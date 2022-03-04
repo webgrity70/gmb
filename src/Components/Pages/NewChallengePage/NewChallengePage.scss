@@ -1,0 +1,20 @@
+.NewChallengePage {
+  padding: 100px 0 50px 0;
+  background-color: white;
+  min-height: 900px;
+  &__title {
+    color: #5c5d5d;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .ui.container {
+    @media only screen and (min-width: 1200px) {
+      width: 965px;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+}

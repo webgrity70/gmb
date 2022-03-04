@@ -1,0 +1,39 @@
+.MatchMeter {
+  border-radius: 3px;
+  color: white;
+  font-weight: 560;
+  display: flex;
+  align-items: center;
+  padding: 1px 0;
+  &.good {
+    background-color: #88c40b;
+    .MatchMeter__bar {
+      &:nth-child(1),
+      &:nth-child(2) {
+        opacity: 0.5;
+      }
+    }
+  }
+  &.excellent {
+    background-color: #21cc99;
+  }
+  &.great {
+    background-color: #4bc24b;
+    .MatchMeter__bar:first-of-type {
+      opacity: 0.5;
+    }
+  }
+  &__bar {
+    width: 8px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: white;
+    &:not(:last-of-type) {
+      margin-bottom: 2px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

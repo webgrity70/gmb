@@ -1,0 +1,69 @@
+@import '../../../../styles/partials/colors';
+
+.FiltersModal {
+  height: 100%;
+  width: 100% !important;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+  }
+  h2 {
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+  &__categories {
+    margin-bottom: 50px;
+    .CategoryIcon {
+      &.active {
+        color: $primary-color;
+      }
+      i {
+        font-size: 60px;
+      }
+    }
+  }
+  &__range-field {
+    flex-direction: column;
+    align-items: center;
+    span {
+      font-weight: 500;
+      font-size: 20px;
+      color: #7f8fa4;
+    }
+    .input-range {
+      margin-top: 40px;
+      &__track {
+        background-color: #e2e7ee;
+      }
+      &__track--active {
+        background-color: $primary-color;
+      }
+      &__slider {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        height: 2rem;
+        width: 2rem;
+        margin-top: -15px;
+      }
+      &__label-container {
+        display: none;
+      }
+    }
+  }
+  &__featured {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    cursor: pointer;
+    &--active {
+      color: $primary-color;
+    }
+  }
+  .ui.button {
+    font-weight: 500;
+    margin-top: 80px;
+  }
+}

@@ -1,0 +1,21 @@
+.MobileBanner {
+  display: none;
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    top: 65px;
+    display: flex;
+    background: #ed6b7a;
+    color: white;
+    align-items: center;
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+    i {
+      font-size: 2em;
+      width: auto;
+      flex: 1 1;
+      margin: 10px 20px 0 0;
+    }
+  }
+}

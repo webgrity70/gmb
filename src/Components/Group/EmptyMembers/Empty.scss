@@ -1,0 +1,27 @@
+@import '../../../styles/partials/colors';
+
+.EmptyMembers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 50px 0;
+
+  h1,
+  a {
+    font-family: $montserrat;
+    display: inline-block;
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.28;
+  }
+
+  a {
+    margin: 0 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: #5c5d5d;
+    }
+  }
+}

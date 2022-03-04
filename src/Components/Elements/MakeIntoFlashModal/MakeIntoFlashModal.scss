@@ -1,0 +1,88 @@
+@import '../../../styles/partials/colors';
+
+.MakeIntoFlashModal {
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-top: 10px !important;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  &__description {
+    color: #7e8fa5;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+  }
+  &__input {
+    margin-top: 40px;
+    span {
+      font-family: $rubik;
+      line-height: 24px;
+      &:first-of-type {
+        color: #5c5d5d;
+        font-size: 14px;
+        line-height: 24px;
+      }
+      &:last-of-type {
+        color: #7e8fa5;
+        font-size: 13px;
+      }
+    }
+  }
+  &.ui.modal .actions {
+    background-color: white;
+    justify-content: flex-end;
+    padding: 15px !important;
+    a {
+      margin-right: 15px;
+      &:first-of-type {
+        margin-right: 40px;
+      }
+    }
+    @media screen and (max-width: 648px) {
+      padding: 10px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    &.ui.modal {
+      width: 624px;
+      > .content {
+        padding: 20px 40px;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__description {
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0 !important;
+    }
+    &.ui.modal {
+      border-radius: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 40px;
+        overflow-y: auto;
+      }
+      > .actions {
+        bottom: 40px;
+        position: absolute;
+      }
+    }
+  }
+}

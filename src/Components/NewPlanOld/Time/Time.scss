@@ -1,0 +1,46 @@
+@import '../../../styles/partials/colors';
+
+.PlanTime {
+  min-width: 173px;
+  .error > div {
+    border-color: #e0b4b4;
+    background-color: #fef6f6;
+    div[class*='placeholder'] {
+      color: #e0b4b4;
+    }
+  }
+  input {
+    width: 158px;
+    height: 32px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 14px;
+    font-family: $montserrat;
+    padding: 0.67857143em 1em;
+    &::-webkit-input-placeholder {
+      color: #c7c7c7;
+    }
+    &:-moz-placeholder {
+      color: #c7c7c7;
+    }
+    &:-moz-placeholder {
+      color: #c7c7c7;
+    }
+    &:-ms-input-placeholder {
+      color: #c7c7c7;
+    }
+    &::placeholder {
+      color: #c7c7c7;
+    }
+  }
+  .empty {
+    input {
+      color: #cbcbcb;
+    }
+    .time {
+      color: #cbcbcb;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    max-width: 130px;
+  }
+}

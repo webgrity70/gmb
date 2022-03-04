@@ -1,0 +1,267 @@
+@import '../../../styles/partials/colors';
+
+.Intentions {
+  display: flex;
+  padding: 0;
+  border: solid 1px #eaeaea;
+  border-radius: 5px;
+  align-items: baseline;
+  &__header {
+    display: flex;
+    width: 100%;
+    background-color: #f6f7f8;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: solid 1px #eaeaea;
+    padding: 0 15px;
+    &-label {
+      display: flex;
+      align-items: center;
+      color: #5c5d5d;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 10px 0 8px 0;
+      justify-content: center;
+      width: 45px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      &.active {
+        border-bottom-color: $primary-color;
+      }
+    }
+    .hourglass-container {
+      width: 16px;
+      height: 16px;
+      background-color: #8896aa;
+      opacity: 0.5;
+      border-radius: 50%;
+      margin-right: 7px;
+    }
+    i.icon {
+      font-size: 16px;
+      margin-right: 7px;
+      &.hourglass {
+        line-height: 1;
+        margin: 0;
+        font-size: 9px;
+        padding-right: 2px;
+        color: white;
+        left: 1px;
+        position: relative;
+      }
+      &.check.circle {
+        color: #98e7d1;
+      }
+      &.minus.circle {
+        color: #f2c9ac;
+      }
+      &.ghost {
+        font-size: 9px;
+        background-color: #e4cde8;
+        height: 16px;
+        border-radius: 50%;
+        color: white;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 16px;
+      }
+    }
+  }
+  &__body {
+    padding: 17px;
+    i.check.icon {
+      font-size: 9px;
+      line-height: 1;
+      color: #3cd6ab;
+      margin-right: 10px;
+    }
+    i.hourglass {
+      font-size: 10px;
+      color: #8896aa;
+      margin-right: 10px;
+    }
+    .ghost {
+      display: flex;
+      position: relative;
+      bottom: -3px;
+    }
+    i.minus.icon {
+      font-size: 9px;
+      line-height: 1;
+      color: #ef9a60;
+      margin-right: 10px;
+    }
+    .fa-ghost {
+      color: #d1a3d9;
+      margin-right: 10px;
+    }
+  }
+  &__popup.ui.popup {
+    z-index: 1901;
+    font-weight: 600;
+    max-width: 270px;
+  }
+  &__confirmation {
+    &-time {
+      text-transform: uppercase;
+      color: #5c5d5d;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 19px;
+      width: 60px;
+      text-align: left;
+      &--local span {
+        cursor: pointer;
+        border-bottom: dashed 1px;
+      }
+    }
+  }
+  &__crown {
+    font-size: 12px;
+    color: #eacd50;
+  }
+  &__no-winner {
+    width: 15px;
+  }
+  &__checkin {
+    display: flex;
+    width: 117px;
+    &-percentage {
+      flex: 1;
+      color: #7f8fa4;
+      font-style: italic;
+      text-align: left;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 20px;
+      margin-left: 3px;
+    }
+  }
+  &__ontime {
+    color: #5c5d5d;
+    font-size: 12px;
+    line-height: 21px;
+    width: 280px;
+    text-align: left;
+  }
+  &__check-in.ui.button {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    padding: 3px 15px;
+    margin-left: 15px;
+  }
+  &__name {
+    color: #5c5d5d;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    width: auto;
+    max-width: 80px;
+    text-align: left;
+    margin-left: 7px;
+    text-transform: uppercase;
+    a {
+      color: #5c5d5d;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__note {
+    color: #7f8fa4;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  &__points {
+    font-style: italic;
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    width: 20px;
+    &--learn {
+      color: $learn-color;
+    }
+    &--life {
+      color: $life-color;
+    }
+    &--work {
+      color: $work-color;
+    }
+    &--health-fitness {
+      color: $health-fitness-color;
+    }
+  }
+  &__not-started {
+    color: #7f8fa4;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    text-align: left;
+    line-height: 21px;
+  }
+  &__notes {
+    margin-left: 10px;
+    flex: 1;
+    .accordion.ui {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .title,
+      .content span:last-of-type {
+        color: #7f8fa4;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: left;
+      }
+      .title,
+      .content {
+        padding: 0 !important;
+      }
+      .content {
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 5px;
+          span:first-of-type {
+            color: #5c5d5d;
+            font-size: 12px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__checkin {
+      width: 120px;
+    }
+    &__check-in.ui.button {
+      margin-left: 0;
+    }
+    &__notes {
+      margin-left: 0;
+      min-width: 100px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    &__note {
+      width: 100%;
+      text-align: left;
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import '../../../styles/partials/colors';
+
+.ChallengesPage {
+  background-color: white;
+  padding: 100px 0;
+  min-height: 100%;
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  &__title {
+    color: #5c5d5d;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+  &__create.ui.dropdown {
+    background-color: $primary-color;
+    color: white;
+    margin: 0 0.25em 0 0;
+    padding: 0.78571429em 1.5em;
+    font-weight: 700;
+    border-radius: 0.28571429rem;
+    font-size: 1rem;
+    line-height: 1em;
+    .menu {
+      width: 100%;
+    }
+    .item {
+      font-weight: bold;
+      color: #5c5d5d;
+      .icon {
+        color: #4e72f1;
+      }
+    }
+  }
+  &__coming {
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #5c5d5d;
+  }
+  &__tabs {
+    .ui.tabular.menu {
+      border-bottom: none;
+      .item {
+        opacity: 0.5;
+        background-color: #eeeeee;
+        height: 47px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: #5c5d5d;
+        border: 1px solid #d4d4d5;
+        border-bottom: none;
+        border-radius: 4px;
+        width: 49.75%;
+        &:first-of-type {
+          margin-right: 0.5%;
+        }
+      }
+      .active.item {
+        color: #5c5d5d;
+        opacity: 1;
+        background-color: #ffffff;
+      }
+    }
+    > .segment.ui {
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__container {
+      width: 90%;
+    }
+  }
+}

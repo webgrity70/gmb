@@ -1,0 +1,28 @@
+@import '../../../styles/partials/colors';
+
+.NewPlanCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  height: 100%;
+  padding: 15px;
+  border: dashed #fd8f25 1px;
+  background-color: #fff7ec;
+  color: $primary-color;
+  font-size: 15px;
+  min-height: 119px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05), 0 4px 7px 0 rgba(0, 0, 0, 0.03),
+    0 1px 5px 0 rgba(0, 0, 0, 0.03);
+  span,
+  i {
+    cursor: pointer;
+  }
+  span {
+    font-weight: 700;
+    letter-spacing: 0.34px;
+    line-height: 19px;
+    margin-top: 13px;
+  }
+}

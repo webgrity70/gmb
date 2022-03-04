@@ -1,0 +1,30 @@
+.SettingsMembershipBlock {
+  &__trial-status {
+    text-transform: capitalize;
+  }
+  &__upgrade-btn.ui.button {
+    margin-top: 15px;
+  }
+  &__section-btn.ui.button {
+    font-size: 12px;
+    background: #e0e1e2 none;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 15px 10px 0 0;
+  }
+  &__expired {
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  &__popup-help {
+    margin-top: 12px;
+    font-size: 12px;
+  }
+  &__popup-help.on-mobile {
+    margin-top: 0;
+  }
+  @media screen and (min-width: 767px) {
+    &__popup-help.on-mobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.ChallengeIntensity {
+  color: #5c5d5d;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  > div {
+    height: 12px;
+    width: 17px;
+    display: flex;
+    align-items: baseline;
+    margin-right: 8px;
+    div {
+      flex: 1;
+      background-color: #ccd2db;
+      &.active {
+        background-color: #4e72f1;
+      }
+    }
+    div:nth-child(1) {
+      height: 4.7px;
+    }
+    div:nth-child(2) {
+      height: 7.63px;
+      margin: 0 1px;
+    }
+    div:nth-child(3) {
+      height: 11.73px;
+    }
+  }
+}

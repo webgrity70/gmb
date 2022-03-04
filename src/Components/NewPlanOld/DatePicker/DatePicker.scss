@@ -1,0 +1,43 @@
+.SingleDatePickerInput {
+  &__withBorder {
+    padding: 2px;
+    width: 150px;
+    border-radius: 4px;
+    .DateInput__small {
+      width: 110px;
+    }
+  }
+  &_calendarIcon {
+    padding: 0;
+    margin: 0 5px 0 10px;
+  }
+  .CalendarMonth_table {
+    margin-top: 10px;
+  }
+  &.error {
+    .SingleDatePickerInput__withBorder {
+      border-color: #e0b4b4;
+      background-color: #fef6f6;
+      button svg {
+        fill: #e6bdbc;
+      }
+      .DateInput input {
+        background-color: #fef6f6;
+      }
+      ::placeholder {
+        color: #e6bdbc;
+        opacity: 1;
+      }
+      :-ms-input-placeholder {
+        color: #e6bdbc;
+      }
+      ::-ms-input-placeholder {
+        color: #e6bdbc;
+      }
+    }
+  }
+  &.empty .CalendarDay__today {
+    background-color: #2ca09c;
+    color: white;
+  }
+}

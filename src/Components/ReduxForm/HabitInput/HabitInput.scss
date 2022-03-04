@@ -1,0 +1,89 @@
+@import '../../../styles/partials/colors';
+
+.HabitInput {
+  width: 100%;
+  &__content {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: #f3f4f5;
+    padding: 15px 10px;
+    margin-top: 10px;
+  }
+  &__label {
+    font-family: $rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #5c5d5d;
+    margin: 0;
+  }
+  &__trigger {
+    cursor: pointer;
+    i {
+      color: $primary-color;
+      font-size: 10px;
+    }
+    span {
+      font-family: $rubik;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 400;
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+  .SignupHabits {
+    margin-top: 0;
+    &__options {
+      flex-direction: column;
+      .dropdown.selection:not(:only-child):last-of-type {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+    .habit-content {
+      width: 100%;
+      margin: 0;
+      img {
+        width: 17px;
+        margin-top: 2px;
+      }
+      .ui.dropdown {
+        padding: 10px 13px;
+        > div.text {
+          &.default {
+            color: #7f8fa4;
+            @media only screen and (max-width: 768px) {
+              text-align: left;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              max-width: 245px;
+              overflow: hidden;
+            }
+          }
+          color: #545454;
+          font-family: $rubik;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .item {
+          border: none;
+          padding: 5px 10px !important;
+          &.selected {
+            margin-top: 0;
+          }
+          span {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            font-family: $montserrat;
+          }
+        }
+      }
+      input {
+        padding: 10px 13px !important;
+        height: 100%;
+      }
+    }
+  }
+}

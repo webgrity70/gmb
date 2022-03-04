@@ -1,0 +1,78 @@
+@import '../../../styles/partials/_colors.scss';
+
+.RecommendedMembers {
+  &.disabled {
+    .ProfileCard__avatar {
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+  .find-more {
+    width: 100%;
+    color: #ff8f00;
+    font-family: $montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 5px;
+    z-index: 1;
+    text-align: right;
+    padding: 0;
+    > div {
+      display: initial;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    padding-right: 20px;
+
+    .title {
+      color: #5c5d5d;
+      font-family: $montserrat;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .description {
+      color: #5c5d5d;
+      font-family: $montserrat;
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 300;
+      height: 15px;
+    }
+  }
+
+  .icons i {
+    margin-top: 0;
+    margin-left: 0;
+    font-size: 25px;
+  }
+  @media only screen and (min-width: 992px) {
+    .ui.grid > [class*='five wide computer'].column {
+      width: 33.33% !important;
+    }
+  }
+
+  .ui.grid {
+    .ProfileCard {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .RecommendedMembers {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .RecommendedMembers {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

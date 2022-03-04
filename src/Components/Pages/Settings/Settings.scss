@@ -1,0 +1,318 @@
+@import '../../../styles/partials/colors';
+
+.SettingsPage {
+  font-family: $montserrat;
+  padding-top: 76px;
+  margin-bottom: 40px;
+  background-color: #fcfcfc;
+  .SettingsPage__title {
+    margin-top: 45px;
+    color: $dark-text-color;
+    font-family: $montserrat;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+  }
+}
+
+.SettingsPage__menu.ui.menu {
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+
+  .item {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 7px 20px;
+    color: $dark-text-color;
+    transition: none;
+
+    &:hover {
+      background-color: transparent;
+      color: $dark-text-color;
+    }
+
+    &.active,
+    &.active:hover {
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: 600;
+      background-color: $primary-color;
+    }
+  }
+}
+
+/** 
+* Styles that need to be moved next to their component
+*/
+.SettingsPage {
+  .settings-block {
+    padding: 1rem 2rem 1rem 1.5rem;
+    border: none;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    .verification-code {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      .ui.input,
+      .ui.button {
+        margin-right: 10px;
+      }
+      .ui.button {
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+    }
+    .warning-input {
+      color: $work-color;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      margin-top: 5px;
+    }
+    .ui.basic.segment {
+      width: 100%;
+    }
+    .inline.fields label {
+      font-weight: 500;
+    }
+    .settings-block-title {
+      height: initial;
+      color: $dark-text-color;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    .settings-content {
+      color: $muted-color;
+      font-size: 14px;
+      font-weight: 500;
+
+      .label {
+        &:after {
+          content: ':';
+        }
+
+        display: inline-flex;
+        margin-right: 10px;
+      }
+
+      .ui.input {
+        font-size: 13px;
+      }
+
+      .value {
+        color: $dark-text-color;
+      }
+    }
+
+    hr.settings-bottom {
+      height: 1px;
+      margin: 0;
+      width: 100%;
+      background-color: $light-border-color;
+      border: none;
+    }
+
+    .actions {
+      margin: 10px;
+      user-select: none;
+      margin-right: 0;
+      padding-right: 0;
+      .orange-color {
+        color: $primary-color;
+      }
+      .button.ui {
+        font-weight: 500;
+      }
+    }
+    @media (max-width: 768px) {
+      &.ui.segment.segment {
+        border: none;
+        margin-bottom: 60px;
+        &:last-of-type {
+          margin-bottom: 180px;
+        }
+      }
+    }
+  }
+
+  .notifications-content {
+    font-family: $montserrat;
+    @media (max-width: 768px) {
+      border-top: 1px solid $dark-border-color;
+      padding-top: 10px !important;
+    }
+
+    .group-header {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      border-bottom: 1px solid $dark-border-color;
+      .turn-all {
+        flex-grow: 1;
+        display: inline-flex;
+        justify-content: flex-end;
+        .legend,
+        strong {
+          color: #5b5d5d;
+        }
+        .global-label {
+          padding-right: 25px;
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+      }
+
+      h3,
+      .turn-all {
+        font-family: $montserrat;
+        margin: 0;
+        padding: 0 0 10px;
+        color: $muted-color;
+        font-size: 14px;
+        // font-weight: 500;
+        line-height: 24px;
+      }
+    }
+    .ui.checkbox input:checked ~ .box:before,
+    .ui.checkbox input:checked ~ label:before {
+      background-color: #ff8e00 !important;
+    }
+    .notification-settings {
+      .notification-headers {
+        margin-top: 10px;
+      }
+      .row {
+        .notification-setting {
+          // margin-top: 20px;
+          // min-height: 50px;
+          // border-right: 1px solid $dark-border-color;
+          .ui.checkbox {
+            margin: 0 10px;
+            min-width: 50px;
+          }
+          &:first-of-type {
+            width: 50%;
+          }
+          @media (max-width: 768px) {
+            min-height: 140px;
+            border: none;
+            &:only-child {
+              h3 {
+                margin-top: 20px;
+              }
+            }
+            &:last-of-type {
+              padding-top: 0 !important;
+            }
+          }
+
+          &:last-child {
+            border: none;
+          }
+
+          h3 {
+            color: $dark-text-color;
+            font-family: $montserrat;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            text-align: center;
+            @media (max-width: 768px) {
+              font-size: 14px;
+              line-height: 18px;
+              margin-top: 10px;
+            }
+          }
+
+          .key {
+            color: $muted-color;
+            font-family: $montserrat;
+            font-size: 10px;
+            line-height: 34px;
+          }
+
+          .value {
+            color: $dark-text-color;
+            font-family: $montserrat;
+            align-self: center;
+            display: inline-flex;
+            justify-content: flex-end;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    p.group-description {
+      margin: 20px;
+      margin-inline: 80px;
+      line-height: 1.5;
+    }
+  }
+  .react-tel-input {
+    width: auto;
+    max-width: 100%;
+
+    input {
+      padding-left: 50px !important;
+      &::-webkit-input-placeholder {
+        font-weight: 300;
+      }
+      &:-moz-placeholder {
+        font-weight: 300;
+      }
+      &:-moz-placeholder {
+        font-weight: 300;
+      }
+      &:-ms-input-placeholder {
+        font-weight: 300;
+      }
+      &::placeholder {
+        font-weight: 300;
+      }
+    }
+  }
+  .settings-content.account-block {
+    .stackable .d-inline-flex {
+      // wrap settings
+      flex-wrap: wrap;
+
+      .value {
+        flex-wrap: wrap;
+      }
+    }
+
+    .label {
+      align-items: center;
+    }
+
+    .value {
+      display: inline-flex;
+      align-items: center;
+      flex-grow: 1;
+      justify-content: space-between;
+
+      .SingleDatePicker {
+        margin: 0; // overwrite CSS-overwrite, TODO: Remove when CSS rework is done.
+      }
+    }
+
+    // region AirBnB datepicker overrides
+    .SingleDatePicker_picker {
+      z-index: 25; // Lastpass uses z-index: 20
+    }
+
+    .DateInput_input {
+      padding: 6px 0;
+    }
+
+    // endregion
+  }
+}

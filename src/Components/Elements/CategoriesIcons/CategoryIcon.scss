@@ -1,0 +1,34 @@
+.CategoryIcon {
+  line-height: 1;
+  i.icon {
+    font-size: 25px;
+
+    &:not(.active) {
+      color: #afafaf;
+    }
+  }
+  &__circle-colored {
+    display: inline-block;
+    margin-right: 10px;
+    opacity: 0.2;
+    &.active {
+      opacity: 1;
+    }
+  }
+  &__colored {
+    i.icon.gmb-category {
+      &-health-fitness {
+        color: #3cd6ab;
+      }
+      &-learn {
+        color: #bb64ca;
+      }
+      &-work {
+        color: #ef6a78;
+      }
+      &-life {
+        color: #ebce41;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../styles/partials/colors';
+
+.PlanOptions {
+  .copied-link {
+    color: #b7b7b8;
+    font-size: 14px;
+    a {
+      color: $primary-color;
+      font-size: 14px;
+    }
+  }
+  &__add.ui.button {
+    margin-top: 10px;
+    font-weight: 500;
+    padding: 10px;
+  }
+  &__container {
+    padding: 0 5px;
+    span {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    a {
+      color: #b7b7b8;
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+    div {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    &.ui.popup {
+      margin-right: 30px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

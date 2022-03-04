@@ -1,0 +1,48 @@
+@import '../../../styles/partials/colors';
+
+.SingleAnnouncement {
+  padding: 0 15px;
+  &__description {
+    p {
+      line-height: 22px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    margin-top: 15px;
+  }
+  &__details {
+    width: 100%;
+    display: flex;
+    &-text {
+      display: flex;
+      flex-direction: row;
+      margin-left: 20px;
+      align-items: flex-end;
+      i {
+        color: $primary_color;
+        margin-right: 7px;
+      }
+      span,
+      h2 {
+        color: #5c5d5d;
+      }
+      span {
+        margin-left: 25px;
+        font-size: 10px;
+      }
+      h2 {
+        margin: 0;
+        font-size: 20px;
+      }
+    }
+    &-icon {
+      position: relative;
+      height: 28px;
+      width: 28px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #efefef;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}

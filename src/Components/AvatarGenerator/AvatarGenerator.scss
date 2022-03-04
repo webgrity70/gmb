@@ -1,0 +1,319 @@
+/*
+    GENERAL STYLES
+*/
+/*noinspection CssUnusedSymbol*/
+#avatar-generator {
+  min-height: 430px;
+  display: flex;
+  @media screen and (max-width: 615px) {
+    flex-wrap: wrap;
+  }
+  .buddy {
+    height: 370px;
+    width: 350px;
+    @media screen and (max-width: 993px) {
+      min-width: 280px;
+      > svg,
+      > div {
+        left: -40px !important;
+      }
+    }
+    @media screen and (max-width: 615px) {
+      min-width: 550px;
+      > svg,
+      > div {
+        left: 75px !important;
+      }
+    }
+    @media screen and (max-width: 520px) {
+      min-width: 450px;
+      > svg,
+      > div {
+        left: 45px !important;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      > svg,
+      > div {
+        left: 10px !important;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      > svg,
+      > div {
+        left: -30px !important;
+      }
+    }
+  }
+
+  .body-color-picker,
+  .hair-color-picker {
+    padding: 0 15px;
+    h4 {
+      font-weight: 500;
+    }
+  }
+  .hair-color-picker {
+    text-align: left;
+  }
+  .right-content {
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    @media screen and (max-width: 993px) {
+      margin-bottom: 60px;
+    }
+    @media screen and (max-width: 520px) {
+      justify-content: center;
+    }
+  }
+  .slider-changes {
+    margin-top: 33px;
+    padding: 0 15px;
+    .slider-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      > div {
+        padding: 0 50px;
+        @media screen and (max-width: 993px) {
+          padding: 0 25px;
+        }
+      }
+      button {
+        height: 35px;
+        width: 85px;
+        background-color: #ff8f00;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.avatar-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+.avatar-slider button {
+  position: absolute;
+  height: 35px;
+  width: 85px;
+  background-color: #ff8f00;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/*noinspection CssUnusedSymbol*/
+.avatar-generator-buttons {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.avatar-slider .selector-title {
+  left: 435px;
+  text-align: center;
+  width: 150px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.avatar-slider .slick-next,
+.avatar-slider .slick-custom-next {
+  left: 585px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.avatar-slider .slick-prev,
+.avatar-slider .slick-custom-prev {
+  left: 350px;
+}
+
+.avatar-slider .selector-title {
+  position: absolute;
+}
+
+/*
+    BODY STYLES
+*/
+
+/*noinspection CssUnusedSymbol*/
+#body-slider.avatar-slider .slick-next,
+#body-slider.avatar-slider .slick-prev {
+  top: 70px;
+}
+
+#body-slider.avatar-slider .selector-title {
+  top: 77px;
+}
+
+/*
+    EYES STYLES
+*/
+/*noinspection CssUnusedSymbol*/
+#eyes-slider.avatar-slider .slick-next,
+#eyes-slider.avatar-slider .slick-prev {
+  top: 120px;
+}
+
+#eyes-slider.avatar-slider .selector-title {
+  top: 127px;
+}
+
+/*
+    HAIR STYLES
+*/
+
+/*noinspection CssUnusedSymbol*/
+#fronthair-slider.avatar-slider .slick-custom-next,
+#fronthair-slider.avatar-slider .slick-custom-prev {
+  top: 170px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#fronthair-slider .slick-next,
+#fronthair-slider .slick-prev,
+#backhair-slider .slick-next,
+#backhair-slider .slick-prev {
+  display: none !important;
+}
+
+#fronthair-slider.avatar-slider .selector-title {
+  top: 177px;
+}
+
+/*
+    MOUTH STYLES
+*/
+
+/*noinspection CssUnusedSymbol*/
+#mouth-slider.avatar-slider .slick-next,
+#mouth-slider.avatar-slider .slick-prev {
+  top: 220px;
+}
+
+#mouth-slider.avatar-slider .selector-title {
+  top: 227px;
+}
+
+.body-color-picker .body-color {
+  width: 100px;
+  height: 20px;
+  background-color: red;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.body-color-picker .body-color.active {
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color1 {
+  background-color: #ed6b7a;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color2 {
+  background-color: #ba68c8;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color3 {
+  background-color: #ffd600;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color4 {
+  background-color: #3cd6ab;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color5 {
+  background-color: #ff8833;
+}
+
+/*noinspection CssUnusedSymbol*/
+.body-color-picker .body-color.color6 {
+  background-color: #40c4ff;
+}
+
+.light.hair-fill-1 path {
+  fill: #f6b5bc;
+}
+
+.light.hair-fill-2 path {
+  fill: #dcb3e3;
+}
+
+.light.hair-fill-3 path {
+  fill: #dfca60;
+}
+
+.light.hair-fill-4 path {
+  fill: #9dead5;
+}
+
+.light.hair-fill-5 path {
+  fill: #ffc399;
+}
+
+.light.hair-fill-6 path {
+  fill: #9fe1ff;
+}
+
+.dark.hair-fill-1 path {
+  fill: #974947;
+}
+
+.dark.hair-fill-2 path {
+  fill: #7c5383;
+}
+
+.dark.hair-fill-3 path {
+  fill: #9f8a20;
+}
+
+.dark.hair-fill-4 path {
+  fill: #3d8a75;
+}
+
+.dark.hair-fill-5 path {
+  fill: #9f6339;
+}
+
+.dark.hair-fill-6 path {
+  fill: #3f819f;
+}
+
+.body-fill-1 path {
+  fill: #ed6b7a;
+}
+
+.body-fill-2 path {
+  fill: #ba68c8;
+}
+
+.body-fill-3 path {
+  fill: #ffd600;
+}
+
+.body-fill-4 path {
+  fill: #3cd6ab;
+}
+
+.body-fill-5 path {
+  fill: #ff8833;
+}
+
+.body-fill-6 path {
+  fill: #40c4ff;
+}

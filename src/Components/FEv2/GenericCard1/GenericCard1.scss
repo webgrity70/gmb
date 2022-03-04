@@ -1,0 +1,69 @@
+.GenericCard1 {
+  &__container {
+    border: solid 1px black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    width: 300px;
+    height: 100px;
+    padding: 15px;
+  }
+
+  &__col1 {
+    flex-direction: column;
+    flex-basis: 30%;
+    text-align: center;
+  }
+
+  &__image {
+    border-radius: 100%;
+    border: solid 1px black;
+    width: 75px;
+    height: 75px;
+    margin: 10px;
+  }
+
+  &__text1 {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  &__text2 {
+  }
+
+  &__text3 {
+  }
+
+  &__col2 {
+    margin-left: 20px;
+    flex-direction: column;
+    flex-basis: 60%;
+  }
+
+  &__iconText {
+    border: solid 1px black;
+    border-radius: 5px;
+    padding: 3px;
+  }
+
+  &__title {
+  }
+
+  &__title2 {
+  }
+
+  &__title3 {
+  }
+
+  &__goContainer {
+    border: solid 1px black;
+    background: lightgray;
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

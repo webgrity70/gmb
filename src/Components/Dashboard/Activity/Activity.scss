@@ -1,0 +1,325 @@
+@import '../../../styles/partials/colors';
+
+.DashboardActivity {
+  display: flex;
+  flex: 1;
+  padding: 50px;
+  &.ui.segment {
+    // border-radius: 5px;
+    // box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 7px 0 rgba(0, 0, 0, 0.06),
+    //   0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  &__avatar {
+    display: block;
+    height: 185px;
+    width: 185px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+    left: 50%;
+    margin-left: -95px;
+  }
+  .ui.divided.grid:not([class*='vertically divided']) > .column:not(.row) {
+    box-shadow: none;
+  }
+  &__progress-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+    @media screen and (max-width: 761px) {
+      display: none;
+    }
+  }
+
+  .CircularProgressBar {
+    width: 220px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .challenge-status {
+    color: #4e72f1;
+    font-size: 11px;
+    margin-top: 7px;
+    font-weight: 600;
+    line-height: 14px;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .challenge-divider {
+    height: 1px;
+    margin: 12px 18px;
+    background-color: #ededed;
+  }
+  .challenge-header {
+    border-left: 2px solid;
+    padding: 0 15px;
+    margin-top: 15px;
+    &.learn {
+      border-color: $learn-color;
+    }
+    &.life {
+      border-color: $life-color;
+    }
+    &.work {
+      border-color: $work-color;
+    }
+    &.health-fitness {
+      border-color: $health-fitness-color;
+    }
+  }
+  .challenge-time {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  .challenge-desc {
+    color: #5c5d5d;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    .GMBMarkdown {
+      font-size: inherit;
+      display: inline;
+      p {
+        display: inline;
+      }
+    }
+  }
+  .make-flash {
+    display: flex;
+    a {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 16px;
+    }
+  }
+  .challenge-members {
+    color: #7f8fa4;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+  .challenge-activity {
+    display: flex;
+    color: #5c5d5d;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 32px;
+    align-items: center;
+    i {
+      font-size: 35px;
+      position: relative;
+      top: 5px;
+      left: -5px;
+      margin-right: 0;
+    }
+  }
+  .event-type {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 110px;
+    overflow: hidden;
+    &.challenge {
+      background-color: #4e72f1;
+    }
+    &.part-plan {
+      background-color: #7ea0cb;
+    }
+  }
+
+  .next-activity {
+    flex: 1 0;
+    max-height: 290px;
+    min-height: 272px;
+    height: auto;
+    background-color: white;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    &.padded {
+      padding: 15px 25px 20px 25px;
+    }
+    .milestone-container {
+      display: flex;
+      i {
+        font-size: 10px;
+        color: #af74df;
+      }
+      span {
+        font-weight: 600;
+        margin-left: 5px;
+      }
+      color: #5c5d5d;
+      font-size: 13px;
+      &.challenge-milestone {
+        margin: 4px 0 6px 0;
+      }
+    }
+    .date-and-time {
+      color: #5c5d5d;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+    .category img {
+      margin-bottom: 3px;
+    }
+    .activity {
+      color: #5c5d5d;
+      font-size: 30px;
+      font-weight: 600;
+      margin: 16px 0;
+      line-height: 26px;
+    }
+    .activity-location {
+      color: #5c5d5d;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
+
+      .GMBMarkdown {
+        font-size: inherit;
+        display: inline;
+        p {
+          display: inline;
+        }
+      }
+    }
+    .specifics {
+      justify-content: flex-start;
+      flex-direction: column;
+      .GMBMarkdown {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+        p {
+          margin: 0;
+        }
+      }
+      a.pointer {
+        margin-left: auto;
+      }
+    }
+    .up-next {
+      color: #7f8fa4;
+      font-size: 10px;
+      line-height: 14px;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 25px;
+    }
+    .schedule {
+      font-size: 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      margin-top: 20px;
+      > div {
+        line-height: 22px;
+        font-style: italic;
+        font-size: 14px;
+        display: inline-flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+      }
+      span {
+        font-size: 18px;
+        font-style: italic;
+        color: #4e4f4f;
+        line-height: 22px;
+        text-align: right;
+      }
+      .ui.button {
+        margin-top: 50px;
+        font-size: 18px;
+      }
+    }
+    @media screen and (max-width: 761px) {
+      text-align: center;
+      margin-bottom: 0;
+      max-width: 92%;
+      margin-left: 4%;
+      justify-content: center;
+      &.padded {
+        padding: 15px 15px 20px 15px;
+      }
+      .schedule {
+        span {
+          font-size: 14px;
+        }
+        > div {
+          margin-bottom: 40px;
+        }
+      }
+      .date-and-time,
+      .activity-location {
+        font-size: 14px;
+      }
+      .date-and-time {
+        margin-top: 0;
+      }
+      .activity-location {
+        line-height: 16px;
+      }
+      .activity {
+        margin: 20px 0 10px 0;
+      }
+      .milestone-container {
+        margin: 0;
+        justify-content: flex-start;
+        i {
+          font-size: 10px;
+        }
+        color: #5c5d5d;
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 761px) {
+    padding: 0;
+    .challenge-desc,
+    .challenge-members {
+      text-align: left;
+    }
+    .challenge-desc {
+      margin-top: 3px;
+    }
+    .challenge-activity {
+      justify-content: flex-start;
+      align-items: flex-start;
+      line-height: 32px;
+      text-align: left;
+      .CategoryIcon {
+        position: relative;
+        bottom: 2px;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .CircularProgressBar {
+      transform: scale(0.8);
+      margin: 0;
+    }
+  }
+}

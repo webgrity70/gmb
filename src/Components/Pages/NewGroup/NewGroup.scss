@@ -1,0 +1,167 @@
+@import '../../../styles/partials/colors';
+
+.NewGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 110px 0 50px 0;
+  align-items: center;
+  background-color: #fafafa;
+
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__rules {
+    span {
+      font-family: $rubik;
+      font-size: 12px;
+      line-height: 14px;
+      color: #cacaca;
+      font-weight: 400;
+    }
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(34, 36, 38, 0.15);
+      border-radius: 0.28571429rem;
+      padding: 10px;
+      font-family: $rubik;
+      color: rgba(0, 0, 0, 0.87);
+      resize: none;
+      height: 100%;
+      font-weight: 400;
+      &::-webkit-input-placeholder {
+        color: #cacaca;
+        font-weight: 600;
+      }
+      &:-moz-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &:-moz-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &:-ms-input-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &::placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+    }
+  }
+  &__PrivacyContainer {
+    display: flex;
+
+    .CardType {
+      padding-top: 0;
+      flex: 1;
+    }
+  }
+
+  &__divider {
+    box-sizing: border-box;
+    height: 1px;
+    width: 100%;
+    background-color: #ececed;
+    margin: 27px 0 12px 0;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 500;
+    color: #5c5d5d;
+    margin: 15px 0;
+  }
+
+  &__categories {
+    margin-top: 15px;
+
+    span {
+      font-family: $rubik;
+      margin-right: 5px;
+      font-weight: 400;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    button.ui.button {
+      height: auto;
+      padding: 10px 20px;
+      margin: 5px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__buttons {
+      justify-content: center;
+      margin: 20px 0 150px 0;
+    }
+    &__container {
+      > .flex {
+        flex-wrap: wrap;
+
+        .CardType {
+          margin-right: 0;
+          min-width: 100%;
+
+          &:first-of-type {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    &__PrivacyContainer {
+      .CardType {
+        padding: 20px 0 0 0;
+
+        &:not(:last-of-type) {
+          margin-right: 0;
+        }
+      }
+    }
+    &__PrivacyContainer {
+      flex-direction: column;
+    }
+    .BasicOrganizationInfo,
+    .BasicPersonalInfo {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      &__details {
+        margin: 0 0 20px 0;
+      }
+
+      &__subType span {
+        margin: 0 5px 0 0;
+      }
+
+      &__description .field {
+        width: 100%;
+
+        textarea {
+          min-height: 100px;
+        }
+      }
+
+      .ui.input > input {
+        margin: 0 0 15px 0;
+      }
+
+      &__languages.error {
+        margin-right: 0;
+      }
+    }
+  }
+  @media (max-width: 855px) {
+    padding: 0 50px;
+    margin-bottom: 100px;
+  }
+}

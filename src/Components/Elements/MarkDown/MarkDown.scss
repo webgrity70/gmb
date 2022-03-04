@@ -1,0 +1,32 @@
+.GMBMarkdown {
+  font-size: 13px;
+  word-break: break-word;
+  img {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  ul,
+  ol {
+    padding-inline-start: 15px;
+    margin: 0;
+    word-break: break-word;
+    margin-left: 1px;
+    li {
+      line-height: 20px;
+    }
+  }
+  p {
+    word-break: break-word;
+    text-align: justify;
+  }
+  blockquote {
+    margin-inline-start: 20px;
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+  }
+
+  .media-link {
+    color: #ff8f00;
+    cursor: pointer;
+  }
+}

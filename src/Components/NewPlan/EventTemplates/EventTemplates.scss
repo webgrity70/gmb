@@ -1,0 +1,95 @@
+@import '../../../styles/partials/colors';
+
+.EventTemplates {
+  h3 {
+    color: #5c5d5d;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+  input {
+    &::-webkit-input-placeholder {
+      font-style: normal;
+    }
+    &:-moz-placeholder {
+      font-style: normal;
+    }
+    &:-moz-placeholder {
+      font-style: normal;
+    }
+    &:-ms-input-placeholder {
+      font-style: normal;
+    }
+    &::placeholder {
+      font-style: normal;
+    }
+  }
+  &__trigger {
+    color: $primary-color;
+    font-family: $rubik;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+  }
+  &__search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    .TextInput {
+      padding-left: 35px;
+    }
+    i {
+      position: absolute;
+      top: 9px;
+      color: #c5d0de;
+      left: 10px;
+      z-index: 10;
+      font-size: 14px;
+    }
+  }
+  &__list {
+    height: 250px;
+    overflow-y: auto;
+    margin-top: 5px;
+    @media screen and (max-width: 575px) {
+      max-height: calc(100% - 120px);
+      height: inherit;
+    }
+  }
+  &.ui.modal {
+    max-width: 600px;
+  }
+  @media only screen and (max-width: 768px) {
+    h3 {
+      margin-top: 20px !important;
+    }
+    &.ui.modal {
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      .content {
+        bottom: 30px;
+        position: absolute;
+        top: 0;
+        overflow-y: hidden;
+        width: 100%;
+        max-height: none;
+      }
+    }
+  }
+}
+
+.ios {
+  .EventTemplates.ui.modal {
+    .EventTemplates__list {
+      max-height: calc(100% - 200px);
+    }
+  }
+}

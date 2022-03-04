@@ -1,0 +1,31 @@
+@import '../../../styles/partials/colors';
+
+.CategoryScore {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  min-width: 90px;
+  &:nth-child(3),
+  &:nth-child(4) {
+    margin-top: 15px;
+  }
+
+  &.life,
+  &.learn {
+    margin-left: auto;
+  }
+  &.health-fitness {
+    color: $health-fitness-color;
+  }
+  &.life {
+    color: $life-color;
+  }
+  &.work {
+    color: $work-color;
+  }
+
+  &.learn {
+    color: $learn-color;
+  }
+}

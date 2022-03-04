@@ -1,0 +1,28 @@
+.ProgressBar {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  &__circle {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: -35px;
+    top: -44px;
+    svg {
+      height: 238px;
+      width: 220px;
+      path {
+        &:first-of-type {
+          stroke-width: 10px;
+        }
+        will-change: auto;
+        stroke-width: 12px;
+        stroke-miterlimit: round;
+        transition: stroke-dashoffset 850ms ease-in-out;
+      }
+      text {
+        font-size: 40px;
+      }
+    }
+  }
+}

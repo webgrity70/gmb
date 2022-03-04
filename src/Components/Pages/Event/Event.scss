@@ -1,0 +1,177 @@
+@import '../../../styles/partials/colors';
+
+.EventPage {
+  padding-top: 110px;
+  padding-bottom: 60px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  .SingleDatePicker {
+    .DateInput svg {
+      display: none;
+    }
+    &_picker {
+      bottom: 0 !important;
+    }
+  }
+  &__fields {
+    flex: 1;
+    > div {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
+      > div:not(.MDEEditor) > div {
+        padding-left: 20px;
+      }
+      > div:first-of-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        > h3 {
+          font-size: 15px;
+          margin-right: 10px;
+          line-height: 36px;
+          font-weight: 500;
+          color: #5c5d5d;
+          margin-bottom: 0;
+          padding-left: 17px;
+          border-left: solid 1px #dededf;
+        }
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex-direction: column;
+      margin-top: 15px;
+      > div {
+        &:not(:first-of-type) {
+          margin-bottom: 15px;
+        }
+        > div:first-of-type {
+          > h3 {
+            border-left: none;
+            padding-left: 0;
+            margin-bottom: 0;
+          }
+        }
+        > div {
+          > div:not(.MDEEditor) {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  &__mde-editor {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 25px;
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      margin: 0;
+    }
+  }
+  &__container {
+    padding: 15px;
+    background-color: white;
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 15px;
+    > a .icon.close {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      color: #bfbfbf;
+      cursor: pointer;
+    }
+    > h1 {
+      text-align: center;
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+  }
+  &__form {
+    &--save-container {
+      padding: 15px 90px;
+      button.ui {
+        font-size: 14px;
+        padding: 10px 30px;
+        margin-top: 10px;
+        font-weight: 500;
+        min-width: 40px;
+        margin-left: 15px;
+        i.add.circle.icon {
+          opacity: 1;
+        }
+        &.edit.basic:hover {
+          background-color: #fbfbfb !important;
+        }
+      }
+      .ui.checkbox label {
+        font-weight: 500;
+        color: #626b6e;
+      }
+      @media screen and (max-width: 736px) {
+        justify-content: center;
+      }
+      @media screen and (max-width: 638px) {
+        flex-direction: column;
+        padding: 0 40px 20px 40px;
+        button.ui {
+          margin-left: 0;
+          margin-right: 0;
+          flex: 1;
+        }
+      }
+    }
+    &--header {
+      padding: 20px 50px;
+      .SingleDatePickerInput {
+        margin-top: 5px;
+      }
+      > div:first-of-type {
+        h3 {
+          font-size: 20px;
+          line-height: 36px;
+          font-weight: 500;
+          color: #5c5d5d;
+          margin-bottom: 0;
+        }
+        margin-right: 25px;
+      }
+      @media screen and (max-width: 638px) {
+        flex-direction: column;
+        padding: 10px 30px;
+        > div:first-of-type > div {
+          padding-left: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 638px) {
+      .PlanBehaviors textarea {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,512 @@
+@import '../../../styles/partials/colors';
+
+.ChallengeDetailsModal {
+  &__pill {
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 21px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0 10px;
+    background-color: #4e72f1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 120px;
+    overflow: hidden;
+    i {
+      margin-left: -3px;
+    }
+    &:hover {
+      color: white;
+      background-color: #4365dc;
+    }
+  }
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    &-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      &--flash {
+        margin-top: 64px;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    span {
+      color: $primary-color;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    i.pencil {
+      margin-left: 15px;
+    }
+  }
+  &__popup {
+    &.ui.popup {
+      z-index: 1901;
+      font-weight: 600;
+      max-width: 370px;
+    }
+    &-trigger {
+      cursor: pointer;
+      border-bottom: dashed 1px;
+    }
+  }
+  &__avatar {
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    bottom: 0px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+  &__header {
+    left: 0;
+    top: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+    align-items: center;
+    width: 100%;
+    &--flash {
+      background-color: #4e72f1;
+      top: 0;
+    }
+    color: white;
+    flex-wrap: wrap;
+    &-text {
+      text-align: left;
+      font-weight: 600;
+      span {
+        color: #5c5d5d;
+        font-size: 12px;
+      }
+      > div {
+        &:first-of-type {
+          font-size: 10px;
+        }
+        &:last-of-type {
+          color: #ffffff;
+          font-size: 14px;
+          line-height: 19px;
+        }
+      }
+    }
+  }
+  &__winner,
+  &__participants {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+  &__memberlist {
+    a {
+      color: #5c5d5d;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 12px;
+
+      &:hover {
+        color: #ff8f00;
+      }
+    }
+  }
+  &__winner {
+    color: #907056;
+    background-color: #eacd50;
+    margin-right: 5px;
+    svg {
+      margin-right: 5px;
+    }
+  }
+  &__participants {
+    color: white;
+    background-color: #3fc4ff;
+  }
+  &__status {
+    text-transform: uppercase;
+    color: #4e72f1;
+  }
+  &__content {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  &__specifics {
+    font-size: 12px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    > div {
+      font-weight: 600;
+      text-align: left;
+      width: 75%;
+      word-break: break-all;
+      color: #5c5d5d;
+      p {
+        line-height: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__label {
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+    &--fixed {
+      min-width: 120px;
+      text-align: left;
+    }
+  }
+  &__value {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  &__box {
+    display: flex;
+    padding: 0;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    align-items: baseline;
+    padding: 17px;
+  }
+  &__statistics {
+    display: flex;
+    margin-bottom: 14px;
+    > div {
+      padding: 5px 0;
+      border-radius: 4px;
+      border: 1px solid #eaeaea;
+    }
+    span:first-of-type {
+      color: #7f8fa4;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 19px;
+    }
+    span:last-of-type {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+  }
+  &__join {
+    flex-direction: row;
+    align-items: center;
+    h5 {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      margin: 0 0 5px 0;
+    }
+    p {
+      color: #7f8fa4;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: left;
+      max-width: 80%;
+      margin-bottom: 5px;
+    }
+    a {
+      font-family: $rubik;
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+    .ui.button {
+      padding: 10px 20px;
+      font-weight: 600;
+    }
+  }
+  &__details {
+    color: #5c5d5d;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 14px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    > span {
+      cursor: pointer;
+      color: #7f8fa4;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      text-decoration: underline;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__milestone {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-left: 12px;
+    color: #e66464;
+    &--on {
+      color: #3cd6ab;
+    }
+  }
+  &__points {
+    font-style: italic;
+    margin: 0 10px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 20px;
+    &--total {
+      font-style: normal;
+      font-size: 16px;
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    &--learn {
+      color: $learn-color;
+    }
+    &--life {
+      color: $life-color;
+    }
+    &--work {
+      color: $work-color;
+    }
+    &--health-fitness {
+      color: $health-fitness-color;
+    }
+  }
+  &__confirmation {
+    &-time {
+      text-transform: uppercase;
+      color: #5c5d5d;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 19px;
+      width: 60px;
+      text-align: left;
+    }
+  }
+  &__off {
+    opacity: 0.5;
+  }
+  &__label {
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+  &__divider {
+    height: 1px;
+    background: #d0d0d0;
+    margin: 10px 0 10px 10px;
+    flex: 1;
+  }
+  &__joined {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #fff7ec;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 20px;
+    span {
+      color: $primary-color;
+      cursor: pointer;
+    }
+    &--loading {
+      span {
+        cursor: not-allowed;
+        color: gray;
+      }
+    }
+    .ui.loader {
+      height: 100% !important;
+      &:after,
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+      &:after {
+        border-color: $primary-color transparent transparent;
+      }
+    }
+  }
+  &__name {
+    color: #5c5d5d;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 110px;
+    text-align: left;
+    margin-left: 7px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-transform: uppercase;
+    &--checkin {
+      width: auto;
+      max-width: 70px;
+    }
+  }
+  &__ontime {
+    color: #7f8fa4;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+  &__check-in.ui.button {
+    padding: 5px 15px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &.ui.modal {
+    width: 710px;
+    > .content {
+      text-align: center;
+      padding: 20px !important;
+      > span {
+        color: #5d5e5e;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &--flash > i.close.icon {
+      color: white !important;
+    }
+    &__winner {
+      margin-right: 20px;
+    }
+    &__joined {
+      flex-direction: column;
+      &--regular {
+        flex-direction: row;
+      }
+    }
+    &__footer {
+      left: 0;
+      padding: 10px 20px 0 20px;
+      width: 100%;
+      bottom: 15px;
+      position: absolute;
+      background-color: white;
+      border-top: solid gray 1px;
+    }
+    &__title-container {
+      margin-top: 60px;
+      &--flash {
+        margin-top: 80px;
+      }
+    }
+    &__participants--flash {
+      margin-right: 20px;
+    }
+    &__header {
+      padding-left: 15px;
+      border-radius: 0;
+      top: 30px;
+      &--flash {
+        top: 0;
+      }
+      &-text > div:last-of-type {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 310px;
+      }
+    }
+    &__specifics {
+      flex-wrap: wrap;
+      > div {
+        width: 100%;
+        margin-top: 5px;
+      }
+    }
+    &__join {
+      flex-direction: column;
+      p {
+        text-align: center;
+        max-width: 100%;
+      }
+      a {
+        margin-bottom: 10px;
+      }
+      h5 {
+        margin: 0 auto 5px auto;
+      }
+    }
+
+    &.ui.modal {
+      border-radius: 0;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 0px;
+        overflow-y: auto;
+      }
+    }
+  }
+  @media only screen and (max-height: 900px) and (max-width: 700px) {
+    &__content {
+      max-height: 530px;
+    }
+  }
+  @media only screen and (max-height: 731px) and (max-width: 700px) {
+    &__content {
+      max-height: 450px;
+    }
+  }
+  @media only screen and (max-height: 640px) and (max-width: 700px) {
+    &__content {
+      max-height: 300px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ios .ChallengeDetailsModal {
+    &__footer {
+      bottom: 0;
+    }
+    &__content {
+      max-height: 60vh;
+    }
+    &.ui.modal > .content {
+      bottom: 150px;
+    }
+  }
+  .ui.page.modals.visible.active > .ui.modal.ChallengeDetailsModal {
+    top: 0;
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+  }
+}

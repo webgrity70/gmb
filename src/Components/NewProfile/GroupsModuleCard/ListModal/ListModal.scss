@@ -1,0 +1,37 @@
+@import '../../../../styles/partials/colors';
+
+.ui.modal.GroupsListModal {
+  @media only screen and (min-width: 1200px) {
+    width: 750px;
+    margin: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 500;
+    }
+  }
+  .GroupsListModal__content {
+    padding: 20px 120px;
+    max-height: 270px;
+    overflow-y: auto;
+    @media (max-width: 414px) {
+      padding: 0;
+      .ListItems__details-text {
+        max-width: 60px;
+      }
+    }
+    .ListItems {
+      &__item-hoverable,
+      &__item {
+        padding: 10px 10px 20px 10px;
+      }
+    }
+  }
+}
+.GroupsListModal__default-trigger {
+  color: $primary_color;
+  font-weight: 500;
+  cursor: pointer;
+}

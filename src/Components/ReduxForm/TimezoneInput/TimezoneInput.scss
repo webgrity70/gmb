@@ -1,0 +1,106 @@
+@import '../../../styles/partials/colors';
+
+.TimezoneInput {
+  span,
+  a {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  a {
+    text-decoration: underline;
+    color: $primary-color;
+    cursor: pointer;
+  }
+  &__value {
+    min-width: 60px;
+    font-weight: 500 !important;
+    margin-right: 5px;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 12px;
+  }
+  &__modal.ui.modal {
+    .header {
+      color: #5c5d5d;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      padding-top: 35px;
+      border-bottom: 0;
+    }
+    .content {
+      padding: 5px 40px 50px 40px;
+    }
+    .actions {
+      background-color: white;
+      border-top: 1px solid rgba(34, 36, 38, 0.08);
+      .ui.button {
+        background-color: transparent;
+        color: $primary-color;
+        padding: 10px;
+        margin: 0;
+        font-weight: 600;
+      }
+    }
+    .RadioInput .ui.radio.checkbox:not(.checked) label {
+      font-weight: 400;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    &__modal.ui.modal {
+      width: 600px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    > i.close.icon {
+      color: white !important;
+    }
+    &__modal.ui.modal {
+      border-radius: 0;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 40px;
+        overflow-y: auto;
+      }
+      > .actions {
+        left: 0;
+        padding: 0 20px;
+        width: 100%;
+        bottom: 30px;
+        position: absolute;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .ios .TimezoneInput__modal {
+    &__footer {
+      bottom: 0;
+    }
+    &__content {
+      max-height: 430px;
+    }
+    &.ui.modal > .content {
+      bottom: 150px;
+    }
+  }
+  .ui.page.modals.visible.active > .ui.modal.TimezoneInput__modal {
+    top: 0;
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+  }
+}

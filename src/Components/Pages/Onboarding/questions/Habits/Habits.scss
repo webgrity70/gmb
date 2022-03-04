@@ -1,0 +1,166 @@
+@import '../../../../../styles/partials/colors';
+
+.SignupHabits {
+  margin-top: -25px; //bad practice but cant change the global margin for every question
+  &__options {
+    display: flex;
+    .dropdown:not(:only-child):last-of-type {
+      margin-left: 10px;
+    }
+    .search.selection.dropdown {
+      color: #5c5d5d;
+    }
+  }
+  .ui.dropdown .menu .selected.item.addition {
+    color: $primary-color;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    background-color: #f6fcff;
+    padding: 15px;
+    width: 450px;
+    justify-content: space-between;
+
+    .habit {
+      text-align: center;
+      padding: 0 15px;
+
+      &.learn {
+        color: $learn-color;
+      }
+
+      &.work {
+        color: $work-color;
+      }
+
+      &.life {
+        color: $life-color;
+      }
+
+      &.health-fitness {
+        color: $health-fitness-color;
+      }
+
+      img {
+        width: 30px;
+        margin-right: 0 !important;
+      }
+
+      .label {
+        font-size: 11px;
+        font-family: $rubik;
+        font-weight: 400;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .habit-content {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 25px;
+    &.full {
+      width: 100%;
+      margin-left: 0;
+    }
+    .habit-title {
+      color: #5c5d5d;
+      font-family: $rubik !important;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-top: 10px;
+    }
+
+    .ui {
+      &.input {
+        input {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .input {
+      width: 100%;
+      margin: 5px 0 5px 0;
+    }
+
+    .habit_selector {
+      &.list {
+        height: 250px;
+        overflow-y: scroll;
+        background-color: #f6fcff;
+
+        .item {
+          font-family: $rubik;
+          font-weight: 400;
+          color: #636b6f;
+          padding: 10px 15px;
+          img {
+            width: 20px;
+          }
+
+          &:hover {
+            background-color: #f1f4f8;
+            cursor: pointer;
+          }
+
+          &.selected {
+            background-color: #dbdbdb;
+          }
+        }
+      }
+    }
+  }
+  &__habit {
+    display: flex;
+    align-items: center;
+    > div {
+      height: 20px;
+      .CategoryIcon i.icon {
+        height: 20px;
+      }
+    }
+    span {
+      color: #5c5d5d;
+      font-family: Rubik;
+      font-size: 14px;
+    }
+    img {
+      width: 20px;
+    }
+  }
+  .NewGroupCategories .ui.checkbox {
+    display: block;
+  }
+  @media (max-width: 500px) {
+    .icons {
+      width: 400px;
+    }
+    &__options {
+      flex-wrap: wrap;
+      .dropdown:not(:only-child):last-of-type {
+        margin: 10px 0;
+      }
+    }
+  }
+  @media (max-width: 440px) {
+    .icons {
+      width: 350px;
+    }
+  }
+  @media (max-width: 378px) {
+    .icons {
+      width: 300px;
+    }
+  }
+  @media (max-width: 320px) {
+    .icons {
+      width: 270px;
+    }
+  }
+}
+.selected {
+  margin-top: 0;
+}

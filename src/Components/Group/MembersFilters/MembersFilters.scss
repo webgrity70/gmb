@@ -1,0 +1,30 @@
+.GroupMembersFilters {
+  float: left;
+  border-right: 1px solid #dfdddd;
+  background-color: white;
+  padding: 0 20px 0 90px;
+  width: 22%;
+  h4 {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+  }
+  &__section {
+    h3 {
+      margin-top: 20px;
+      font-size: 15px;
+    }
+  }
+  .ui.radio.checkbox input:checked ~ label:after {
+    background-color: white !important;
+  }
+}
+.stuck-container.bound-container {
+  .GroupMembersFilters {
+    width: 100%;
+    height: calc(100vh - 20px);
+    padding-bottom: 50px;
+    overflow: auto;
+    padding-top: 20px;
+  }
+}

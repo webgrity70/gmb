@@ -1,0 +1,172 @@
+@import '../../../styles/partials/colors';
+
+@mixin normal_button($color) {
+  color: #fff;
+  background-color: $color;
+  &:hover {
+    background-color: saturate(darken($color, 7.5%), 10%);
+  }
+  &:focus {
+    background-color: saturate(darken($color, 10%), 10%);
+  }
+  &:active {
+    background-color: saturate(darken($color, 10%), 15%);
+  }
+}
+
+.BillingPlan {
+  display: flex;
+  flex-direction: column;
+
+  .BillingPlan__card.ui.segments {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .BillingPlan__pricing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .BillingPlan__annual-price,
+    .BillingPlan__annual {
+      font-family: $gotham-bold;
+      line-height: 1;
+      color: #616d7d;
+      margin: 0;
+    }
+
+    .BillingPlan__annual-price-int {
+      font-size: 60px;
+    }
+
+    .BillingPlan__annual-price-dec {
+      font-size: 30px;
+    }
+
+    .BillingPlan__name {
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 1;
+      padding: 21.5px 26px;
+      font-family: $gotham-bold;
+    }
+
+    .BillingPlan__pricing {
+      padding: 20px 6px;
+    }
+
+    .BillingPlan__monthly {
+      font-family: $gotham-bold;
+      font-size: 14px;
+      line-height: 2;
+      margin-top: 15px;
+    }
+
+    .BillingPlan__monthly-price {
+      font-size: 16px;
+    }
+
+    .BillingPlan__description,
+    .BillingPlan__features {
+      color: #7a8bad;
+      font-family: $rubik;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .BillingPlan__features.ui.list > .item {
+      padding: 8px 0;
+      > .content {
+        line-height: 1.4;
+      }
+    }
+
+    .BillingPlan__description {
+      font-style: italic;
+    }
+
+    .BillingPlan__cta-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      flex: 1;
+      border: none;
+    }
+
+    .BillingPlan__cta.ui.button {
+      font-family: $rubik;
+      text-transform: uppercase;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .BillingPlan__monthly_cta {
+      font-family: $rubik;
+      outline: none;
+      background: none;
+      border: none;
+      text-decoration: underline;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 400;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}
+
+.BillingPlan--color-green {
+  .BillingPlan__name {
+    background-color: #3cd6ab;
+    color: #fff;
+  }
+  .BillingPlan__colored {
+    color: #3cd6ab;
+  }
+  .BillingPlan__cta.ui.button {
+    @include normal_button(#3cd6ab);
+  }
+}
+
+.BillingPlan--color-blue {
+  .BillingPlan__name {
+    background-color: #40c4ff;
+    color: #fff;
+  }
+  .BillingPlan__colored {
+    color: #40c4ff;
+  }
+  .BillingPlan__cta.ui.button {
+    @include normal_button(#40c4ff);
+  }
+}
+
+.BillingPlan--color-pink {
+  .BillingPlan__name {
+    background-color: #ed6b7a;
+    color: #fff;
+  }
+  .BillingPlan__colored {
+    color: #ed6b7a;
+  }
+  .BillingPlan__cta.ui.button {
+    @include normal_button(#ed6b7a);
+  }
+}
+
+.BillingPlan--color-orange {
+  .BillingPlan__name {
+    background-color: #ffab27;
+    color: #fff;
+  }
+  .BillingPlan__colored {
+    color: #ffab27;
+  }
+  .BillingPlan__cta.ui.button {
+    @include normal_button(#ffab27);
+  }
+}

@@ -1,0 +1,76 @@
+@import '../../../styles/partials/colors';
+
+.ProfileFormBuddyPreferences {
+  font-family: $rubik;
+  text-align: left;
+
+  &__preference-label {
+    color: #5c5d5d;
+    font-size: 14px;
+    line-height: 34px;
+    margin-bottom: 1rem;
+    font-family: $montserrat;
+    font-weight: 500;
+
+    .ui.divider {
+      flex: 1 0 auto;
+      margin-left: 1rem;
+      margin-top: 17px;
+    }
+  }
+
+  &__range-field {
+    margin-top: 2.5rem !important;
+    padding: 0 12px;
+  }
+
+  .ui input[type='text'],
+  .ui.dropdown > .text,
+  .ui.checkbox label {
+    color: #495463;
+    line-height: 1.4;
+  }
+
+  .ui.radio.checkbox label:after,
+  .ui.radio.checkbox input:checked ~ label:after {
+    background-color: #ffffff !important;
+  }
+
+  .ui.checked.checkbox {
+    label {
+      color: #5c5d5d;
+      font-weight: bold;
+    }
+  }
+
+  .input-range__slider {
+    background: #ff8f00 !important;
+    height: 26px !important;
+    width: 26px !important;
+    border: none !important;
+  }
+  .input-range__track--active {
+    background: #ff8f00 !important;
+  }
+  .input-range__slider-container {
+    margin: -5px;
+  }
+  .input-range__label--min {
+    display: none;
+  }
+  .input-range__label--max {
+    display: none;
+  }
+  .input-range__label-container {
+    color: #5c5d5d;
+    font-family: $rubik !important;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+  .input-range__label--value {
+    top: -2.8rem !important;
+    left: 5px;
+  }
+}

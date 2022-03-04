@@ -1,0 +1,154 @@
+@import '../../../styles/partials/colors';
+.selected {
+  margin-top: 20px;
+
+  .question-title {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .sub_item {
+    background-color: #ff8f00;
+    color: #fff;
+    font-family: $rubik;
+    padding: 5px;
+    font-weight: 400;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 25px;
+    display: inline-block;
+    margin: 5px;
+
+    .icon {
+      color: #ffffff;
+    }
+  }
+}
+.BasicOrganizationInfo {
+  display: flex;
+  .ui.input {
+    width: 100%;
+    & > input {
+      margin: 0 7px 15px 0;
+      font-weight: 400;
+      font-family: $rubik, 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+  }
+  &__details {
+    flex: 1;
+    margin-right: 5px;
+  }
+  &__subType {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    &.error {
+      border: solid $red-color 1px;
+      padding: 5px;
+      margin-right: 8px;
+      border-radius: 5px;
+    }
+    .active {
+      span {
+        font-weight: 600;
+      }
+    }
+    .field {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    span {
+      margin-left: 10px;
+      font-weight: 400;
+      font-family: $rubik, 'Times New Roman', Times, serif;
+    }
+    .ui.radio.checkbox {
+      height: 8px;
+      margin-bottom: 3px;
+    }
+  }
+  &__languages {
+    &.error {
+      border: solid $red-color 1px;
+      padding: 5px;
+      margin-right: 8px;
+      border-radius: 5px;
+    }
+    &-entries {
+      font-weight: 600;
+    }
+    > span:first-child {
+      font-family: $rubik;
+      font-weight: 400;
+      margin-right: 5px;
+    }
+    a {
+      text-decoration: underline;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+  .error-text {
+    color: #9e3a39;
+    margin: 0 0 10px 0;
+  }
+  &__description {
+    flex: 1;
+    .field {
+      height: 100%;
+    }
+    &.error textarea {
+      border: solid $red-color 1px;
+      background: #fef6f6;
+
+      &::-webkit-input-placeholder {
+        color: #9e3938;
+      }
+      &:-moz-placeholder {
+        color: #9e3938;
+      }
+      &:-moz-placeholder {
+        color: #9e3938;
+      }
+      &:-ms-input-placeholder {
+        color: #9e3938;
+      }
+      &::placeholder {
+        color: #9e3938;
+      }
+    }
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(34, 36, 38, 0.15);
+      border-radius: 0.28571429rem;
+      padding: 10px;
+      font-family: $rubik, 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      color: rgba(0, 0, 0, 0.87);
+      font-weight: 400;
+      resize: none;
+      height: 100%;
+
+      &::-webkit-input-placeholder {
+        color: #cacaca;
+        font-weight: 600;
+      }
+      &:-moz-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &:-moz-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &:-ms-input-placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+      &::placeholder {
+        color: #cacaca;
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -1,0 +1,860 @@
+@import '../../../styles/partials/colors';
+
+/*noinspection CssUnusedSymbol*/
+.CalendarDay.CalendarDay__today {
+  background-color: #e4e7e7;
+  color: black;
+  font-weight: bold;
+}
+
+.ical-feed {
+  float: right;
+  margin-right: 15px;
+
+  z-index: 2;
+  @media screen and (max-width: 731px) {
+    .ui.button {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+/*noinspection CssUnusedSymbol*/
+.ical-feed .copied-link {
+  display: block;
+  z-index: 9999;
+}
+
+.calendarOptions {
+  float: right;
+  position: relative;
+  top: 5px;
+  right: 5px;
+
+  .optionToggleIcon {
+    color: #ff8f00;
+    font-size: 22px;
+  }
+
+  .ui {
+    &.dropdown {
+      .menu {
+        & > .header {
+          margin: 1.5rem 0 0.25rem;
+          font-size: 1rem;
+          font-weight: 500;
+          text-transform: none;
+        }
+
+        & > .item {
+          padding-top: 0.25rem !important;
+          padding-bottom: 0.25rem !important;
+
+          &:hover {
+            background: transparent;
+          }
+
+          .ui.button {
+            background-color: transparent;
+            color: #b7b7b8;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            margin-right: 1rem;
+            &:hover,
+            &.active {
+              background-color: transparent;
+              color: #ff8f00;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.page .header-container {
+  display: flex !important;
+  .create-plan {
+    margin-left: 110px;
+  }
+}
+.calendarOptions a#options i {
+  color: #ff8f00;
+  font-size: 22px;
+}
+
+.calendarOptions h4 {
+  margin-left: 10px;
+}
+
+/*noinspection CssUnusedSymbol*/
+.calendarOptions a.dropdown-item {
+  color: #b0b0b1;
+  background-color: initial;
+}
+
+/*noinspection CssUnusedSymbol*/
+.calendarOptions a.dropdown-item.active {
+  color: #ff8f00;
+}
+
+/*noinspection CssUnusedSymbol*/
+.tooltip_templates {
+  display: none;
+}
+
+.event-tooltip {
+  &.ui {
+    &.popup {
+      color: #5c5d5d;
+      font-weight: 600;
+      background: #e2e7ee;
+      border-color: #e2e7ee;
+      padding: 7px;
+      box-shadow: none;
+      max-width: 300px;
+      min-width: 200px;
+
+      .content {
+        font-weight: 500;
+      }
+
+      .notes {
+        h5 {
+          font-weight: 500;
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &.ui.top.popup:before,
+  &.ui.bottom.popup:before,
+  &.ui.right.popup:before,
+  &.ui.left.popup:before {
+    background: #e2e7ee;
+    box-shadow: none;
+  }
+}
+
+.event-tooltip-header {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.event-tooltip-header .start-time {
+  float: left;
+}
+
+.event-tooltip-header .user {
+  text-align: center;
+}
+
+.event-tooltip-header .start-date {
+  float: right;
+}
+
+.event-tooltip-body {
+  position: relative;
+  height: 100%;
+}
+
+.event-tooltip-body .content {
+  margin: 10px auto 3px auto;
+}
+
+/*noinspection CssUnusedSymbol*/
+.event-tooltip-body .notes .note {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/*noinspection CssUnusedSymbol*/
+.event-tooltip-body .content .event-title {
+  position: relative;
+  top: -3px;
+}
+
+.tippy-tooltip {
+  background-color: rgba(226, 231, 238, 1) !important;
+}
+
+.tippy-popper[x-placement^='bottom'] [x-arrow] {
+  border-bottom-color: #e2e7ee !important;
+}
+
+.tippy-popper[x-placement^='top'] [x-arrow] {
+  border-top-color: #e2e7ee !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.is-invalid {
+  border: 1px solid red !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.is-invalid-child > .SingleDatePicker,
+.is-invalid-child > input {
+  border: 1px solid red !important;
+}
+
+.is-invalid-checkbox > label::before {
+  border: 1px solid red !important;
+}
+
+/*******************************
+            OLD
+********************************/
+/*noinspection CssUnusedSymbol*/
+#calendar_container {
+  z-index: 0;
+}
+
+/*noinspection CssUnusedSymbol*/
+.DayPicker_weekHeader_1 {
+  margin: -13px 0;
+}
+
+/*noinspection CssUnusedSymbol*/
+#dateinput.DateInput_input {
+  font-family: sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 1.15;
+  margin: 0;
+  border-radius: 5px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#planDate.DateInput_input,
+#eventDate.DateInput_input {
+  font-size: 16px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#dateinput.DateInput_input__focused {
+  border-bottom: 2px solid #fd8f25;
+}
+
+/*noinspection CssUnusedSymbol*/
+.CalendarDay__selected,
+.CalendarDay__selected:active,
+.CalendarDay__selected:hover {
+  background: #fd8f25 !important;
+  border: 1px double #fd8f25 !important;
+  color: #fff;
+}
+
+/*noinspection CssUnusedSymbol*/
+.DayPickerKeyboardShortcuts_show__bottomRight,
+.DayPickerKeyboardShortcuts_show__bottomRight:hover {
+  border-right-color: #fd8f25 !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.SingleDatePickerInput__withBorder,
+.DateInput {
+  border-radius: 5px !important;
+}
+
+#plan h2 {
+  text-align: center;
+  color: #5c5d5d;
+  font-family: $montserrat;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
+/*noinspection CssUnusedSymbol*/
+/* .fc-toolbar .fc-center {
+    margin-left: -140px;
+} */
+
+.fc-toolbar .fc-center h2 {
+  display: inline-block;
+  font-size: 14px !important;
+  color: #7f8fa4 !important;
+}
+
+#plan h3 {
+  color: #5c5d5d;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+#plan select {
+  height: 36px;
+  width: 119px;
+  border: 1px solid #dfe3e9;
+  border-radius: 5px;
+}
+
+#plan .select-holder {
+  width: 120px;
+  margin-right: 20px;
+  margin-left: 22px;
+}
+
+#plan {
+  .want {
+    margin-bottom: 20px;
+    .intent_block:first-of-type {
+      .select-holder {
+        width: 200px;
+      }
+    }
+  }
+  .intent_block {
+    display: inline-block;
+  }
+  .location {
+    input[type='time']::-webkit-clear-button,
+    input[type='time']::-ms-clear {
+      display: none;
+    }
+    input::-ms-clear {
+      width: 0;
+      height: 0;
+    }
+    .time.icon {
+      display: none;
+    }
+    input {
+      padding-right: 10px !important;
+      margin-left: 0;
+      height: 38px;
+      width: 130px;
+      font-size: 14px;
+    }
+  }
+  .location.ui.input > input {
+    margin-left: 0;
+  }
+  @media screen and(max-width: 1200px) {
+    .when-days .same {
+      padding-left: 155px;
+    }
+  }
+  @media screen and(max-width: 992px) {
+    .when-days {
+      > div {
+        width: 100% !important;
+        .same {
+          padding-left: 173px;
+        }
+      }
+    }
+  }
+  @media screen and(max-width: 768px) {
+    margin-bottom: 60px;
+    .time-divider {
+      height: 1px;
+      background: #e9e9ea;
+      margin-top: 20px;
+    }
+    .when-intend {
+      margin-top: 0;
+      .where {
+        padding-left: 5px;
+      }
+    }
+    .want {
+      margin-bottom: 20px;
+      .intent_block:first-of-type {
+        .select-holder {
+          width: 200px;
+        }
+      }
+    }
+    h3 {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    p.inline {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    table {
+      margin-bottom: 0;
+    }
+    .how-long {
+      margin-top: 0;
+      h3 {
+        font-size: 14px;
+      }
+      .SingleDatePicker {
+        margin-left: 10px;
+      }
+      > div:last-of-type {
+        margin-top: 25px;
+      }
+      .ui.button.orange {
+        margin-top: 20px;
+      }
+    }
+    .SingleDatePicker_picker {
+      left: -25px !important;
+    }
+    &.bg.grey {
+      border-bottom: none;
+    }
+    .page {
+      padding-bottom: 50px;
+    }
+    .when-where-info .ui.input > input {
+      margin: 15px 0 0 0;
+      max-width: 130px;
+    }
+    .intent_block {
+      display: flex;
+      #sessionDuration {
+        margin-left: 0;
+      }
+      &:last-of-type {
+        margin-top: 5px;
+      }
+    }
+    .select-holder {
+      margin-left: 10px;
+    }
+    .create-plan-bottom-warning {
+      text-align: left;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+    .when-days {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      > div {
+        width: 100% !important;
+        .same {
+          border-left: none;
+          padding-top: 25px;
+          padding-bottom: 0;
+          padding-left: 10px;
+          flex-direction: column;
+          > div:first-of-type {
+            margin-bottom: 15px;
+          }
+        }
+        br:first-of-type {
+          display: none;
+        }
+        > .ui.checkbox {
+          padding: 0 0.75rem;
+        }
+      }
+    }
+  }
+  @media screen and(max-width: 370px) {
+    .when-days tr {
+      display: flex;
+    }
+    .select-holder {
+      margin-left: 0;
+    }
+    .select-holder {
+      margin-right: 0;
+    }
+    .hours {
+      margin-right: 5px;
+    }
+    .want .inline {
+      margin-right: 5px;
+    }
+    .when-intend .where {
+      padding-left: 0;
+    }
+  }
+}
+/*noinspection CssUnusedSymbol*/
+#noOfTimes,
+#sessionDuration {
+  height: 38px;
+  width: 42px;
+  border: 1px solid #dfe3e9;
+  border-radius: 5px;
+  margin-right: 15px;
+  padding-left: 7px;
+  font-size: 16px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#sessionDuration {
+  margin-left: 20px;
+}
+
+/*noinspection CssUnusedSymbol*/
+input.TimeInput-input {
+  min-width: 115px;
+  /* margin: 0 0 0 10px; */
+  max-width: 60%;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  text-align: left;
+  line-height: 1.21428571em;
+  font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+  padding: 0.67857143em 1em;
+  background: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 0.28571429rem;
+  -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease, border-color 0.1s ease, -webkit-box-shadow 0.1s ease;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.ui.input > input {
+  margin-left: 10px;
+}
+
+.create-plan.center {
+  margin-bottom: 3em;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  button:last-of-type {
+    margin-top: 20px;
+  }
+}
+
+#calendar_container .fc-button-group button {
+  background: #ffffff none;
+  box-shadow: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #b0b0b1;
+}
+
+#calendar_container .fc-button-group button {
+  outline: none !important;
+}
+
+p.create-plan .ui.button {
+  margin-right: 1rem;
+  margin-left: 20px;
+}
+
+#calendar_container .fc-head-container .fc-widget-header {
+  border: none;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-button-group button.fc-state-active {
+  color: #fd8f25;
+  font-weight: 600;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-button-group button.fc-state-default:hover {
+  color: #fd8f25;
+}
+#calendar_container button.fc-state-default {
+  color: #74849a;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-state-default {
+  appearance: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-state-default:hover {
+  color: #fd8f25;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-toolbar.fc-header-toolbar {
+  height: 35px;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container {
+  color: #7f8fa4 !important;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container a.fc-day-number {
+  color: #3c4858;
+}
+
+#calendar_container .fc-basicWeek-view a:not([href]):not([tabindex]) {
+  color: #7f8fa4;
+}
+
+.fc-row .fc-content-skeleton td,
+.fc-row .fc-helper-skeleton td {
+  text-align: center;
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc .fc-body td .fc-day-top {
+  border: 1px solid #d0d0d0;
+  border-bottom: none;
+}
+
+.fc-unthemed thead {
+  border: none !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-head {
+  border-top: 1px solid #7f8fa4 !important;
+  border-bottom: 1px solid #7f8fa4 !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  float: none !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+#calendar_container .fc-day-header {
+  height: 40px;
+  line-height: 40px;
+  color: #7f8fa4;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #7f8fa4;
+  border-bottom: 1px solid #7f8fa4;
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc-unthemed td.fc-today,
+.fc-unthemed td.fc-today.fc-other-month {
+  /*background: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top-width: 0 !important;
+  border-top-style: none !important;
+  border-top-color: transparent !important; */
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc .fc-body td.fc-day-top.fc-today {
+  border-bottom: 4px solid #ff8f00;
+}
+
+.create-plan-bottom-warning {
+  text-align: right;
+  margin-bottom: 15px;
+  .info-text {
+    margin-right: 10px;
+  }
+}
+
+.info-text {
+  color: #7e8fa5;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.when-where-info {
+  > .input {
+    &:first-of-type {
+      margin-left: 45px;
+    }
+    &:last-of-type {
+      margin-left: 85px;
+    }
+    max-width: 220px;
+    /* margin-right: 10px; */
+    &:last-of-type input {
+      margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    > .input {
+      &:first-of-type {
+        margin-right: 20px;
+      }
+      &:first-of-type,
+      &:last-of-type {
+        margin-left: 0;
+      }
+    }
+    .when-where-info {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+    }
+  }
+}
+
+.fc-event-container .self,
+.fc-event-container .buddy {
+  width: 13px;
+  height: 13px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.fc-event-container .self {
+  border-radius: 50%;
+}
+
+.fc-event-container .buddy.health-fitness {
+  width: 13px;
+  height: 13px;
+  background-color: #3cd6ab;
+}
+
+.fc-event-container .health-fitness {
+  color: #3cd6ab !important;
+}
+
+.fc-event-container .learn {
+  color: #ba68c8 !important;
+}
+
+.fc-event-container .work {
+  color: #ed6b7a !important;
+}
+
+.fc-event-container .life {
+  color: #eacd50 !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc-event-container {
+  border: none !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+.fc-day-grid-event .fc-content {
+  overflow: visible !important;
+}
+
+/*noinspection CssUnusedSymbol*/
+a.fc-event.check_no {
+  opacity: 0.3;
+}
+
+/*noinspection CssUnusedSymbol*/
+a.fc-event.check_yes > .fc-content:after {
+  content: '\f058';
+  font-family: $fontawesome;
+  font-weight: normal;
+  font-style: normal;
+  position: absolute;
+  font-size: 15px;
+  top: -8px;
+  right: -60%;
+  z-index: 5;
+  overflow: visible;
+  text-decoration: none;
+  color: #252a33;
+}
+
+/*noinspection CssUnusedSymbol*/
+a.fc-event {
+  width: auto;
+  margin: 0 auto;
+  font-size: 22px;
+  background: none;
+  border: none;
+}
+
+a.fc-event i {
+  color: #3cd6ab;
+}
+
+/*noinspection CssUnusedSymbol*/
+a.fc-event i.fas.fa-times-circle {
+  opacity: 0.3;
+}
+
+/*noinspection CssUnusedSymbol*/
+.plan-button {
+  height: 36px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  background-color: #ff8f00;
+  color: white !important;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 36px;
+  border-radius: 3px;
+  border: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  #plan .page h2.title {
+    margin-left: 100px;
+  }
+  .header-container {
+    .create-plan.center {
+      margin-left: 60px;
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  #plan .page h2.title {
+    margin-left: 300px;
+  }
+  .header-container {
+    .create-plan.center {
+      margin-left: 0;
+      margin-right: 40px;
+    }
+  }
+}
+@media screen and (max-width: 505px) {
+  #plan .page {
+    .header-container {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+    }
+    h2.title {
+      margin-left: 0;
+    }
+  }
+  .header-container {
+    .create-plan.center {
+      margin: 0;
+    }
+  }
+  .UserCategories {
+    margin-left: 120px;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .UserCategories {
+    margin-left: 50px;
+  }
+  .flowing.popup.transition.visible {
+    left: 0 !important;
+  }
+}
+@media screen and (max-width: 414px) {
+  .UserCategories {
+    margin-left: 70px;
+  }
+}

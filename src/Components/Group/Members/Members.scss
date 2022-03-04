@@ -1,0 +1,44 @@
+@import '../../../styles/partials/colors';
+
+.GroupMembers {
+  &__toggle {
+    font-size: 25px !important;
+    cursor: pointer;
+    margin-right: 20px !important;
+    position: relative;
+    top: 5px;
+    &--active {
+      color: $primary-color;
+    }
+  }
+  &__search {
+    width: 100%;
+
+    &--filtering {
+      width: 78%;
+      margin-left: auto;
+    }
+    &--sticky {
+      margin-left: 22%;
+      min-height: 100vh;
+    }
+    .table-invite-btn--active {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__content {
+    display: block;
+    min-height: 700px;
+    .stuck-container.bound-container,
+    .stuck-container.fixed-container {
+      width: 22%;
+    }
+    .stuck-container.bound-container .sticky {
+      top: 60px !important;
+      position: fixed;
+    }
+  }
+}

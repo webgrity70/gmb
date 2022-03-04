@@ -1,0 +1,15 @@
+.ProfilePageStatsBar {
+  background-color: #f6fcff;
+  border-bottom: 3px solid #3fc4ff;
+  min-height: 73px;
+
+  &__score {
+    margin: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__categories-grid.ui.grid {
+      padding-top: 0.25rem;
+    }
+  }
+}

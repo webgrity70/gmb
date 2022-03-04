@@ -1,0 +1,78 @@
+@import '../../../styles/partials/colors';
+
+.NewPlanPage {
+  padding-top: 110px;
+  padding-bottom: 60px;
+  background-color: #fafafa;
+  .CardType {
+    width: 100%;
+    min-height: 120px;
+  }
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  &__draft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5c5d5d;
+    margin-top: 15px;
+    h3 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+    a:hover {
+      color: $primary-color;
+    }
+  }
+  &__container {
+    padding: 15px;
+    background-color: white;
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 15px;
+    > a .icon.close {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      color: #bfbfbf;
+      cursor: pointer;
+    }
+    > h1 {
+      text-align: center;
+      font-size: 20px;
+      line-height: 36px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 991px) {
+      .CardType {
+        &:first-of-type {
+          margin-right: 0;
+        }
+        &:last-of-type {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  &__categories {
+    margin-top: 15px;
+    .CategoryIcon {
+      margin-right: 15px;
+      &__circle-colored {
+        width: 20px;
+      }
+    }
+  }
+}

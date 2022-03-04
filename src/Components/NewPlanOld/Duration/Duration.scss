@@ -1,0 +1,32 @@
+.PlanDuration {
+  div.css-151xaom-placeholder {
+    color: #c7c7c7;
+  }
+  .error:not(.input) > div:first-of-type {
+    border-color: #e0b4b4;
+    background-color: #fef6f6;
+    > div:first-of-type > div:first-of-type {
+      color: #e6bdbc;
+    }
+  }
+  > div {
+    display: flex;
+    > div {
+      align-self: flex-start;
+      &:last-of-type {
+        width: 130px;
+        > div:first-of-type {
+          border-color: rgba(34, 36, 38, 0.15);
+        }
+        > div:nth-child(3) {
+          z-index: 2;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 638px) {
+    > div > div:last-of-type {
+      width: 120px;
+    }
+  }
+}

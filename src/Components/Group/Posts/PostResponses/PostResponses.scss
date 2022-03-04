@@ -1,0 +1,39 @@
+.PostResponses {
+  &__header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .ck.ck-editor {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+
+    .ui.button {
+      align-self: flex-end;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    font-family: Rubik, serif;
+    font-size: 14px;
+    color: #7f8fa4;
+
+    margin-right: 1rem;
+  }
+
+  &__count {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    & > *:not(:last-child) {
+      border-bottom: 1px solid #ebebeb;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import '../../../styles/partials/colors';
+
+.MilestonesModal {
+  .content {
+    height: 550px;
+    overflow-y: auto;
+  }
+  &__disabled {
+    cursor: not-allowed;
+    color: #7f8fa4;
+    &:hover {
+      color: #7f8fa4 !important;
+    }
+  }
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-top: 10px !important;
+    text-align: center;
+  }
+  &__description {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+  }
+  &__divider {
+    height: 1px;
+    background-color: #e1e1e1;
+    flex: 1;
+  }
+  &__milestone {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #b7bcc3;
+    margin-top: 10px;
+    cursor: pointer;
+    align-items: center;
+    &--active {
+      color: $primary-color;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+  &__week {
+    color: #b7bcc3;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-right: 20px;
+    text-align: center;
+  }
+  &__habit {
+    display: flex;
+    align-items: center;
+    > div {
+      height: 20px;
+      .CategoryIcon i.icon {
+        height: 20px;
+      }
+    }
+    span {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+    }
+    img {
+      width: 20px;
+    }
+  }
+  .CheckBoxInput.ui.checkbox {
+    label {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      font-family: $montserrat;
+      &:after {
+        top: 1px;
+      }
+    }
+  }
+  .ui.dropdown {
+    width: 100%;
+    display: inline-flex;
+    border: 1px solid #e1e1e1;
+    height: auto;
+    > div.text,
+    &.visible > div.text:not(.default) {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &:focus,
+    &:hover,
+    &.active,
+    &.active:hover,
+    &.active:hover .menu,
+    &.active .menu {
+      border-color: #e1e1e1 !important;
+    }
+    .menu.visible {
+      width: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      div.item {
+        background-color: transparent !important;
+        border: none;
+        &.selected {
+          margin-top: 0;
+        }
+        &:hover {
+          background-color: #f3f4f8 !important;
+        }
+      }
+    }
+  }
+  &.ui.modal {
+    max-width: 600px;
+    .actions {
+      background-color: white;
+      justify-content: flex-end;
+      padding: 15px !important;
+      a {
+        margin-right: 15px;
+        &:first-of-type {
+          margin-right: 40px;
+        }
+        &:focus,
+        &:hover {
+          color: #f97a00;
+        }
+      }
+      @media screen and (max-width: 648px) {
+        padding: 10px !important;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    &.ui.modal {
+      width: 80%;
+      .content {
+        bottom: 100px;
+        position: absolute;
+        top: 0px;
+        overflow-y: auto;
+        height: auto;
+        max-height: calc(100vh - 100px);
+      }
+      .actions {
+        width: 100%;
+        bottom: 50px;
+        position: absolute;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ios .MilestonesModal.ui.modal {
+    .actions {
+      bottom: 130px;
+    }
+    .content {
+      bottom: 165px;
+      max-height: calc(100vh - 200px);
+    }
+  }
+  .ui.page.modals.visible.active > .ui.modal.MilestonesModal {
+    top: 0;
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+  }
+}

@@ -1,0 +1,50 @@
+@import '../../../styles/partials/colors';
+
+.FlashChallenges {
+  margin-top: 30px;
+  &__interval {
+    span {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+    i {
+      color: $primary-color;
+      font-size: 13px;
+      cursor: pointer;
+      &:first-of-type {
+        margin-right: 10px;
+      }
+      &:last-of-type {
+        margin-left: 10px;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    h5 {
+      margin: 0;
+      color: #5c5d5d;
+      font-weight: bold;
+      line-height: 24px;
+    }
+    i.lightning {
+      color: #4e72f1;
+      width: 16px;
+      margin-right: 10px;
+    }
+    i.fa-question-circle {
+      color: #7f8fa4;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__interval {
+      width: 100%;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+}

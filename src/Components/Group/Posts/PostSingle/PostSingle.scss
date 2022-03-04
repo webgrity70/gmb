@@ -1,0 +1,103 @@
+.PostSingle {
+  padding: 25px 25px 40px 25px;
+  &__back {
+    font-size: 13px;
+    color: #7e8ea6;
+    font-weight: 500;
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    .title {
+      margin-right: 1rem;
+      color: #5c5d5d;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 28px;
+    }
+
+    .meta {
+      font-size: 12px;
+      line-height: 18px;
+      color: #7e8ea6;
+      font-weight: 500;
+
+      .author {
+        color: #ff9000;
+      }
+    }
+
+    &-links {
+      margin-left: auto;
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      color: #ff8f00;
+      font-weight: 500;
+    }
+
+    &-link {
+      cursor: pointer;
+    }
+  }
+
+  &__dropdown {
+    & > .text {
+      color: #d0d0d0;
+      font-size: 30px;
+      letter-spacing: 0.34px;
+      line-height: 15px;
+      margin-left: 0.5rem;
+    }
+  }
+  &__dropdown-menu {
+    & > .item {
+      .text {
+        color: #ff8f00;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__content {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 10px;
+    p {
+      line-height: 24px;
+    }
+    .image {
+      display: table;
+      clear: both;
+      text-align: center;
+      margin: 1em auto;
+      img {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: 50px;
+      }
+      &.image-style-align-left {
+        float: left;
+        margin: 1em 40px;
+      }
+      &.image-style-align-right {
+        float: right;
+        margin: 1em 40px;
+      }
+    }
+  }
+
+  &__response {
+    display: flex;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 5px 25px 5px;
+  }
+}

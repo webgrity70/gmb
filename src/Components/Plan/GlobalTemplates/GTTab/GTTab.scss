@@ -1,0 +1,219 @@
+@import '../../../../styles/partials/colors';
+
+.GTTab {
+  &__title,
+  &__description {
+    text-align: center;
+    color: #5c5d5d;
+  }
+  &__title {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__action {
+    display: flex;
+    justify-content: flex-end;
+    .ui.button {
+      margin-top: 20px;
+      font-weight: 500;
+    }
+  }
+  &__options {
+    margin-top: 20px;
+    .ui.input {
+      margin-right: 10px;
+      max-width: 330px;
+      height: 36px;
+      input {
+        font-weight: 400;
+        background: #fff;
+        border: 1px solid rgba(34, 36, 38, 0.15);
+        color: #7f8fa4;
+        font-size: 14px;
+        line-height: 14px;
+        font-family: $rubik;
+        &::-webkit-input-placeholder {
+          color: #7f8fa4;
+        }
+        &:-moz-placeholder {
+          color: #7f8fa4;
+        }
+        &:-moz-placeholder {
+          color: #7f8fa4;
+        }
+        &:-ms-input-placeholder {
+          color: #7f8fa4;
+        }
+        &::placeholder {
+          color: #7f8fa4;
+        }
+      }
+      i {
+        color: #c7d2df;
+      }
+      @media screen and (max-width: 767px) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__templates {
+    height: 250px;
+    overflow-y: auto;
+    margin-top: 10px;
+    margin-left: -5px;
+    .ui.grid > .column:not(.row) {
+      padding-bottom: 30px;
+    }
+    .column {
+      padding-top: 0 !important;
+    }
+    .column:nth-child(1n) {
+      padding-left: 4px !important;
+    }
+  }
+  &__categories {
+    display: flex;
+    justify-content: center;
+    .CategoryIcon {
+      height: 26px;
+      &.active {
+        color: $primary-color;
+      }
+      i.icon {
+        font-size: 35px;
+      }
+    }
+  }
+  &__featured {
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    &--active {
+      color: $primary-color;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+  &__range-field {
+    display: flex;
+    margin-right: 15px;
+    span {
+      margin-right: 20px;
+      font-weight: 500;
+      color: #7f8fa4;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .input-range {
+      width: 150px;
+      margin-top: 2px;
+      &__track {
+        background-color: #e2e7ee;
+      }
+      &__track--active {
+        background-color: $primary-color;
+      }
+      &__slider {
+        border-color: $primary-color;
+        background-color: $primary-color;
+      }
+      &__label-container {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+      align-items: center;
+      span {
+        margin-bottom: 5px;
+        margin-right: 0;
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    width: 100% !important;
+    margin-top: -10px !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+    .content {
+      min-height: calc(100% - 40px);
+    }
+    .close.icon {
+      top: 0 !important;
+      right: 0 !important;
+      color: black !important;
+    }
+    &__title {
+      margin-top: 40px !important;
+    }
+    &__templates {
+      overflow-y: auto;
+      height: calc(100vh - 300px);
+      margin-top: 0;
+      .ui.stackable.grid > .column:not(.row) {
+        padding-top: 0 !important;
+      }
+      .ui.stackable.grid > .column:not(.row) {
+        padding-bottom: 20px !important;
+      }
+    }
+    &__action {
+      position: absolute;
+      justify-content: center;
+      bottom: 70px;
+      background: white;
+      padding-bottom: 20px;
+      border-top: solid 1px #cdcdcd;
+      width: 100%;
+    }
+    &__options-mobile {
+      display: flex;
+      .ui.input > input {
+        font-weight: 400;
+        color: #7f8fa4;
+        font-size: 14px;
+        background: #fff;
+        border: 1px solid rgba(34, 36, 38, 0.15);
+        line-height: 14px;
+        font-family: $rubik;
+        &::-webkit-input-placeholder {
+          color: #7f8fa4;
+        }
+        &:-moz-placeholder {
+          color: #7f8fa4;
+        }
+        &:-moz-placeholder {
+          color: #7f8fa4;
+        }
+        &:-ms-input-placeholder {
+          color: #7f8fa4;
+        }
+        &::placeholder {
+          color: #7f8fa4;
+        }
+      }
+      i {
+        color: #c7d2df;
+      }
+      i.sliders {
+        margin-left: 15px;
+        color: $primary-color;
+        margin-top: 15px;
+        cursor: pointer;
+        font-size: 25px;
+      }
+    }
+    &__description,
+    &__options-mobile {
+      padding: 0 10px;
+    }
+  }
+}
+
+.ios .GTTab__templates {
+  height: calc(100vh - 380px);
+}

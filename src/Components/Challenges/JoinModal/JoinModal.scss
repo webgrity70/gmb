@@ -1,0 +1,83 @@
+.JoinChallengeModal {
+  &__title {
+    color: #5c5d5d;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 36px;
+    margin-top: 10px !important;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  &__schedule {
+    margin-top: 20px;
+    color: #5c5d5d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-bottom: 20px;
+    ul {
+      padding-left: 15px;
+    }
+  }
+  &__description {
+    color: #7e8fa5;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__divider {
+    height: 2px;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+  }
+  .ui.button {
+    font-size: 16px;
+    padding: 12px 0;
+    flex: 1;
+    font-weight: bold;
+    &.basic:hover {
+      background-color: #fff9f3 !important;
+    }
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    &.ui.modal {
+      width: 665px;
+      > .content {
+        padding: 20px 40px;
+      }
+    }
+    .ui.button {
+      max-width: 50%;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__description {
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0 !important;
+    }
+    &.ui.modal {
+      border-radius: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 40px;
+        overflow-y: auto;
+      }
+    }
+  }
+}

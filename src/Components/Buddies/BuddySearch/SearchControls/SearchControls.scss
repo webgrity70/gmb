@@ -1,0 +1,90 @@
+@import '../../../../styles/partials/colors';
+
+.BuddySearchControls {
+  text-align: center;
+
+  &__title {
+    color: #5c5d5d;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  .BuddySearchControls__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    .text {
+      color: #5c5d5d;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+
+  .image {
+    margin-right: 15px;
+    width: 30px;
+  }
+
+  &__search-bar {
+    height: 36px;
+    width: 570px;
+    max-width: 570px;
+    border: 1px solid #dfe3e9;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 5px 12px;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: $rubik;
+    color: rgba(0, 0, 0, 0.87);
+    &::-webkit-input-placeholder {
+      color: #adbbce;
+    }
+    &:-moz-placeholder {
+      color: #adbbce;
+    }
+    &:-moz-placeholder {
+      color: #adbbce;
+    }
+    &:-ms-input-placeholder {
+      color: #adbbce;
+    }
+    &::placeholder {
+      color: #adbbce;
+    }
+    &:focus {
+      border-color: rgb(255, 143, 0);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__subtitle {
+      display: flex;
+      padding: 0 15px;
+    }
+
+    &__search-bar {
+      width: calc(100% - 15px);
+      margin-left: 0;
+    }
+  }
+}
+
+i.icon.BuddySearchControls__filter-icon {
+  font-size: 25px;
+  cursor: pointer;
+  position: relative;
+  top: 4px;
+  left: -16px;
+
+  &.active {
+    color: rgb(255, 143, 0);
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}

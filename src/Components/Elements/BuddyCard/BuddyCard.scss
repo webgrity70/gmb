@@ -1,0 +1,96 @@
+@import '../../../styles/partials/colors';
+
+.BuddyCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 236px;
+  margin: 0 auto;
+
+  .BuddyCard__header {
+    height: 56px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 56px;
+
+    &.health-and-fitness,
+    &.health-fitness {
+      background-color: #3cd6ab;
+    }
+
+    &.learn {
+      background-color: #ba68c8;
+    }
+
+    &.work {
+      background-color: #ed6b7a;
+    }
+
+    &.life {
+      background-color: #eacd50;
+    }
+  }
+
+  .BuddyCard__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 70px;
+    border-bottom-left-radius: 5px;
+    padding: 0 8px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05), 0 4px 7px 0 rgba(0, 0, 0, 0.03),
+      0 1px 5px 0 rgba(0, 0, 0, 0.03);
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 90%;
+  }
+}
+
+.BuddyCard__buddy {
+  display: flex;
+  margin: 5px 0;
+  align-items: center;
+
+  .BuddyCard__avatar {
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    overflow: hidden;
+  }
+
+  .BuddyCard__name {
+    margin-left: 45px;
+    color: #5c5d5d;
+    font-family: $gotham-bold;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .BuddyCard {
+    .BuddyCard__header {
+      font-size: 14px;
+
+      img {
+        margin-right: 2px !important;
+      }
+    }
+  }
+}

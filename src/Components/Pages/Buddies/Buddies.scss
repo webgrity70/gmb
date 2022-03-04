@@ -1,0 +1,95 @@
+@import '../../../styles/partials/colors';
+
+.BuddiesPage {
+  padding: 100px 0 70px 0;
+  .empty-buddies {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    text-align: center;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__tabs {
+    width: 80%;
+    margin: 20px auto;
+    border-bottom: none !important;
+    &.filtering {
+      float: left;
+      padding: 0 30px;
+    }
+    .ui.tabular.menu {
+      border-bottom: none;
+      .item {
+        opacity: 0.5;
+        background-color: #eeeeee;
+        height: 47px;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        color: #5c5d5d;
+        border: 1px solid #d4d4d5;
+        border-bottom: none;
+        border-radius: 4px;
+        width: 49.75%;
+        &:first-of-type {
+          margin-right: 0.5%;
+        }
+      }
+      .active.item {
+        color: #5c5d5d;
+        opacity: 1;
+        background-color: #ffffff;
+      }
+    }
+    > .segment.ui {
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &__browse {
+    border-top: 1px solid #dddddd;
+    padding-top: 25px;
+
+    &--sticky-filters {
+      .BuddySearchControls {
+        margin-left: auto;
+        width: 80%;
+      }
+      .BuddiesPage__tabs {
+        margin-left: 20%;
+        min-height: 100vh;
+      }
+    }
+  }
+
+  .stuck-container.bound-container,
+  .stuck-container.fixed-container {
+    width: 20%;
+
+    .sticky {
+      top: 45px !important;
+      position: fixed;
+    }
+  }
+
+  .stuck-container.bound-container {
+    .BuddyFilters {
+      width: 100%;
+      background-color: #fafafa;
+      height: calc(100vh - 20px);
+      padding-bottom: 50px;
+      overflow: auto;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__tabs {
+      width: 95%;
+    }
+  }
+}

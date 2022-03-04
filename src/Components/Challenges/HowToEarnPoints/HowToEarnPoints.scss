@@ -1,0 +1,75 @@
+@import '../../../styles/partials/colors';
+
+.HowToEarnPoints {
+  h2,
+  h4 {
+    text-align: center;
+    color: #5c5d5d;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  h4 {
+    font-size: 14px;
+    margin: 10px 0;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  img {
+    width: 75%;
+  }
+  &.ui.modal {
+    > .content {
+      text-align: center;
+      padding: 20px 50px !important;
+      > span {
+        color: #5d5e5e;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    img {
+      width: 100%;
+    }
+    h2 {
+      line-height: 30px;
+    }
+    h4 {
+      line-height: 20px;
+    }
+    &.ui.modal {
+      border-radius: 0;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 0px;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ios .HowToEarnPoints {
+    &__content {
+      max-height: 430px;
+    }
+    &.ui.modal > .content {
+      bottom: 130px;
+    }
+  }
+  .ui.page.modals.visible.active > .ui.modal.HowToEarnPoints {
+    top: 0;
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+  }
+}

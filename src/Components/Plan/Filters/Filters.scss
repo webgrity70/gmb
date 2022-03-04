@@ -1,0 +1,33 @@
+.PlanFilters {
+  &.ui.popup {
+    text-align: center;
+    padding: 15px 25px 0 25px;
+  }
+  > div > span {
+    color: #5c5d5d;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &__categories-title {
+    color: #d1d1d1;
+    font-size: 14px;
+    margin-top: 10px;
+    > div {
+      height: 1px;
+      margin: auto;
+      width: 90%;
+      margin-top: 3px;
+      background-color: #d1d1d1;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    &.ui.popup {
+      min-width: 300px;
+      margin-left: 30px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

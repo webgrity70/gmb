@@ -1,0 +1,365 @@
+@import '../../../styles/partials/colors';
+
+.AgendaDay {
+  font-family: $montserrat;
+  flex: 1 1;
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px #d0d0d0;
+  min-width: 100%;
+  padding-right: 5px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  &:first-of-type {
+    padding-top: 30px;
+  }
+  &.today {
+    border-left: solid 8px #3fc4ff;
+    margin-left: 0;
+  }
+  &__checkin-container {
+    margin-top: 5px;
+  }
+  &__event {
+    flex: 1 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #d0d0d0;
+    }
+  }
+  &__buddy {
+    display: flex;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    span {
+      margin-top: 6px;
+      font-weight: 500;
+      color: #7f8fa4;
+    }
+  }
+  &__title {
+    padding: 0;
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    width: 75px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__appointment {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    line-height: 19px;
+    text-align: left;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    padding-left: 14px;
+    margin-bottom: 20px;
+
+    &--learn {
+      border-left: 2px solid $learn-color;
+    }
+    &--life {
+      border-left: 2px solid $life-color;
+    }
+    &--work {
+      border-left: 2px solid $work-color;
+    }
+    &--health-fitness {
+      border-left: 2px solid $health-fitness-color;
+    }
+
+    span {
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 19px;
+    }
+  }
+  &__details {
+    flex: 1;
+    cursor: pointer;
+  }
+  &__milestone {
+    color: #7f8fa4;
+    font-size: 11px;
+    font-weight: 500;
+    text-align: left;
+    line-height: 20px;
+    .milestone-name {
+      color: #5c5d5d;
+    }
+    i {
+      color: #bb64ca !important;
+    }
+  }
+  &__milestoneTrack {
+    color: #e66464 !important;
+    &--on {
+      color: #3cd6ab !important;
+    }
+  }
+  &__past {
+    opacity: 0.3;
+  }
+  &__container {
+    flex: 1;
+  }
+  &__category {
+    display: flex;
+    align-items: center;
+    color: #5c5d5d;
+    font-weight: 600;
+    margin-left: -3px;
+    text-align: left;
+    .CategoryIcon i {
+      line-height: 35px;
+    }
+  }
+  &__points {
+    margin-right: 5px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+    color: #a2a9b3;
+    &--learn {
+      color: $learn-color;
+    }
+    &--life {
+      color: $life-color;
+    }
+    &--work {
+      color: $work-color;
+    }
+    &--health-fitness {
+      color: $health-fitness-color;
+    }
+  }
+  &__check-in {
+    margin-top: 4px;
+    span {
+      font-size: 9px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+  &__place {
+    margin-left: 15px;
+    color: #7f8fa4;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  &__description {
+    text-align: left;
+    color: #5c5d5d;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 5px;
+  }
+  &__confirmed {
+    color: #7f8fa4;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    position: relative;
+    display: flex;
+    .label {
+      max-width: 80px;
+    }
+    .note {
+      font-style: italic;
+      font-weight: 600;
+      max-width: calc(100% - 90px);
+      padding-left: 10px;
+      display: flex;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+  &__checkedin {
+    color: #7f8fa4;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: left;
+    position: relative;
+    margin-top: 3px;
+    display: flex;
+    .label {
+      max-width: 80px;
+    }
+    .note {
+      font-style: italic;
+      font-weight: 600;
+      max-width: calc(100% - 90px);
+      padding-left: 10px;
+      display: flex;
+    }
+    span {
+      font-size: 12px;
+      font-weight: 600;
+      margin-left: 5px;
+    }
+  }
+  &__checkmark {
+    color: #a2a9b3;
+    &--learn {
+      color: $learn-color;
+    }
+    &--life {
+      color: $life-color;
+    }
+    &--work {
+      color: $work-color;
+    }
+    &--health-fitness {
+      color: $health-fitness-color;
+    }
+  }
+  &__plan {
+    text-align: left;
+    color: #7f8fa4;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 20px;
+    span {
+      background-color: #7ea0cb;
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 21px;
+      padding: 2px 12px;
+    }
+    strong {
+      color: #5d5f5f;
+      font-weight: 600;
+    }
+  }
+  &__challenge {
+    text-align: left;
+    color: #7f8fa4;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 20px;
+    span {
+      background-color: #4e72f1;
+      border-radius: 10px;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 21px;
+      padding: 2px 12px;
+      i {
+        margin-left: -3px;
+      }
+    }
+    strong {
+      color: #5d5f5f;
+      font-weight: 600;
+    }
+  }
+  &__flash {
+    display: flex;
+    width: 100%;
+    background-color: #4e72f1;
+    text-align: left;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #ffffff;
+    padding-left: 15px;
+    span {
+      border-radius: 10px;
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+  }
+  &__checkin.ui.button {
+    padding: 7px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  &__avatar-container {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    position: relative;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  &__notes {
+    font-size: 10px;
+    color: #7f8fa4;
+    display: flex;
+    .notes {
+      flex: 1;
+    }
+    .note {
+      display: flex;
+    }
+    b {
+      font-weight: 500;
+      margin-right: 3px;
+    }
+  }
+  .GMBMarkdown {
+    width: fit-content;
+    text-align: left;
+    margin-bottom: 5px;
+    font-size: 12px;
+    margin-left: 0;
+    color: #5c5d5d;
+    font-weight: 500;
+    p {
+      margin: 0;
+      text-align: left;
+    }
+    li {
+      line-height: 16px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    &__title {
+      flex-direction: row;
+      width: 100%;
+      padding-bottom: 3px;
+      span:first-of-type {
+        margin-right: 5px;
+      }
+    }
+    &__container {
+      margin: 0 0 5px 0;
+    }
+    &__checkin-container {
+      margin: 10px 10px 0 10px;
+      .ui.button {
+        font-size: 16px;
+        padding: 12px 30px;
+        width: 100%;
+      }
+    }
+    &__notes,
+    &__event {
+      flex-direction: column;
+    }
+  }
+}

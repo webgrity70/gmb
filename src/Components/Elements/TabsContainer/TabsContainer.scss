@@ -1,0 +1,49 @@
+@import '../../../styles/partials/colors';
+
+.TabsContainer {
+  margin-bottom: 30px;
+  .ui.menu .item {
+    flex: 1;
+    color: $primary-color;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+
+    &:not(.active):hover {
+      color: $primary-color;
+    }
+    &.active {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      color: #5c5d5d;
+    }
+  }
+  &__body {
+    max-height: 585px;
+    overflow-y: auto;
+    &.segment.active {
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+  &__header {
+    &.hide {
+      display: none;
+    }
+    &.ui.tabular.menu {
+      border-bottom: none;
+    }
+    &-icon {
+      color: $primary-color;
+      margin-right: 10px;
+    }
+    &-extra {
+      margin-left: 10px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .item:not(.active) > span {
+      display: none;
+    }
+  }
+}

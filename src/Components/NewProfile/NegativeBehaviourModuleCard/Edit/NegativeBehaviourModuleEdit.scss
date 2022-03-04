@@ -1,0 +1,21 @@
+@import '../../../../styles/partials/colors';
+
+.ProfileNegativeBehaviourModuleEdit {
+  .ui.form .field > label {
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .ui.form textarea {
+    color: #5c5d5d;
+    font-family: $montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+}

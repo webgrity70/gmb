@@ -1,0 +1,30 @@
+@import '../../../styles/partials/colors';
+
+.TextAreaInput {
+  width: 100%;
+  padding: 0.67857143em 1em;
+  color: #5c5d5d;
+  min-height: 70px;
+  border: 1px solid #dfe3e9;
+  border-radius: 5px;
+  max-height: 140px;
+  border-color: #ced0da;
+  font-family: $rubik;
+  resize: vertical !important;
+  font-weight: 400;
+  &::-webkit-input-placeholder {
+    color: #7f8fa4;
+  }
+  &:-moz-placeholder {
+    color: #7f8fa4;
+  }
+  &:-moz-placeholder {
+    color: #7f8fa4;
+  }
+  &:-ms-input-placeholder {
+    color: #7f8fa4;
+  }
+  &::placeholder {
+    color: #7f8fa4;
+  }
+}

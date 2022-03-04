@@ -1,0 +1,23 @@
+@import '../../../styles/partials/colors';
+
+.DescriptionWebsite {
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $rubik;
+  }
+  &__trigger {
+    margin-top: 20px;
+    color: $primary-color;
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    span {
+      text-decoration: underline;
+    }
+  }
+  .FieldSetLayout {
+    margin-top: 10px;
+  }
+}

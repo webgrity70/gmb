@@ -1,0 +1,41 @@
+.MediaModal {
+  &.ui.modal {
+    width: 710px;
+    min-height: 400px;
+    > .content {
+      text-align: center;
+      padding: 20px !important;
+      > img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+
+      > iframe {
+        width: 100%;
+        min-height: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ios .MediaModal {
+    &__footer {
+      bottom: 0;
+    }
+    &__content {
+      max-height: 60vh;
+    }
+    &.ui.modal > .content {
+      bottom: 150px;
+    }
+  }
+  .ui.page.modals.visible.active > .ui.modal.MediaModal {
+    top: 0;
+    width: 100% !important;
+    height: 100vh;
+    margin: 0 !important;
+    overflow-y: hidden !important;
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../styles/partials/colors';
+
+.ProfileFormNegativeBehaviour {
+  font-family: $rubik;
+  text-align: left;
+  font-weight: 400;
+
+  &__options.ui.grid {
+    margin-bottom: 22px;
+    overflow-y: auto;
+  }
+
+  .ui input[type='text'],
+  .ui.dropdown > .text,
+  .ui.checkbox label {
+    color: #495463;
+    line-height: 1.4;
+  }
+
+  .ui.checked.checkbox {
+    label {
+      color: #5c5d5d;
+      font-weight: bold;
+    }
+  }
+
+  &__weight-loss-input {
+    width: 82px;
+  }
+
+  &__toggle-container {
+    display: flex;
+    align-items: center;
+    span {
+      margin: 0 0 0 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import 'colors';
+
+.accountability-score {
+  border-radius: 8px;
+  background-color: #3fc4ff;
+  padding: 10px 5px;
+  display: flex;
+  width: 175px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  align-items: center;
+  margin: 0 auto;
+
+  .level-name {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &.non-beta {
+    background-color: #ffbd2e;
+  }
+
+  &.xs {
+    width: 85px;
+    height: 15px;
+    border-radius: 3px;
+
+    img {
+      height: 10px;
+    }
+
+    .score {
+      font-size: 14px;
+    }
+  }
+
+  &.md {
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+
+    img {
+      height: 15px;
+    }
+
+    .score {
+      font-size: 1em;
+    }
+  }
+
+  img {
+    height: 25px;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .score {
+    color: #ffffff;
+    font-family: $montserrat;
+    font-size: 32px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    display: inline-flex;
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
+
+.user-experience {
+  height: 100%;
+  max-width: 200px;
+  .categories {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .category {
+      padding: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+
+      &.health-fitness {
+        color: #3cd6ab;
+      }
+
+      &.learn {
+        color: #ba68c8;
+      }
+
+      &.work {
+        color: #ed6b7a;
+      }
+
+      &.life {
+        color: #eacd50;
+      }
+
+      img {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+        flex-shrink: 0;
+        flex-grow: 0;
+      }
+    }
+  }
+}

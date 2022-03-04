@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>eyes/eyes3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="eyes/eyes3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(148.000000, 99.000000)">
+            <path d="M6.4844,1 L12.9624,6.98" id="Stroke-674" stroke="#424242" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M0,10.0175 L8.507,12.9825" id="Stroke-675" stroke="#424242" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M96.8359,1.0722 L90.3629,7.0522" id="Stroke-676" stroke="#424242" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M103.333,10.0918 L94.801,13.0608" id="Stroke-677" stroke="#424242" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M17.1504,31.6816 L37.1484,29.3436 C40.5474,25.9156 42.4254,21.0076 41.8114,15.7656 C40.7484,6.6716 32.6404,0.0876 23.7164,1.1306 C14.8004,2.1736 8.3984,10.4536 9.4624,19.5486 C10.0744,24.7906 13.0424,29.1326 17.1504,31.6816" id="Fill-678" fill="#FFFFFF"></path>
+            <path d="M86.6604997,31.6816 L66.6804997,29.5096 C63.3124997,26.0866 61.4824997,21.1566 62.1444997,15.8666 C63.2984997,6.6896 71.4714997,-0.0214 80.3834997,0.9476 C89.2934997,1.9156 95.6174997,10.2026 94.4634997,19.3806 C93.8024997,24.6696 90.7914997,29.0746 86.6604997,31.6816" id="Fill-680" fill="#FFFFFF"></path>
+            <path d="M35.2197,17.5625 C35.2197,22.1425 31.1187,25.7555 26.1657,25.7555 C21.1267,25.7555 17.0837,22.1425 17.0837,17.5625 C17.0837,13.0215 21.1267,9.3735 26.1657,9.3735 C31.1187,9.3735 35.2197,13.0215 35.2197,17.5625" id="Fill-679" fill="#444344"></path>
+            <path d="M69.1973,17.5625 C69.1973,22.1425 73.2983,25.7555 78.2513,25.7555 C83.2873,25.7555 87.3323,22.1425 87.3323,17.5625 C87.3323,13.0215 83.2873,9.3735 78.2513,9.3735 C73.2983,9.3735 69.1973,13.0215 69.1973,17.5625" id="Fill-681" fill="#444344"></path>
+        </g>
+    </g>
+</svg>

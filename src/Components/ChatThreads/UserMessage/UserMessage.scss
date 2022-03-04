@@ -1,0 +1,55 @@
+@import '../../../styles/partials/colors';
+
+.ChatUserMessage {
+  background-color: #f7f7f7 !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+
+  &__user-link {
+    color: $dark-text-color;
+    font-family: $gotham-bold;
+    font-size: 16px;
+    line-height: 1;
+
+    &:hover {
+      text-decoration: underline;
+      color: $primary-color;
+    }
+  }
+  &__online {
+    width: 10px;
+    height: 10px;
+    background-color: #6dd400;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    border: solid 2px white;
+  }
+  &__avatar {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    > div:first-of-type {
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      overflow: hidden;
+      position: relative;
+      -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__message {
+    color: #464747;
+    font-family: $rubik;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: left;
+    white-space: pre-line;
+    letter-spacing: 0.2px;
+  }
+}

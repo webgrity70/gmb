@@ -1,0 +1,41 @@
+.UpgradeTrial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  .UpgradeTrial__text {
+    color: #ed6b7a;
+    margin-bottom: 0;
+    font-size: 12px;
+  }
+
+  .UpgradeTrial__cta {
+    font-size: 12px;
+    margin-top: 2px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    span:last-of-type {
+      margin-left: 5px;
+    }
+  }
+  @media (max-width: 414px) {
+    margin-left: 5px;
+    .UpgradeTrial__text {
+      max-width: 45px;
+      overflow-x: hidden;
+      font-size: 8px;
+    }
+    .UpgradeTrial__cta {
+      font-size: 8px;
+      span:last-of-type {
+        display: none;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  .navbar-toggler {
+    padding: 0 0 0 5px;
+  }
+}

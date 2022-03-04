@@ -1,0 +1,21 @@
+.ModalMap {
+  &__map-container {
+    position: relative;
+    width: 100%;
+    padding-top: 65%;
+  }
+
+  &__map-element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__map-container {
+      padding-top: 50%;
+    }
+  }
+}

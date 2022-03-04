@@ -1,0 +1,120 @@
+@import '../../../styles/partials/colors';
+
+$font1: Montserrat, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+$snow: #fafafa;
+$minWidth: 767px;
+
+.DiscoverPage {
+  background-color: $snow;
+  min-height: 100%;
+  font-family: $font1;
+
+  &__header {
+    @media screen and (min-width: $minWidth) {
+      padding: 0 41px 20px 41px;
+      max-width: 1300px;
+    }
+    padding-top: 7px;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 1px $dark-border-color;
+    background: $snow;
+  }
+
+  &__container {
+    padding-left: 20px;
+    padding-top: calc(2rem - 0.14285714em);
+    @media screen and (min-width: $minWidth) {
+      padding: calc(2rem - 0.14285714em) 41px 20px 41px;
+      max-width: 1300px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+
+    border: solid 1px $dark-border-color;
+    border-top: none;
+    background: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: $dark-text-color;
+    background-color: $snow;
+    text-align: center;
+    padding-top: 100px;
+  }
+
+  &__title2 {
+    font-size: 16px;
+    color: #5c5d5d;
+    line-height: 36px;
+  }
+
+  &__divider {
+    height: 2px;
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__testbox {
+    border: solid 4px pink;
+  }
+
+  &__cardRow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: -10px;
+    margin-left: -10px;
+
+    &::after {
+      content: '';
+      flex: auto;
+      width: 380px;
+      max-width: 380px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    @media screen and (max-width: 1263px) {
+      justify-content: start;
+    }
+  }
+
+  &__cardRow > div {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__viewMoreContainer {
+    line-height: 30px;
+    text-align: right;
+  }
+
+  &__viewMoreButton {
+    padding: 2px 20px;
+    background: white;
+    color: #ff8f00;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
+
+// mobile overrides
+@media screen and (max-width: 767px) {
+  .DiscoverPage {
+    padding: 0;
+  }
+}

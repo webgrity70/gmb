@@ -1,0 +1,131 @@
+@import '../../../styles/partials/colors';
+
+#buddy-request {
+  box-sizing: border-box;
+  border-bottom: 1px solid #e9eaea;
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+  .name a {
+    color: $primary_color;
+    margin-left: 5px;
+  }
+  .avatar {
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .name {
+    display: inline-block;
+    font-weight: bold;
+    top: -5px;
+    left: 5px;
+    position: relative;
+    width: calc(100% - 25px);
+
+    img {
+      width: 20px;
+      float: right;
+    }
+  }
+
+  .options {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e9eaea;
+    margin-top: 10px;
+    padding-top: 10px;
+    align-items: center;
+    .will-unmatch {
+      color: black;
+      margin-bottom: 7px;
+      a {
+        margin-right: 3px;
+      }
+    }
+    button {
+      width: auto;
+      padding: 5px 10px;
+      min-height: 30px;
+      border-radius: 5px;
+      margin: 0;
+      font-weight: 500;
+      &.gmb-primary {
+        font-weight: 500;
+      }
+      &.accept {
+        width: 186.5px;
+        margin-top: 10px;
+        &.ui.basic {
+          color: $primary-color !important;
+          box-shadow: 0 0 0 2px $primary-color inset !important;
+        }
+      }
+      &.decline {
+        margin-right: 7px;
+        &.ui.basic {
+          box-shadow: 0 0 0 2px #656565 inset !important;
+        }
+      }
+      .icon {
+        font-size: 12px;
+        margin-right: 7px !important;
+        float: left;
+      }
+    }
+
+    .chat-invite {
+      color: #5c5d5d;
+      display: inline-block;
+      padding: 5px 0;
+
+      &.status {
+        text-transform: uppercase;
+      }
+
+      span {
+        color: #c6c6c6;
+        &.accepted {
+          color: #5c5d5d;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .timer {
+      color: #808080;
+      padding-top: 10px;
+      font-size: 13px;
+    }
+  }
+
+  .category {
+    color: #5c5d5d;
+    font-family: $montserrat;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-top: 15px;
+    a {
+      font-weight: 700;
+      color: $primary_color;
+    }
+  }
+
+  .buddy-request-time {
+    color: #7f8fa4;
+    font-family: $montserrat;
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 500;
+    margin-left: 20px;
+  }
+}

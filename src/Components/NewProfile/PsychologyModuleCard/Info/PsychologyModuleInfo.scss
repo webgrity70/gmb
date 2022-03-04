@@ -1,0 +1,10 @@
+@import '../../../../styles/partials/colors';
+
+.PsychologyModuleInfo {
+  &__default-trigger {
+    margin: 0;
+    color: $primary_color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

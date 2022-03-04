@@ -1,0 +1,33 @@
+@import '../../../styles/partials/colors';
+
+.TextInput {
+  padding: 0.67857143em 1em;
+  background: #fff;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 5px;
+  font-size: 14px;
+  line-height: 14px;
+  font-family: $rubik;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.87);
+  height: 36px;
+  width: 100%;
+  &:disabled {
+    background-color: #f2f2f2;
+  }
+  &::-webkit-input-placeholder {
+    color: #7f8fa4;
+  }
+  &:-moz-placeholder {
+    color: #7f8fa4;
+  }
+  &:-moz-placeholder {
+    color: #7f8fa4;
+  }
+  &:-ms-input-placeholder {
+    color: #7f8fa4;
+  }
+  &::placeholder {
+    color: #7f8fa4;
+  }
+}

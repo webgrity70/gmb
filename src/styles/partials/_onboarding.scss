@@ -1,0 +1,844 @@
+@import 'colors';
+
+.register-page {
+  background-color: #c1edfe;
+  padding-top: 64px;
+  min-height: 100vh;
+
+  .registered {
+    font-size: 24px;
+    font-family: $rubik;
+    color: #00729f;
+    text-align: center;
+    display: block;
+    font-weight: 400;
+    margin-top: 100px;
+    padding: 0 20px;
+    line-height: 30px;
+  }
+  .active.selected.item {
+    margin-top: 0;
+  }
+  .page-content {
+    width: 800px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 30px;
+    .ui.button.next_button {
+      height: 36px;
+      width: 163px;
+      background-color: #3fc4ff;
+    }
+
+    .prev_button.ui.button i.icon {
+      margin-right: 0;
+    }
+    .date-error {
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      color: $dark-text-color;
+      margin-top: 20px;
+    }
+    .question-container {
+      min-height: 80vh;
+      @media (max-width: 500px) {
+        min-height: 67vh;
+      }
+    }
+    .button_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+      @media (max-width: 500px) {
+        margin-top: 15px;
+      }
+    }
+    .section-title {
+      height: 23px;
+      color: #00729f;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 19px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .button_container {
+      .prev-button {
+        margin-top: -2px;
+      }
+    }
+  }
+}
+
+.login-container {
+  &.register {
+    .login {
+      margin-top: 24px;
+      font-size: 17px;
+      font-family: $rubik;
+      font-weight: 400;
+      color: #535353;
+      a {
+        color: $primary-color;
+        text-decoration: underline;
+        font-weight: 500;
+        display: inline-flex;
+        padding-left: 0;
+      }
+    }
+  }
+
+  .ui {
+    &.horizontal {
+      &.divider {
+        width: 250px;
+        margin: 15px auto 14px;
+        text-transform: lowercase;
+        font-size: 16px;
+        color: #6a7e8d;
+      }
+    }
+
+    &.google,
+    &.facebook {
+      &.button {
+        background: #ddf2fa;
+        color: #7e8ea6 !important;
+        min-width: 210px;
+        height: 36px;
+        p {
+          line-height: 15px;
+        }
+        i {
+          font-family: $fontawesome !important;
+          font-weight: 100;
+          display: inline-block;
+          margin-right: 5px;
+        }
+        &:hover {
+          color: #ffffff !important;
+        }
+      }
+    }
+
+    &.facebook {
+      &.button {
+        &:hover {
+          background-color: #3b5998;
+        }
+      }
+    }
+  }
+
+  .login_button_container {
+    .login_button {
+      .ui.twitter.button {
+        font-family: $rubik;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.apps-container {
+  display: flex;
+  align-items: center;
+  span {
+    font-size: 1rem;
+    color: black;
+  }
+  img {
+    width: 2.5em;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+}
+.login-container {
+  margin-right: -15px;
+  margin-left: -15px;
+
+  &.login {
+    .register {
+      margin-top: 30px;
+      font-size: 17px;
+      font-family: $rubik;
+      color: #535353;
+      display: flex;
+      font-weight: 400;
+      align-items: center;
+      width: 100%;
+      min-width: 300px;
+      text-align: center;
+      justify-content: center;
+      a {
+        color: $primary-color;
+        text-decoration: underline;
+        font-weight: 500;
+        display: inline-flex;
+        padding-left: 0;
+        margin-left: 5px;
+      }
+    }
+
+    .horizontal {
+      &.divider {
+        margin-top: 40px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    margin: 0;
+  }
+}
+
+.question {
+  font-family: $rubik !important;
+  margin-top: 50px;
+  font-weight: 400;
+
+  .referral {
+    .ui {
+      &.input {
+        input {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &.location {
+    .question-content {
+      width: 100%;
+      .ui.placeholder,
+      .ui.placeholder .line {
+        background-color: #c1edfe;
+      }
+    }
+  }
+
+  &.plan_number_of_times {
+    .question-title {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .question-content {
+      .inline.dropdown,
+      .sub-title {
+        font-family: $rubik !important;
+        font-size: 20px;
+        color: #3f3f3f;
+        font-weight: 400;
+        margin: 10px;
+        font-weight: 600;
+      }
+
+      .ui {
+        &.input {
+          width: 70px;
+        }
+      }
+    }
+  }
+
+  .i_want_my_plans_to_happen,
+  .im_confident_i_do_what_i_say,
+  .i_feel_more_motivated_by,
+  .i_want_communication,
+  .regarding_your_habit_would_you_consider_yourself,
+  .i_consider_myself_more {
+    .slider {
+      .input-range__track {
+        .input-range__label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &.goal {
+    display: block;
+  }
+
+  &.gender {
+    .question-content {
+      .ui {
+        &.input {
+          width: 150px;
+          margin-top: -40px;
+          display: block;
+          margin-left: 27px;
+        }
+      }
+    }
+  }
+
+  .question-title {
+    color: #3f3f3f;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    background: #ff8f0000 !important;
+    margin-top: 60px;
+  }
+
+  .question-sub-title {
+    color: #495462;
+    font-family: $rubik;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-weight: 400;
+
+    .icon {
+      margin-right: 25px;
+      font-size: 13px;
+    }
+  }
+
+  .question-content {
+    width: auto;
+    text-align: left;
+    display: inline-block;
+
+    .inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      div {
+        &:first-of-type {
+          margin: 10px 0 10px 0;
+        }
+        &:last-of-type {
+          margin: 10px 0 10px 0;
+        }
+        display: flex;
+        justify-content: center;
+        input {
+          width: 245px !important;
+        }
+        margin: 10px 0 10px 0;
+      }
+
+      .form_field_container_inner_radio_inputText {
+        height: 36px;
+        width: 140px !important;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        margin: 5px;
+        padding: 10px;
+        font-family: $rubik;
+        color: #5c5d5d;
+        font-weight: bold;
+      }
+      .search_location {
+        width: 110px;
+        background-color: #fff !important;
+        color: $primary-color !important;
+        font-weight: 600;
+        line-height: 0;
+        height: 38px;
+        margin-top: 3px;
+        margin-left: 25px;
+        padding-top: 9px;
+        position: relative;
+        padding-left: 0;
+        .icon {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+        }
+      }
+
+      .selection.dropdown {
+        min-width: 100px;
+      }
+    }
+
+    .date_dropdowns {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .field {
+        margin: 5px;
+      }
+    }
+
+    .selection.dropdown {
+      color: $primary-color;
+      @media screen and (max-width: 657px) {
+        min-width: 90px;
+      }
+      .menu {
+        .item {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .ui {
+      label {
+        font-family: $rubik;
+        font-size: 15px;
+        color: #5c5d5d;
+        font-weight: 600;
+      }
+
+      &.checkbox,
+      &.radio {
+        margin: 5px 0;
+      }
+
+      &.input {
+        width: 400px;
+
+        input {
+          font-family: $rubik;
+          font-weight: 400;
+          color: #5c5d5d;
+          &:focus {
+            border-color: #ff8f00 !important;
+          }
+        }
+      }
+    }
+
+    input {
+      font-family: $rubik;
+      color: #5c5d5d;
+      font-weight: 400;
+      &:focus {
+        border-color: #ff8f00 !important;
+      }
+    }
+
+    .same-time-and-place {
+      .same-inputs {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        .input {
+          width: 150px;
+          margin: 10px;
+        }
+      }
+    }
+
+    .reduce-behaviour {
+      position: relative;
+
+      span.behaviour-icon {
+        position: absolute;
+        z-index: 34;
+        left: 20px;
+        top: 5px;
+
+        img {
+          width: 30px;
+        }
+      }
+
+      .selection.dropdown {
+        width: 250px;
+        color: #5c5d5d;
+        padding-left: 70px;
+
+        .menu {
+          .item {
+            color: #5c5d5d;
+          }
+        }
+
+        input {
+          &.search {
+            padding-left: 70px;
+          }
+        }
+      }
+    }
+
+    .range {
+      position: relative;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      width: 750px;
+
+      .input-range {
+        &__label {
+          &--min,
+          &--max {
+            top: -20px;
+          }
+        }
+
+        &__track {
+          &--background {
+            background-color: aliceblue;
+            width: 100%;
+            height: 5px;
+          }
+
+          &--active {
+            position: absolute;
+            height: 5px;
+            background-color: $primary-color;
+          }
+        }
+
+        &__slider {
+          height: 25px;
+          width: 25px;
+          background-color: $primary-color;
+          border-radius: 50%;
+          &-container {
+            top: -2px;
+            .input-range__slider {
+              border: none;
+            }
+            .input-range__label--value {
+              top: -2.3rem;
+              left: 4px;
+            }
+          }
+        }
+
+        .input-range__label--max,
+        .input-range__label--min {
+          display: none;
+        }
+      }
+    }
+
+    .input-range__label-container {
+      color: #5c5d5d;
+      font-family: $rubik !important;
+      font-size: 17px;
+      font-weight: 400;
+      width: 23px;
+      text-align: center;
+      display: inline-block;
+    }
+
+    .slider_container {
+      &.timezone_range,
+      &.distance {
+        margin-top: 50px;
+        .slider_labels {
+          display: none;
+        }
+        .input-range__label-container {
+          width: auto;
+        }
+      }
+      .slider_labels {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 50px;
+        margin: 30px 0;
+      }
+
+      .slider {
+        .input-range {
+          &__track {
+            &--background {
+              width: 100%;
+              height: 5px;
+              background-color: aliceblue;
+              position: relative;
+            }
+            &--active {
+              position: absolute;
+              height: 5px;
+              background-color: $primary-color;
+            }
+          }
+          &__label {
+            &--min,
+            &--max {
+              display: none;
+            }
+          }
+          &__slider {
+            height: 25px;
+            width: 25px;
+            background-color: $primary-color;
+            border-radius: 50%;
+            &-container {
+              top: -2px;
+              .input-range__slider {
+                border: none;
+              }
+              .input-range__label--value {
+                top: -2.3rem;
+                left: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .education,
+    .languages {
+      .field {
+        margin: 15px;
+      }
+
+      .selected {
+        .sub_item {
+          min-width: 100px;
+          max-width: 240px;
+          background-color: #ff8f00;
+          color: #ffffff;
+          font-family: $rubik !important;
+          padding: 5px;
+          margin-top: 5px;
+          border-radius: 5px;
+          cursor: pointer;
+
+          min-height: 20px;
+          font-size: 11px;
+          font-weight: 600;
+          line-height: 21px;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+          align-items: center;
+
+          .icon {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .multi-selector {
+      .ui {
+        label {
+          font-size: 16px;
+          font-weight: normal;
+          font-family: $rubik;
+        }
+
+        &.checked {
+          font-weight: bold !important;
+        }
+      }
+      .input-other {
+        width: 130px;
+        margin-top: -33px;
+        display: block;
+        margin-left: 27px;
+
+        input {
+          padding: 7px;
+        }
+      }
+    }
+
+    .add_button {
+      height: 36px;
+      width: 95px;
+      background-color: #ffffff !important;
+      color: #ff8f00 !important;
+      font-weight: 600;
+    }
+
+    .referral,
+    .places {
+      width: 400px;
+      .location-search-input {
+        padding: 10px;
+        border: 1px solid #cccccc;
+        width: 100%;
+      }
+
+      .add_button {
+        margin-top: 30px;
+      }
+
+      .selected {
+        margin-top: 20px;
+
+        .question-title {
+          margin-bottom: 20px;
+          display: inline-block;
+        }
+
+        .sub_item {
+          background-color: #ff8f00;
+          color: #fff;
+          font-family: $rubik;
+          padding: 5px;
+          font-weight: 400;
+          border-radius: 5px;
+          cursor: pointer;
+          min-height: 25px;
+          display: inline-block;
+          margin: 5px;
+
+          .icon {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .dropdown-multiple {
+      .selection.dropdown {
+        width: 600px;
+        .ui {
+          &.label {
+            background-color: $primary-color;
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .textarea_container {
+      width: 600px;
+      textarea {
+        width: 100%;
+        display: inline-block;
+        border-color: rgba(34, 36, 38, 0.15);
+        border-radius: 5px;
+        font-weight: 400;
+        font-family: $rubik;
+        color: #5c5d5d;
+        margin-bottom: 1rem;
+      }
+
+      .character_count {
+        color: #5c5d5d;
+        font-family: $rubik;
+        font-size: 11px;
+        line-height: 21px;
+        font-weight: 400;
+        display: block;
+        text-align: center;
+        margin-top: -5px;
+      }
+    }
+
+    .slider_container {
+      width: 750px;
+    }
+
+    .question_subtitle.v2 {
+      color: #5c5d5d;
+      font-family: $rubik !important;
+      font-size: 19px;
+      line-height: 16px;
+      font-weight: 400;
+      text-align: center;
+    }
+    .plan-days {
+      &--container {
+        width: 430px;
+
+        .plan_days_block {
+          display: flex;
+          flex-direction: row;
+          margin: 5px;
+
+          .ui.input {
+            width: 150px;
+          }
+
+          .plan_days_inputs {
+            margin-right: 10px;
+          }
+
+          .plan_days_day {
+            background-color: $primary-color;
+            margin: 0 10px;
+            min-width: 90px;
+            padding: 5px;
+            line-height: 27px;
+            color: #ffffff;
+            font-family: $rubik;
+            font-weight: 400;
+            border-radius: 3px;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .billing {
+      label {
+        width: 100px;
+        font-family: $rubik;
+        font-weight: 400;
+        color: #5c5d5d;
+      }
+      .field {
+        margin: 10px;
+      }
+    }
+    @media (max-width: 500px) {
+      .ui.input {
+        width: auto;
+      }
+      .textarea_container {
+        width: 250px;
+      }
+      .range {
+        width: 210px;
+      }
+      .slider_container {
+        width: 270px;
+        .slider_labels {
+          padding: 0;
+        }
+        .question_subtitle.v2 {
+          font-size: 14px;
+        }
+      }
+      .dropdown-multiple .selection.dropdown {
+        width: 250px;
+      }
+      .RegisterGroupSelect {
+        .places {
+          width: 200px;
+        }
+        .results.transition.visible {
+          width: 220px;
+          max-height: 220px;
+        }
+      }
+      .languages {
+        .field {
+          width: 200px;
+          & > div {
+            width: 100%;
+          }
+        }
+        .animated.button {
+          width: 100%;
+        }
+        .close.icon {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.signup-confirmation-question {
+  .question-title {
+    font-weight: 500;
+    line-height: 1.5;
+  }
+}

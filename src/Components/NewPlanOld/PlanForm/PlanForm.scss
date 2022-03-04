@@ -1,0 +1,338 @@
+@import '../../../styles/partials/colors';
+
+.PlanForm {
+  .SingleDatePickerInput {
+    &.hide {
+      opacity: 0;
+    }
+    height: 32px;
+  }
+  input.DateInput_input {
+    height: 25px;
+  }
+  .ui.input input {
+    height: 32px !important;
+  }
+  .ui.search {
+    min-height: 32px;
+    padding: 0.57857143em 1em;
+    input {
+      height: 32px !important;
+    }
+    i {
+      line-height: 10px !important;
+    }
+  }
+  &__templates {
+    padding: 15px 60px;
+    .ui.fluid.selection.dropdown {
+      margin-left: 20px;
+      padding: 8px 10px;
+      height: auto;
+      min-height: 32px !important;
+      flex: 1;
+      &.active {
+        border-color: #dededf;
+      }
+      .selected {
+        margin-top: 0;
+      }
+      .menu {
+        border-color: #dededf;
+        > div > div {
+          padding: 8px 10px !important;
+          cursor: pointer;
+          &:hover,
+          &.selected {
+            background: rgba(0, 0, 0, 0.05);
+            color: rgba(0, 0, 0, 0.95);
+            z-index: 13;
+          }
+        }
+        span {
+          color: #616363;
+          font-weight: 400;
+        }
+      }
+      i.dropdown.icon {
+        line-height: 1;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex-direction: column;
+      padding: 15px 10px;
+      .ui.fluid.selection.dropdown {
+        width: 210px;
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .ui.input input {
+        width: 210px;
+      }
+    }
+  }
+  &__mde-editor {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-right: 40px;
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+  }
+  &__scheduled {
+    display: flex;
+    margin-right: 15px;
+    h1 {
+      color: #7f8fa4;
+      font-family: Rubik;
+      font-size: 12px;
+      line-height: 17px;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+    @media screen and (max-width: 991px) {
+      width: auto;
+      margin-right: 30px;
+    }
+    @media screen and (max-width: 638px) {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 7px;
+      margin-right: 0;
+    }
+  }
+  &__save-template {
+    margin-right: 20px;
+    min-width: fit-content;
+    .ui.checkbox label {
+      color: #717272;
+      font-weight: 500;
+    }
+    @media screen and (max-width: 530px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__template {
+    padding: 0px 40px 10px 40px;
+    .ui.checkbox {
+      margin-bottom: 10px;
+      label {
+        font-weight: 500;
+        color: #626b6e;
+      }
+    }
+    .ui.input {
+      width: 250px;
+      margin-right: 10px;
+    }
+    span {
+      color: #7e8fa5;
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+    @media screen and (max-width: 736px) {
+      justify-content: space-between;
+      .ui.checkbox label {
+        margin: 0;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex-direction: column;
+    }
+  }
+  &__save {
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      margin-right: 5px;
+      text-decoration: underline;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      > div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+  &__add {
+    text-align: center;
+    background-color: #ecf4ff;
+    border: dashed 2px #a4b9d4;
+    color: #a4b9d4;
+    padding: 14px;
+    font-weight: 500;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    cursor: pointer;
+    margin: 25px 60px 30px 60px;
+    border-radius: 10px;
+    i {
+      margin-right: 10px;
+      font-size: 16px;
+    }
+    &:hover {
+      background-color: #9ebae0;
+      color: white;
+      border-style: solid;
+    }
+    @media screen and (max-width: 638px) {
+      margin: 25px 10px 30px 10px;
+    }
+  }
+  &__until {
+    margin-bottom: 15px;
+    padding-left: 40px;
+    flex: 1;
+    > div > div {
+      height: 32px;
+      display: flex !important;
+      align-items: center;
+    }
+    .ui.checkbox.radio {
+      margin-right: 15px;
+      label {
+        color: #6c6d6d;
+        font-weight: 500;
+        padding-left: 30px;
+      }
+    }
+    h1 {
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 35px;
+      color: #5c5d5d;
+    }
+    span {
+      font-size: 12px;
+      font-family: 'Rubik';
+      margin-top: 3px;
+      color: #7f8fa4;
+    }
+    @media screen and (max-width: 638px) {
+      padding-left: 0;
+      flex-direction: column;
+      align-items: center;
+      > div {
+        width: 300px;
+      }
+    }
+  }
+  &__goal {
+    text-align: center;
+    border-right: solid 1px #c1c2c3;
+    padding-right: 60px;
+    flex: 1;
+    i {
+      margin-left: 5px;
+    }
+    h1 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #5c5d5d;
+      margin-bottom: 0;
+    }
+    .ui.input {
+      width: 300px;
+    }
+    @media screen and (max-width: 638px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+      border-right: none;
+      padding-right: 0;
+      .ui.input {
+        width: auto;
+      }
+    }
+  }
+  &__save-container {
+    padding: 15px 40px;
+    button.ui {
+      font-size: 14px;
+      padding: 10px 30px;
+      font-weight: 500;
+      margin-top: 0;
+      margin-right: 10px;
+      i.add.circle.icon {
+        opacity: 1;
+      }
+      &.delete {
+        padding: 10px 21px;
+      }
+      &.clear.basic:hover {
+        background-color: #fbfbfb !important;
+      }
+    }
+    .ui.checkbox label {
+      font-weight: 500;
+      color: #626b6e;
+    }
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 40px 20px 40px;
+      > div:last-of-type {
+        margin-top: 20px;
+        justify-content: center;
+      }
+      button.ui {
+        padding: 12px 30px;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      margin-top: 10px;
+      .ui.button {
+        width: 80%;
+        min-height: 40px;
+        max-height: 43px;
+        margin: 0 0 20px 0;
+      }
+    }
+    @media screen and (max-width: 530px) {
+      .ui.button {
+        width: 100%;
+      }
+      > div:first-of-type {
+        flex-direction: column;
+      }
+    }
+  }
+  &__header {
+    padding: 40px 50px 30px 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (max-width: 638px) {
+      padding: 40px 10px 10px 10px;
+      justify-content: center;
+      flex-direction: column;
+      margin-left: 0;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    .PlanWeek .PlanBehaviors textarea {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+  @media screen and (min-width: 638px) {
+    .SingleDatePicker {
+      &_picker {
+        left: -200px !important;
+      }
+    }
+  }
+}

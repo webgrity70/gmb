@@ -1,0 +1,24 @@
+@import '../../../styles/partials/colors';
+
+.RegularChallenges {
+  margin-top: 30px;
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    h5 {
+      margin: 0;
+      color: #5c5d5d;
+      font-weight: bold;
+      line-height: 24px;
+    }
+    i.hourglass {
+      color: #4e72f1;
+      width: 16px;
+      margin-right: 10px;
+    }
+    i.fa-question-circle {
+      color: #7f8fa4;
+    }
+  }
+}

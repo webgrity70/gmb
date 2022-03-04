@@ -1,0 +1,16 @@
+.DayMonthEvent {
+  &__specifics {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &__alert {
+    font-size: 11px;
+    text-align: center;
+    color: #5073f1;
+    margin-top: 10px;
+    line-height: 12px;
+    .icon {
+      margin-left: 10px;
+    }
+  }
+}

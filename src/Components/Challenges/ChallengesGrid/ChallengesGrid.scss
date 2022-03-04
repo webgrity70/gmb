@@ -1,0 +1,44 @@
+@import '../../../styles/partials/colors';
+
+.ChallengesGrid {
+  &__more {
+    text-align: center;
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      font-family: $montserrat;
+      color: $primary-color;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+      i {
+        font-size: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    h3 {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+    span {
+      font-weight: 500;
+    }
+  }
+  .column {
+    padding-bottom: 10px !important;
+  }
+  @media screen and (max-width: 768px) {
+    .ui.stackable.grid > .column:not(.row) {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+}

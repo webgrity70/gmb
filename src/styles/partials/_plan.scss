@@ -1,0 +1,497 @@
+@import 'colors';
+
+.calendar-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  margin: 5px 5px 0 5px;
+
+  &.f-work {
+    width: 0 !important;
+    height: 0 !important;
+    border: 10px solid transparent;
+    border-bottom-color: $work-color;
+    background-color: unset !important;
+    top: -8px;
+    position: relative;
+    margin-bottom: 6px;
+    &:after {
+      content: '' !important;
+      position: absolute;
+      left: -10px;
+      top: 10px;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+    }
+
+    &.checked {
+      &:before {
+        content: '\F00C';
+        font-family: $fontawesome;
+        display: block;
+        color: #ffffff;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 18px;
+        height: 15px;
+        position: absolute;
+        left: -6px;
+        top: 2px;
+        z-index: 2;
+      }
+    }
+  }
+
+  &.f-circle {
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.f-health-fitness {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid;
+    border-bottom-color: $health-fitness-color;
+    background-color: unset !important;
+    width: 0;
+    //top: -13px;
+    left: 2px;
+    position: relative;
+
+    &.checked {
+      &::after {
+        position: absolute;
+        bottom: -16px;
+        left: -5px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &.f-learn {
+    background-color: #ba68c8;
+    display: inline-block;
+    left: 6px;
+  }
+
+  &.f-life {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid;
+    border-top-color: $life-color;
+    background-color: unset !important;
+    width: 0;
+
+    &.checked {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: -19px;
+        left: -4px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &.c-health-fitness {
+    background-color: #3cd6ab;
+    &.unchecked {
+      opacity: 0.3;
+    }
+  }
+
+  &.dull,
+  &.checked {
+    &:after {
+      content: '\f00c';
+      font-family: $fontawesome;
+      display: block;
+      color: #ffffff;
+      font-style: normal;
+      font-size: 12px;
+      line-height: 18px;
+      height: 15px;
+    }
+  }
+
+  &.dull {
+    &:after {
+      content: ' ' !important;
+    }
+  }
+
+  &.c-learn {
+    background-color: #ba68c8;
+    color: #ba68c8;
+    &.unchecked {
+      opacity: 0.3;
+    }
+    &:after {
+      border-top-color: #ba68c8;
+    }
+  }
+
+  &.c-work {
+    background-color: #ed6b7a;
+    color: #ed6b7a;
+    &.unchecked {
+      opacity: 0.3;
+    }
+    &:after {
+      border-top-color: #ed6b7a;
+    }
+  }
+
+  &.c-life {
+    background-color: #eacd50;
+    color: #eacd50;
+    &.unchecked {
+      opacity: 0.3;
+    }
+    &:after {
+      border-top-color: #eacd50;
+    }
+  }
+}
+
+#plan {
+  .page {
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  p {
+    &.inline {
+      display: inline-block;
+      color: #5c5d5d;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 32px;
+    }
+  }
+
+  .want {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .when-intend {
+    .where {
+      padding-left: 60px;
+    }
+  }
+
+  .DateInput__small {
+    width: 120px;
+  }
+
+  .SingleDatePickerInput {
+    .SingleDatePickerInput_calendarIcon {
+      padding-left: 1px;
+      padding-top: 6px;
+      padding-right: 0;
+
+      .SingleDatePickerInput_calendarIcon_svg {
+        color: #cecece;
+      }
+    }
+  }
+
+  .select-holder {
+    .css-d8oujb {
+      background-color: transparent;
+    }
+
+    .css-10nd86i {
+      .css-1aya2g8 {
+        .css-1rtrksz {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .css-19bqh2r {
+      width: 21px;
+      height: 13px;
+    }
+
+    &.hours {
+      margin-left: 0;
+      width: 115px;
+    }
+  }
+
+  .how-long {
+    margin-top: 30px;
+    .info-text {
+      margin-left: 20px;
+    }
+    .repeat {
+      margin-top: 10px;
+    }
+
+    .SingleDatePicker {
+      margin-left: 20px;
+      margin-right: 30px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .event {
+    .SingleDatePicker {
+      margin-left: 50px;
+      margin-right: 30px;
+    }
+
+    .input {
+      .TimeInput {
+        .TimeInput-input {
+          padding: 11px 10px;
+          font-size: 14px;
+          color: #656565;
+        }
+      }
+    }
+
+    .want {
+      display: inline-block;
+      margin-left: 50px;
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+
+    .select-holder {
+      line-height: 24px;
+      color: #535353;
+    }
+
+    &-where {
+      margin-top: 50px;
+
+      .where-title {
+        vertical-align: top;
+      }
+
+      .where-location {
+        margin-left: 50px;
+        display: inline-block;
+
+        input {
+          display: block;
+          width: 275px;
+          font-size: 16px;
+          padding: 8px 12px;
+        }
+
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.when-days {
+  .day {
+    label {
+      color: #5c5d5d;
+    }
+  }
+
+  .same {
+    padding-left: 185px;
+    display: flex;
+    margin-bottom: 13px;
+    > div {
+      display: flex;
+      flex-direction: column;
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+    .location,
+    .TimeInput input.TimeInput-input {
+      margin-left: 35px;
+      margin-top: 15px;
+      color: #828282;
+      width: 90px;
+    }
+
+    .location {
+      width: 175px;
+
+      input {
+        #location {
+          font-size: 16px;
+          padding: 8px 12px;
+        }
+      }
+    }
+
+    .ui {
+      &.checkbox {
+        label {
+          color: #5c5d5d;
+        }
+      }
+    }
+  }
+}
+
+#plan-calendar {
+  // General calendar styles
+  .fc-widget-header {
+    border: none;
+  }
+
+  .fc-center {
+    margin-left: 120px;
+  }
+
+  .tippy-popper {
+    width: 200px !important;
+  }
+
+  .fc-state-highlight {
+    background: none;
+    border-left: none;
+    border-right: none;
+  }
+
+  // Month calendar styles
+  .fc-month-view {
+    td {
+      &.fc-widget-content {
+        border-width: 0;
+        border-color: transparent;
+        border-style: none;
+      }
+
+      &.fc-event-container {
+        &a {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .fc-month-view {
+    .fc-widget-content {
+      .fc-day-grid {
+        .fc-week {
+          &.fc-widget-content {
+            min-height: 128px !important;
+            height: auto !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Week calendar styles
+  .fc-basicWeek-view {
+    .fc-day-grid-container,
+    .fc-week {
+      height: 500px;
+    }
+
+    .fc-body {
+      &:before {
+        content: '-';
+        display: block;
+        line-height: 1em;
+        color: transparent;
+      }
+    }
+
+    .fc-widget-content {
+      border: solid 1px #d0d0d0;
+      border-top: none 0 transparent;
+      border-left: none 0 transparent;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .week_event {
+    text-align: left;
+    padding: 5px 5px 20px;
+
+    .event_top_line {
+      margin-left: -5px;
+      height: 1px;
+      width: 65%;
+      background-color: #e4e4e4;
+    }
+
+    .start-time {
+      font-size: 10px;
+    }
+
+    .user {
+      i {
+        vertical-align: middle;
+      }
+
+      p {
+        font-size: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        color: #5c5d5d;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      &.event-title {
+        font-size: 13px;
+        color: #5c5d5d;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #calendar_container {
+    padding-bottom: 100px;
+  }
+  #plan-calendar {
+    .fc-toolbar {
+      &.fc-header-toolbar {
+        height: 55px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 731px) {
+  #plan-calendar {
+    .fc-toolbar {
+      .fc-center {
+        margin-left: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #plan-calendar {
+    .fc-toolbar {
+      .fc-center {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.SingleDatePickerInput.down {
+  .SingleDatePicker_picker {
+    margin-bottom: 100px;
+  }
+}

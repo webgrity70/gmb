@@ -1,0 +1,41 @@
+@import '../../../../styles/partials/colors';
+
+.CurrentWeekHabits {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  margin-top: 10px;
+  img {
+    width: 16px;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #5c5d5d;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 150px;
+  }
+  > i {
+    color: $primary-color;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 0;
+    margin-top: -8px;
+    margin-left: 10px;
+    display: block;
+  }
+  &--editing {
+    > i {
+      display: block;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0;
+    span {
+      font-size: 12px;
+    }
+  }
+}

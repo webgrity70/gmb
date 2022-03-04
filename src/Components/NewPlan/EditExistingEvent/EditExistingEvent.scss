@@ -1,0 +1,111 @@
+@import '../../../styles/partials/colors';
+
+.EditExistingEventForm {
+  .content {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  &__popup.ui.popup {
+    z-index: 1990;
+  }
+  &.ui.modal {
+    .content {
+      padding: 35px !important;
+      @media only screen and (max-width: 767px) {
+        padding: 35px !important;
+      }
+    }
+    .close.icon {
+      color: #5c5d5d;
+    }
+  }
+  &__title {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    .gmb-category-health-fitness {
+      color: $health-fitness-color;
+    }
+    .gmb-category-work {
+      color: $work-color;
+    }
+    .gmb-category-life {
+      color: $life-color;
+    }
+    .gmb-category-learn {
+      color: $learn-color;
+    }
+  }
+  &__label {
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #5c5d5d;
+    margin: 10px 0 0 0;
+  }
+  &__disabled {
+    cursor: not-allowed;
+    color: #7f8fa4;
+    &:hover {
+      color: #7f8fa4 !important;
+    }
+  }
+  &.ui.modal .actions {
+    background-color: white;
+    justify-content: space-between;
+    padding: 15px 35px !important;
+    a {
+      margin-right: 15px;
+      &:not(:last-of-type) {
+        margin-right: 40px;
+      }
+      &:focus,
+      &:hover {
+        color: #f97a00;
+      }
+    }
+    @media screen and (max-width: 648px) {
+      padding: 10px !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    &.ui.modal {
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      .content {
+        bottom: 85px;
+        position: absolute;
+        top: 0;
+        overflow-y: auto;
+        width: 100%;
+        max-height: none;
+        padding: 1rem !important;
+      }
+      .actions {
+        bottom: 40px;
+        position: absolute;
+        a:not(:last-of-type) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+.ios {
+  .EditEventForm.ui.modal {
+    .content {
+      bottom: 165px;
+    }
+    .actions {
+      bottom: 120px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import '../../../styles/partials/colors';
+
+.FlashChallengeCheckBoxInput {
+  width: 100%;
+  &__popup.ui.popup {
+    z-index: 2000;
+    margin-left: -12px !important;
+  }
+  &__content {
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    background-color: #f3f4f5;
+    padding: 15px;
+  }
+  &__location {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    span {
+      &:first-of-type {
+        font-weight: 500;
+      }
+      &:last-of-type {
+        color: $primary-color;
+        text-decoration: underline;
+        cursor: pointer;
+        margin-left: 5px;
+      }
+    }
+  }
+  &__legend {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    span {
+      color: #7e8fa5;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 21px;
+    }
+  }
+  &__label {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  .ui.radio:not(.checked) label {
+    font-weight: 500;
+  }
+}

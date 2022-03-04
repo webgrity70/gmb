@@ -1,0 +1,79 @@
+@import '../../../styles/partials/colors';
+
+.PlanCreation {
+  &__duration {
+    color: #7e8ea6;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 6px 0 0 0;
+  }
+  &__global {
+    .DropdownInput {
+      width: 250px !important;
+      @media only screen and (max-width: 768px) {
+        width: 100% !important;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__date-title {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+  &__schedule {
+    &-button.ui.button {
+      padding: 11px 12px;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #5c5d5d;
+      margin-top: 40px;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+    .ui.button:not(.orange) {
+      margin-right: 15px;
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+      margin-bottom: 90px;
+      flex-direction: column-reverse;
+      margin-top: 40px;
+      .ui.button {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      .ui.button:not(.orange) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__extra-actions {
+    .ui.button {
+      padding: 11px 20px;
+      color: #5c5d5d !important;
+    }
+    i {
+      color: #5c5d5d;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      .ui.button {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

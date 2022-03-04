@@ -1,0 +1,222 @@
+@import '../../../styles/partials/colors';
+
+.RegularPreview {
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    &-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 64px;
+    }
+  }
+  &__confirm.ui.modal {
+    .content {
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .actions {
+      justify-content: flex-end;
+      background-color: white !important;
+    }
+  }
+  &__joined {
+    display: flex;
+    padding: 10px 15px;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: #fff7ec;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 20px;
+    span {
+      color: $primary-color;
+      cursor: pointer;
+    }
+  }
+  &__members {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 10px;
+    border-radius: 15px;
+    line-height: 21px;
+    text-align: center;
+    background-color: #3fc4ff;
+  }
+  &__progress.ui.progress {
+    height: 6px;
+    background-color: #ebeced;
+    margin: 8px 0 18px 0;
+    > div.bar {
+      height: 6px;
+      background-color: #4e72f1;
+    }
+  }
+  &__statistics {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    > span:first-of-type {
+      color: #4e72f1;
+    }
+  }
+  &__text {
+    color: #5c5d5d;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 14px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  &__details {
+    cursor: pointer;
+    color: #7f8fa4;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: underline;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  &__join {
+    display: flex;
+    padding: 0;
+    margin-top: 20px;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    align-items: baseline;
+    padding: 17px;
+    flex-direction: row;
+    align-items: center;
+    h5 {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 19px;
+      margin: 0 0 5px 0;
+    }
+    p {
+      color: #7f8fa4;
+      font-size: 13px;
+      line-height: 16px;
+      text-align: left;
+      max-width: 80%;
+      margin-bottom: 5px;
+    }
+    a {
+      font-family: $rubik;
+      font-size: 14px;
+      line-height: 17px;
+      text-decoration: underline;
+      font-weight: 400;
+    }
+    .ui.button {
+      padding: 10px 20px;
+      font-weight: 600;
+    }
+  }
+  &.ui.modal .actions {
+    background-color: white;
+    justify-content: flex-end;
+    padding: 15px 30px !important;
+    color: $primary-color;
+    @media screen and (max-width: 648px) {
+      padding: 10px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    &.ui.modal {
+      width: 700px;
+      > .content {
+        padding: 20px 30px;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__description {
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0 !important;
+    }
+    &__members {
+      position: fixed;
+      top: 15px;
+    }
+    &__join {
+      flex-direction: column;
+      p {
+        text-align: center;
+        max-width: 100%;
+      }
+      a {
+        margin-bottom: 10px;
+      }
+      h5 {
+        margin: 0 auto 5px auto;
+      }
+    }
+    &.ui.modal {
+      border-radius: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 40px;
+        overflow-y: auto;
+      }
+      > .actions {
+        bottom: 40px;
+        position: absolute;
+      }
+    }
+  }
+  @media only screen and (max-height: 900px) and (max-width: 700px) {
+    .WeeksEvents {
+      max-height: 350px;
+      &.joined {
+        max-height: 500px;
+      }
+    }
+  }
+  @media only screen and (max-height: 731px) and (max-width: 700px) {
+    .WeeksEvents {
+      max-height: 300px;
+      &.joined {
+        max-height: 450px;
+      }
+    }
+  }
+  @media only screen and (max-height: 640px) and (max-width: 700px) {
+    .WeeksEvents {
+      max-height: 190px;
+      &.joined {
+        max-height: 340px;
+      }
+    }
+  }
+  @media only screen and (max-height: 568px) and (max-width: 700px) {
+    .WeeksEvents {
+      max-height: 120px;
+      &.joined {
+        max-height: 270px;
+      }
+    }
+  }
+}

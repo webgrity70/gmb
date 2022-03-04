@@ -1,0 +1,72 @@
+.PostNew {
+  padding: 36px 26.5px 87.5px 37.5px;
+  & > *:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__title {
+    color: #5c5d5d;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  &__title-input {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    & > *:not(:last-child) {
+      margin-right: 18px;
+    }
+
+    .ui.button {
+      font-weight: 600;
+      padding: 10px 35px;
+    }
+    @media screen and (max-width: 420px) {
+      flex-wrap: wrap;
+      .ui.button {
+        width: 100% !important;
+        margin: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__button {
+    &--grey {
+      background-color: #ced2db;
+    }
+    &--grey.ui.button {
+      color: white;
+    }
+  }
+
+  .ui.input > input::placeholder {
+    font-size: 14px;
+    font-family: Montserrat, serif;
+    font-weight: 500;
+    color: #7e8fa5;
+  }
+
+  .ck.ck-editor__editable > .ck-placeholder::before {
+    color: #7e8fa5;
+    font-family: Montserrat, serif;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  .ck.ck-editor__main > .ck-editor__editable {
+    height: 202px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 5px 5px 5px;
+  }
+}

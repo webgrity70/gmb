@@ -1,0 +1,63 @@
+@import '../../../styles/partials/colors';
+
+.TimeInput {
+  &.ui.dropdown {
+    width: fit-content;
+    height: 36px;
+    display: inline-flex;
+    > input.TextInput {
+      display: block !important;
+      width: 80px;
+    }
+  }
+  .menu.visible {
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    &:empty {
+      display: none !important;
+    }
+    div.item {
+      background-color: transparent !important;
+      border: none;
+      padding-left: 35px !important;
+      &.selected {
+        margin-top: 0;
+      }
+      &:hover {
+        background-color: #f3f4f8 !important;
+      }
+    }
+    span {
+      color: #5c5d5d;
+      font-family: $montserrat;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .active:before {
+      content: '✓';
+      width: 1em;
+      height: 1em;
+      margin-right: 0.3em;
+      color: $primary-color;
+      position: absolute;
+      left: 10px;
+    }
+  }
+  .ui.button {
+    display: inline-flex;
+    width: 65px;
+    justify-content: space-between;
+    padding: 11px 13px;
+    height: 100%;
+    font-family: $rubik;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #545454;
+    i {
+      margin-right: 0 !important;
+      margin-left: auto !important;
+    }
+  }
+}

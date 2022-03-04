@@ -1,0 +1,19 @@
+@import '../../../styles/partials/colors';
+
+.GroupMembersTable {
+  &__dropdown-eject.ui.dropdown {
+    color: #c0c0c0;
+    margin-left: 20px;
+    .GMBDropdown__container.menu {
+      padding: 10px 15px;
+      width: 150px;
+    }
+  }
+  &__ProfileCardChat {
+    color: $primary_color;
+    margin: 8px auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}

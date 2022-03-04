@@ -1,0 +1,136 @@
+@import '../../../styles/partials/colors';
+
+.ChallengeCreation {
+  .ui.button {
+    font-weight: 600;
+    border-radius: 5px;
+  }
+  .option-recommended {
+    line-height: 1.3;
+    font-family: $rubik;
+    color: $primary-color;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__intensity {
+    ul.RadioInput {
+      flex-direction: row;
+      label {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__templatesLink {
+    display: flex;
+    justify-content: flex-end;
+
+    & > div {
+      color: $primary-color;
+      font-family: $rubik;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+    }
+  }
+  &__divider {
+    width: 100%;
+    border: 1px solid #e7e7e7;
+    margin: 20px 0 5px 0;
+  }
+  &__duration {
+    color: #7e8ea6;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 6px 0 0 0;
+  }
+  &__label {
+    label,
+    strong {
+      font-size: 14px;
+      font-weight: 400;
+      font-family: $rubik;
+    }
+    strong {
+      font-weight: 500;
+      margin-left: 5px;
+    }
+  }
+  fieldset:not(:first-of-type).FieldSetLayout label {
+    font-family: $rubik;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .ui.accordion .title {
+    color: #5c5d5d;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 24px;
+    i {
+      width: 10px;
+      margin-right: 5px;
+    }
+  }
+  .RadioInput {
+    flex-direction: column;
+    .ui.radio.checkbox {
+      &.checked label {
+        font-weight: 500;
+      }
+      label {
+        font-weight: 400;
+      }
+    }
+  }
+  &__schedule {
+    &-button.ui.button {
+      padding: 11px 12px;
+    }
+    &-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #5c5d5d;
+      margin-top: 40px;
+    }
+  }
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 70px;
+    .ui.button:not(.orange) {
+      margin-right: 15px;
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content: center;
+      margin-bottom: 90px;
+      flex-direction: column-reverse;
+      margin-top: 40px;
+      .ui.button {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+      .ui.button:not(.orange) {
+        margin-right: 0;
+      }
+    }
+  }
+  &__extra-actions {
+    .ui.button {
+      padding: 11px 20px;
+      color: #5c5d5d !important;
+    }
+    i {
+      color: #5c5d5d;
+    }
+    @media only screen and (max-width: 768px) {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      .ui.button {
+        padding: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}

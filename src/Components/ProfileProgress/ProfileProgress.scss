@@ -1,0 +1,24 @@
+.ProfileProgressBar {
+  z-index: 9999;
+  width: 70px;
+  height: 60px;
+  margin-top: 5px;
+  cursor: pointer;
+  .ProgressBar {
+    &__circle {
+      top: auto;
+      left: auto;
+    }
+    svg {
+      width: 70px;
+      height: 60px;
+    }
+  }
+}
+.ProfileProgressBar__fields {
+  display: flex;
+  flex-direction: column;
+  &-block {
+    text-decoration: line-through;
+  }
+}

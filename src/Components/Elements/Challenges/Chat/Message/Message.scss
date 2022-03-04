@@ -1,0 +1,15 @@
+.ChallengeChatMessage__self-msg {
+  max-width: 100%;
+  margin-left: auto;
+  .date {
+    margin-right: auto;
+  }
+}
+
+.ChallengeChatMessage__user-msg {
+  width: 90%;
+  margin-right: auto;
+  .date {
+    margin-left: auto;
+  }
+}

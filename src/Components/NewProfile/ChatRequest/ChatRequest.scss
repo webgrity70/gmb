@@ -1,0 +1,87 @@
+.ChatRequest {
+  &__trigger.ui.button {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  &__menu.menu {
+    right: 0 !important;
+    left: unset !important;
+    width: 365px;
+    padding: 15px 20px !important;
+  }
+  &__category {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    a {
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    &:not(:last-of-type) {
+      border-bottom: solid 1px #dcdcdc;
+    }
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+    .CategoryIcon {
+      display: flex;
+      i {
+        height: 20px;
+      }
+    }
+    &-text {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      span {
+        &:first-of-type {
+          color: #5b5d5d;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 24px;
+        }
+        &:last-of-type {
+          color: #757676;
+          font-size: 12px;
+          font-weight: 500;
+          max-width: 260px;
+          line-height: 14px;
+          white-space: initial;
+        }
+      }
+    }
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    span {
+      line-height: 18px;
+      &:first-of-type {
+        color: #5b5d5d;
+        font-weight: 500;
+        font-size: 13px;
+      }
+      &:last-of-type {
+        color: #8493a7;
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    &__header {
+      max-width: 260px;
+      white-space: initial !important;
+    }
+    &__menu.menu {
+      left: -60px !important;
+      width: 320px !important;
+    }
+    &__category-text span:last-of-type {
+      max-width: 230px;
+    }
+  }
+}

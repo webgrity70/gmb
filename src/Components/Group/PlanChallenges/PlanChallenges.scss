@@ -1,0 +1,33 @@
+@import '../../../styles/partials/colors';
+
+.PlanChallenges {
+  min-height: 200px;
+
+  &__empty {
+    &-admin {
+      margin-left: 15px;
+      padding-top: 24px;
+      text-align: center;
+      h2 {
+        color: #5c5d5d;
+        font-weight: 400;
+        margin-bottom: 0;
+        line-height: 1.4;
+        font-size: 1.71428571rem;
+        span {
+          font-size: 1.71428571rem;
+          cursor: pointer;
+          color: $primary-color;
+          display: inline;
+        }
+      }
+      span {
+        color: #7e8ea6;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 24px;
+        display: block;
+      }
+    }
+  }
+}

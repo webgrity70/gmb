@@ -1,0 +1,211 @@
+@import '../../../styles/partials/colors';
+
+.EventForm {
+  .SingleDatePickerInput {
+    height: 32px;
+  }
+  input.DateInput_input {
+    height: 25px;
+  }
+  .ui.input input {
+    height: 32px !important;
+  }
+  .ui.search {
+    min-height: 32px;
+    padding: 0.57857143em 1em;
+    input {
+      height: 32px !important;
+    }
+    i {
+      line-height: 10px !important;
+    }
+  }
+  &__date-title {
+    display: none;
+    @media screen and (max-width: 638px) {
+      display: block;
+      margin-bottom: 10px;
+      h1 {
+        font-size: 20px;
+        margin-right: 10px;
+        line-height: 36px;
+        font-weight: 500;
+        color: #5c5d5d;
+      }
+    }
+  }
+  &__save-container {
+    padding: 15px 40px;
+    button.ui {
+      font-size: 14px;
+      padding: 10px 30px;
+      font-weight: 500;
+      flex: 0.6;
+      min-height: auto;
+      i.add.circle.icon {
+        opacity: 1;
+      }
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+    .ui.checkbox label {
+      font-weight: 500;
+      color: #626b6e;
+    }
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 40px 20px 40px;
+      > div:last-of-type {
+        margin-top: 40px;
+        justify-content: center;
+      }
+      button.ui {
+        padding: 12px 30px;
+      }
+    }
+    @media screen and (max-width: 518px) {
+      > div:last-of-type {
+        flex-wrap: wrap;
+        align-items: center;
+        .ui.button {
+          width: 80%;
+          margin: 0;
+          min-height: 40px;
+          &:first-of-type:not(.orange) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  &__template {
+    .ui.checkbox {
+      margin-right: 30px;
+      margin-bottom: 10px;
+      label {
+        font-weight: 500;
+        color: #626b6e;
+      }
+    }
+    .ui.input {
+      width: 250px;
+      margin-right: 10px;
+    }
+    span {
+      color: #7e8fa5;
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+    @media screen and (max-width: 736px) {
+      justify-content: space-between;
+      .ui.checkbox label {
+        margin: 0;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex-direction: column;
+    }
+  }
+  &__save {
+    margin-top: 5px;
+    margin-right: 10px;
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      margin-right: 5px;
+      text-decoration: underline;
+      text-align: right;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+  &__mde-editor {
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    margin-right: 25px;
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      margin-left: 0;
+    }
+  }
+  &__fields {
+    flex: 1;
+    > div {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-of-type) {
+        margin-right: 25px;
+      }
+      > div:not(.MDEEditor):last-of-type {
+        padding-left: 20px;
+      }
+      > div:first-of-type {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        > h3 {
+          font-size: 16px;
+          margin-right: 10px;
+          line-height: 36px;
+          font-weight: 500;
+          color: #5c5d5d;
+          margin-bottom: 0;
+          padding-left: 17px;
+          border-left: solid 1px #dededf;
+        }
+      }
+    }
+    @media screen and (max-width: 638px) {
+      flex-direction: column;
+      margin-top: 15px;
+      > div {
+        &:not(:first-of-type) {
+          margin-bottom: 15px;
+        }
+        > div:first-of-type {
+          padding-left: 3px !important;
+          > h3 {
+            border-left: none;
+            padding-left: 0;
+            margin-bottom: 0;
+          }
+        }
+        > div:not(.MDEEditor):last-of-type {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  &__header {
+    padding: 50px;
+    @media screen and (max-width: 638px) {
+      padding: 10px 30px;
+      flex-direction: column;
+    }
+    .PlanBehaviors {
+      max-width: 190px;
+    }
+  }
+  @media screen and (max-width: 638px) {
+    .PlanBehaviors textarea {
+      margin-left: 0;
+    }
+    .SingleDatePicker {
+      &_picker {
+        left: -20px !important;
+      }
+    }
+  }
+}

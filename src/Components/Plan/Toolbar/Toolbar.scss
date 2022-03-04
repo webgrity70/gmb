@@ -1,0 +1,78 @@
+@import '../../../styles/partials/colors';
+
+.PlanToolbar {
+  margin: 15px 0;
+  > div {
+    flex: 1;
+  }
+  &__settings {
+    .icon {
+      color: $primary-color;
+      cursor: pointer;
+      &:first-of-type {
+        margin-right: 15px;
+      }
+    }
+    .ui.button {
+      font-weight: 600;
+      margin-right: 15px;
+    }
+    @media screen and (max-width: 575px) {
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7f8fa4;
+    .icon {
+      color: #a8aab7;
+      cursor: pointer;
+      &.left {
+        padding-right: 45px;
+      }
+      &.right {
+        padding-left: 45px;
+      }
+    }
+  }
+  &__views {
+    color: #b0b0b1;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    span {
+      cursor: pointer;
+      &:not(:first-of-type) {
+        margin-left: 25px;
+      }
+      &.active {
+        color: $primary-color;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    &__views {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    &__title {
+      border-top: solid 1px #d0d0d0;
+      min-width: 100%;
+      margin-top: 10px;
+      padding: 10px 0px;
+      .icon {
+        &.left {
+          padding-right: 20px;
+        }
+        &.right {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+}

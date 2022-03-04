@@ -1,0 +1,85 @@
+@import '../../../styles/partials/colors';
+
+.ListItems {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  &__details {
+    &:only-child {
+      margin-left: 32px;
+    }
+    &-text {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      max-width: 140px;
+      overflow: hidden;
+    }
+  }
+  &__item-hoverable {
+    a {
+      > div > div:last-of-type {
+        margin: 0 5px 0 0;
+        color: $gray-light;
+        font-size: 13px;
+        line-height: 24px;
+      }
+      &:hover {
+        span {
+          color: $primary_color;
+          cursor: pointer;
+          text-decoration: underline;
+        }
+        img {
+          filter: grayscale(100%);
+        }
+      }
+    }
+  }
+  &__item,
+  &__item-hoverable {
+    flex: 0 50%;
+    padding: 0 0 20px 5px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    > div > div,
+    a > div {
+      display: flex;
+      align-items: center;
+    }
+    a {
+      cursor: pointer;
+    }
+    i {
+      color: $gray-light;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    span {
+      color: $dark-text-color;
+      font-size: 13px;
+      font-weight: 500;
+      user-select: none;
+    }
+    > div {
+      margin-right: 5px;
+    }
+    &-borderer {
+      border-radius: 100%;
+      margin-right: 7px;
+      border: 2px solid $dark-text-color;
+      img {
+        border-radius: 100%;
+      }
+    }
+    img {
+      height: 32px;
+      width: 32px;
+    }
+  }
+  @media (max-width: 414px) {
+    &__details-text {
+      max-width: 90px;
+    }
+  }
+}

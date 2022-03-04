@@ -1,0 +1,126 @@
+.ChallengeMembersTableColumns {
+  &__text {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+  }
+  &__label {
+    color: #5c5d5d;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+  &__value {
+    color: #5c5d5d;
+    font-size: 12px;
+    line-height: 21px;
+  }
+  &__avatar {
+    position: relative;
+    height: 45px;
+    width: 45px;
+    margin-right: 10px;
+    background-color: #fafafa;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  }
+  &__member {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 20px 0;
+    &:first-of-type {
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+  &__name {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+  }
+  &__details {
+    color: #5c5d5d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  &__location {
+    color: #5c5d5d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-left: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 130px;
+    overflow: hidden;
+  }
+  &__badge {
+    width: 36px;
+  }
+  &__rank {
+    border: 1px solid #e3e3e3;
+    background-color: #f0f0f0;
+    margin-right: 7px;
+    margin-left: 5px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #969696;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__score {
+    border-radius: 3px;
+    padding: 5px 6px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    background-color: #4e72f1;
+    min-width: 60px;
+    i {
+      margin-right: 15px;
+    }
+  }
+  &__user {
+    .avatar {
+      width: 50px !important;
+      height: 50px !important;
+    }
+    span {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+  }
+  &__trigger {
+    color: #7f8fa4;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    cursor: pointer;
+  }
+  &__note.ui.popup {
+    background-color: #f3f4f5;
+    display: flex !important;
+    flex-direction: column;
+    span {
+      line-height: 21px;
+      color: #5c5d5d;
+      font-size: 12px;
+      &:first-of-type {
+        font-weight: 600;
+      }
+    }
+    &:before {
+      background-color: #f3f4f5;
+    }
+  }
+}

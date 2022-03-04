@@ -1,0 +1,140 @@
+.Post {
+  display: flex;
+
+  &__cards {
+    flex-grow: 1;
+  }
+
+  &__card {
+    border: 0;
+    //margin: 0 1rem;
+    padding: 12px 14px;
+    font-size: 13px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ebebeb;
+    }
+
+    &:hover {
+      background-color: #fff7ec;
+      border-bottom-color: transparent;
+    }
+
+    .image {
+      img {
+        width: 100%;
+      }
+    }
+
+    .meta {
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__pinnedPost {
+    border-left: 2px solid #40c3fe;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-weight: bold;
+    display: flex;
+
+    i {
+      margin-left: auto;
+      font-size: 17px;
+      padding: 0.1rem;
+      cursor: pointer;
+    }
+
+    &-text {
+      //flex-grow: 1;
+      max-width: 320px;
+      color: #5c5d5d;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 0.5rem;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
+
+    &-draft {
+      color: #21b3f4;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 19px;
+    }
+  }
+
+  &__meta {
+    margin-left: auto;
+    color: #7f8fa4;
+    font-size: 11px;
+    font-weight: 600;
+
+    .author {
+      color: #ff8f00;
+    }
+
+    .pinButton {
+      background: none;
+      color: #40c3fe;
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+  }
+
+  &__responses {
+    color: #b0b0b1;
+    font-family: Montserrat, serif;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  &__dropdown {
+    .item {
+      & > span.text {
+        display: block;
+      }
+    }
+    & > .text {
+      color: #d0d0d0;
+      letter-spacing: 0.34px;
+      line-height: 15px;
+      margin-left: 0.5rem;
+      font-size: 22px;
+    }
+
+    &-menu {
+      width: 187px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    &__card {
+      height: 140px;
+      .content {
+        height: 100%;
+        position: relative;
+      }
+      .meta {
+        bottom: 0;
+        position: absolute;
+      }
+    }
+  }
+}

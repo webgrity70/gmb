@@ -1,0 +1,39 @@
+.GroupsFilters {
+  float: left;
+  border-right: 1px solid #dfdddd;
+  margin-top: -25px;
+  padding: 70px 20px 0 90px;
+  width: 20%;
+
+  h2.header {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+  }
+
+  .ui.form {
+    margin-left: 10px;
+
+    .field {
+      label {
+        color: #5c5d5d;
+      }
+    }
+  }
+
+  h6 {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 25px;
+    padding-right: 20px;
+  }
+
+  .dropdown-single {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 10px !important;
+  }
+}

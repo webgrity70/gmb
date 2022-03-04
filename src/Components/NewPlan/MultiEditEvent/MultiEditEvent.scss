@@ -1,0 +1,109 @@
+@import '../../../styles/partials/colors';
+
+.MultiEditEventForm {
+  &.ui.modal {
+    > .content {
+      padding: 35px !important;
+      @media only screen and (max-width: 767px) {
+        padding: 35px !important;
+      }
+    }
+    .close.icon {
+      color: #5c5d5d;
+    }
+  }
+  .ui.accordion {
+    .title {
+      font-family: $rubik;
+      font-size: 14px;
+      line-height: 24px;
+      padding-bottom: 0;
+      font-weight: 400;
+      color: #5c5d5d;
+    }
+    .content {
+      padding: 0 !important;
+    }
+  }
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    .gmb-category-health-fitness {
+      color: $health-fitness-color;
+    }
+    .gmb-category-work {
+      color: $work-color;
+    }
+    .gmb-category-life {
+      color: $life-color;
+    }
+    .gmb-category-learn {
+      color: $learn-color;
+    }
+  }
+  &__label {
+    font-family: $rubik;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #5c5d5d;
+    margin: 10px 0 0 0;
+  }
+  &__disabled {
+    cursor: not-allowed;
+    color: #7f8fa4;
+    &:hover {
+      color: #7f8fa4 !important;
+    }
+  }
+  &.ui.modal .actions {
+    background-color: white;
+    justify-content: flex-end;
+    padding: 15px 35px !important;
+    a {
+      margin-right: 15px;
+      &:first-of-type {
+        margin-right: 40px;
+      }
+      &:focus,
+      &:hover {
+        color: #f97a00;
+      }
+    }
+    @media screen and (max-width: 648px) {
+      padding: 10px !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    &.ui.modal {
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      > .content {
+        bottom: 85px;
+        position: absolute;
+        top: 0;
+        overflow-y: auto;
+        width: 100%;
+        max-height: none;
+        padding: 1rem !important;
+      }
+      .actions {
+        bottom: 40px;
+        position: absolute;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ios .ui.modal .actions {
+    bottom: 120px;
+  }
+}

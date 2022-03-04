@@ -1,0 +1,60 @@
+@import '../../../../styles/partials/colors';
+
+.ui.modal.AppsEdit {
+  @media only screen and (min-width: 1200px) {
+    width: 750px;
+    margin: 0;
+  }
+  .content {
+    span {
+      font-weight: 500;
+    }
+  }
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media only screen and (max-width: 767px) {
+      padding: 12px !important;
+    }
+  }
+  .AppsEdit__toggle-container {
+    display: flex;
+    span {
+      margin: 0 0 0 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .AppsEdit__app {
+    width: 150px;
+    max-width: 150px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+    font-weight: 500;
+  }
+  .AppsEdit__form {
+    margin-top: 70px;
+    .search {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  .AppsEdit__content {
+    @media (max-width: 414px) {
+      padding: 0;
+    }
+    .ListItems {
+      &__item-hoverable,
+      &__item {
+        padding: 10px 10px 20px 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.NewGroupCategories {
+  display: inline-block;
+  .ui.checkbox {
+    &.checked label {
+      font-weight: 600;
+    }
+    label {
+      margin-right: 30px;
+      font-family: Rubik, Montserrat, 'Times New Roman', Times, serif;
+      color: #5c5d5d;
+    }
+    input:focus ~ label {
+      color: #5c5d5d;
+    }
+  }
+  padding: 6px;
+  .NewGroupCategory {
+    &:not(.active) {
+      filter: grayscale(100%);
+    }
+  }
+  &.error {
+    border: solid #de3e47 1px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}

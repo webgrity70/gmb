@@ -1,0 +1,12 @@
+.ExpiredUser.ui.modal {
+  text-align: center;
+  .close.icon {
+    color: black;
+  }
+  p {
+    max-width: 400px;
+    margin: auto;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+}

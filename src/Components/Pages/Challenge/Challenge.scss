@@ -1,0 +1,27 @@
+.ChallengePage {
+  margin-top: 65px;
+  height: auto;
+  min-height: 100vh;
+  background-image: url(/images/hills.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  background-color: #fcfcfc;
+  &__tabs {
+    text-align: center;
+    margin: 30px auto auto auto;
+    width: 80%;
+  }
+  .TabsContainer {
+    margin-bottom: 0;
+    padding-bottom: 40px;
+    &__body {
+      max-height: unset;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__tabs {
+      width: 100%;
+    }
+  }
+}

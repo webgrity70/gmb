@@ -1,0 +1,41 @@
+@import '../../../styles/partials/_colors.scss';
+
+.ProfileFormOccupation {
+  font-family: $rubik;
+  text-align: left;
+  font-weight: 400;
+
+  .ui.selection.dropdown {
+    min-width: 30px;
+  }
+
+  .ui input[type='text'],
+  .ui.dropdown > .text,
+  .ui.checkbox label {
+    color: #495463;
+    line-height: 1.4;
+  }
+
+  .ui.checked.checkbox {
+    label {
+      color: #5c5d5d;
+      font-weight: bold;
+    }
+  }
+
+  &__form-error.ui.message {
+    display: inline-block !important;
+    margin-top: 0;
+  }
+
+  &__selected-lang.ui.label {
+    margin: 5px;
+  }
+  &__other-checkbox {
+    margin-top: 5px !important;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+    margin-left: 30%;
+  }
+}

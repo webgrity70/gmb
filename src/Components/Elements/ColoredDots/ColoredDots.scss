@@ -1,0 +1,35 @@
+@import '../../../styles/partials/colors';
+
+.colored-dots {
+  i {
+    &.icon {
+      &.light-yellow {
+        color: $light-yellow-color;
+        &:hover {
+          color: $yellow-color;
+        }
+      }
+      &.light-red {
+        color: $light-red-color;
+        &:hover {
+          color: $red-color;
+        }
+      }
+      &.light-green {
+        color: $light-green-color;
+        &:hover {
+          color: $green-color;
+        }
+      }
+      &.green {
+        color: $green-color !important;
+      }
+      &.red {
+        color: $red-color !important;
+      }
+      &.yellow {
+        color: $yellow-color !important;
+      }
+    }
+  }
+}

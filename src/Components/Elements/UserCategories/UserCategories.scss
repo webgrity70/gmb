@@ -1,0 +1,71 @@
+@import '../../../styles/partials/colors';
+
+$green: #b7ffeb;
+$purple: #eea1fc;
+$red: #fdb0b8;
+$yellow: #f8e68e;
+
+.UserCategories {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #5c5d5d;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  .health-fitness.active {
+    color: $health-fitness-color;
+  }
+  .learn.active {
+    color: #ba68c8;
+  }
+  .work.active {
+    color: $work-color;
+  }
+  .life.active {
+    color: $life-color;
+  }
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 15px;
+    span {
+      font-size: 14px;
+      line-height: 14px;
+      font-weight: 400;
+      color: #d1d1d1;
+    }
+    > span {
+      margin-right: 25px;
+    }
+  }
+  &__content {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    > .flex:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+    .buddy {
+      margin: 0 15px 0 30px;
+    }
+    .buddy:not(.active),
+    .you:not(.active) {
+      color: #d1d1d1;
+    }
+    .category {
+      width: 150px;
+      display: flex;
+      margin-right: 20px;
+      .CategoryIcon {
+        margin-top: 2px;
+      }
+    }
+    .icon.eye {
+      cursor: pointer;
+      margin-left: 10px;
+    }
+  }
+}

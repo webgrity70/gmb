@@ -1,0 +1,18 @@
+.GroupsResultsList {
+  .TableContainer {
+    .ui.table {
+      border-collapse: collapse;
+      border-left: none;
+      border-right: none;
+      width: calc(100% - 1px);
+      .featured {
+        border: 1px solid #b16300;
+        background-color: rgba(255, 143, 0, 0.08);
+      }
+    }
+    tbody td:first-child {
+      padding-left: 30px;
+      width: 450px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.EmojiPicker {
+  &.ui.popup.top.right {
+    min-width: 350px;
+    &:before {
+      content: none;
+    }
+  }
+  .emoji-mart {
+    width: auto !important;
+  }
+  .emoji-mart-title-label:only-child {
+    display: none;
+  }
+  @media screen and (max-width: 767px) {
+    &.ui.popup.top.right {
+      min-width: 100%;
+      left: 0 !important;
+      margin-bottom: 50px;
+    }
+  }
+}

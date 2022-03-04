@@ -1,0 +1,43 @@
+@import '../../../styles/partials/colors';
+
+.MyGroupsSection {
+  background-color: #fafafa;
+  &__title {
+    color: #5c5d5d;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    margin-right: 10px;
+  }
+  &__list {
+    tbody,
+    table {
+      border-color: transparent !important;
+    }
+  }
+
+  &__container {
+    &--list {
+      border-radius: 0;
+      border: 1px solid #dee2e6;
+      border-top: none;
+    }
+    .TableContainer {
+      .ui.table {
+        border-collapse: collapse;
+        width: calc(100% - 1px);
+        .featured {
+          border: 1px solid #b16300;
+          background-color: rgba(255, 143, 0, 0.08);
+        }
+      }
+      tbody td:first-child {
+        padding-left: 30px;
+        width: 450px;
+      }
+    }
+  }
+  .LoadingContainer {
+    min-height: 100px;
+  }
+}

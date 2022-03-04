@@ -1,0 +1,168 @@
+@import '../../../styles/partials/colors';
+
+.PlansPage {
+  background-color: #fcfcfc;
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  &__container {
+    text-align: center;
+    margin-bottom: 70px;
+    width: 80%;
+    h1 {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+  }
+  &__legends {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    div:not(.inactive) {
+      .f-work {
+        border-bottom-color: #b0b0b1;
+        &:after {
+          border-top-color: #b0b0b1;
+        }
+      }
+      .f-circle,
+      .f-learn {
+        background-color: #b0b0b1;
+      }
+      .f-life {
+        border-top-color: #b0b0b1;
+      }
+      .f-health-fitness {
+        border-bottom-color: #b0b0b1;
+      }
+    }
+    .f-health-fitness {
+      top: 0;
+    }
+    .f-work {
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      position: relative;
+      top: -10px;
+      border-bottom-color: $work-color;
+      &:after {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: $work-color;
+      }
+    }
+    span {
+      line-height: 28px;
+      color: #b0b0b1;
+      margin-left: 5px;
+      font-weight: 500;
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &__calendar {
+    -webkit-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 10px 25px;
+    margin: 5px 0;
+  }
+  &__tabPanes {
+    display: flex;
+    flex: 1 1;
+    height: 47px;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: center;
+    color: #5c5d5d;
+  }
+  &__tabs {
+    border-bottom: none !important;
+    .ui.tabular.menu .active.item {
+      color: #5c5d5d;
+    }
+    .menu.tabular.ui {
+      border-bottom: none !important;
+    }
+    .item {
+      opacity: 0.5 !important;
+      background-color: #eeeeee !important;
+    }
+    .item.active {
+      opacity: 1 !important;
+      background-color: #ffffff !important;
+    }
+    .segment.ui {
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0;
+    }
+  }
+  &__tab-calendar {
+    height: 47px;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: bold !important;
+    line-height: 24px !important;
+    text-align: center;
+    color: #5c5d5d;
+    border-top: 1px solid #d4d4d5 !important;
+    border-left: 1px solid #d4d4d5 !important;
+    border-right: 1px solid #d4d4d5 !important;
+    box-sizing: box;
+    border-radius: 4px;
+    width: calc(50% - 5px);
+    padding-left: calc(25% - 30px) !important;
+  }
+  &__tab-myplans {
+    height: 47px;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: bold !important;
+    line-height: 24px !important;
+    text-align: center;
+    color: #5c5d5d;
+    border-top: 1px solid #d4d4d5 !important;
+    border-left: 1px solid #d4d4d5 !important;
+    border-right: 1px solid #d4d4d5 !important;
+    border-bottom: 0 !important;
+    box-sizing: box;
+    border-radius: 4px;
+    width: 50%;
+    padding-top: 10px;
+    padding-left: calc(25% - 30px) !important;
+    margin-left: 5px;
+  }
+  &__tab-splitter {
+    width: 5px;
+  }
+  &__tab-comingsoon {
+    padding: 30px !important;
+    font-family: $montserrat;
+    font-size: 20px !important;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    color: #5c5d5d;
+  }
+  @media screen and (max-width: 575px) {
+    &__container {
+      width: 100%;
+    }
+  }
+}

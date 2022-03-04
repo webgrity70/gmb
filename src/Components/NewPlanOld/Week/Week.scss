@@ -1,0 +1,316 @@
+@import '../../../styles/partials/colors';
+
+.PlanWeek {
+  padding: 20px 50px 0 50px;
+  &__calculated-date {
+    margin-left: 40px;
+    font-weight: 500;
+    color: #8191a7;
+    font-size: 10px;
+  }
+  &__actions {
+    display: flex;
+    margin-left: 15px;
+    color: #a4b9d4;
+    font-weight: 500;
+    font-size: 12px;
+    .YourTemplates {
+      margin: 0;
+    }
+    i {
+      margin-right: 5px;
+    }
+    > div {
+      cursor: pointer;
+      transition: color 0.3s linear;
+      &:hover {
+        color: $primary-color;
+      }
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      margin-left: 0;
+      flex-wrap: wrap;
+    }
+  }
+  &__day-disabled {
+    > div:first-of-type,
+    > div:last-of-type > div:not(.PlanTime) {
+      pointer-events: none;
+      user-select: none;
+      opacity: 0.5;
+    }
+    > div:last-of-type {
+      padding-top: 8px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+    .PlanWeek__mde-editor a {
+      color: #a7a8a8;
+      margin-left: 5px;
+    }
+  }
+  .PlanTime span {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #ed6b7a;
+  }
+  &__repeat-previous {
+    max-width: 120px;
+    cursor: pointer;
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 638px) {
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  &__divider {
+    height: 1px;
+    background-color: #c1c2c3;
+    flex: 1;
+    margin-left: 25px;
+    @media screen and (max-width: 638px) {
+      display: none;
+    }
+  }
+  &__week-title {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    h1 {
+      color: #c1c2c3;
+      font-family: Rubik;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 500;
+      margin: 0;
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-left: 8px;
+      }
+    }
+    @media screen and (max-width: 638px) {
+      padding: 0 15px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+  &__repeat-fields {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 145px;
+    .PlanBehaviors {
+      max-width: 195px;
+    }
+    .PlanTime {
+      min-width: 185px;
+      + div {
+        width: 202px !important;
+      }
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        margin-right: 40px;
+      }
+      &:not(:last-of-type) {
+        border-left: solid 1px #dededf;
+      }
+      > div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        h3 {
+          margin-bottom: 0;
+          padding-left: 13px;
+          margin-right: 10px;
+        }
+        &:nth-child(3) {
+          padding-left: 15px;
+          &.SignupHabits {
+            padding-left: 18px;
+            @media screen and (min-width: 800px) {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .ui.checkbox {
+        margin: -10px 0 5px 15px;
+        label {
+          font-weight: 500;
+          padding-left: 30px;
+          font-size: 13px;
+          color: #626b6e;
+        }
+      }
+      h3 {
+        font-size: 16px;
+        line-height: 36px;
+        font-weight: 500;
+        color: #5c5d5d;
+      }
+    }
+    @media screen and (max-width: 1090px) {
+      > div {
+        border-left: none !important;
+        > div {
+          h3 {
+            padding-left: 0;
+          }
+          &:nth-child(3) {
+            padding-left: 0;
+            &.SignupHabits {
+              padding-left: 0;
+              margin-bottom: 0;
+            }
+          }
+        }
+        &:nth-child(2),
+        &:nth-child(4) {
+          h3 {
+            padding-left: 17px;
+            border-left: solid 1px #dededf;
+          }
+          div.ui.checkbox {
+            padding-left: 20px;
+          }
+        }
+        > div.ui.checkbox {
+          padding-left: 0;
+          margin-left: 0;
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      margin-left: 0;
+      > div:not(:first-of-type) {
+        &:nth-child(2),
+        &:nth-child(4) {
+          h3 {
+            padding-left: 0;
+            border-left: none;
+          }
+          div.ui.checkbox {
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    @media screen and(min-width: 900px) {
+      .PlanWeek__mde-editor {
+        margin-left: 20px;
+      }
+    }
+  }
+  &__day {
+    padding-top: 0;
+    margin-right: 65px;
+    height: 17px;
+    font-size: 13px !important;
+    &.ui.checkbox {
+      width: 95px;
+      &.checked {
+        label {
+          font-weight: 500;
+        }
+      }
+      input:focus ~ label,
+      label {
+        padding-left: 40px;
+        color: #5c5d5d;
+      }
+    }
+  }
+  > div {
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+    .SignupHabits {
+      padding-left: 0;
+    }
+  }
+  &__mde-editor {
+    width: 100%;
+    a {
+      font-size: 12px;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    .MDEEditor > div {
+      width: 100%;
+    }
+    @media screen and(max-width: 638px) {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  &__fields {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    > div {
+      display: flex;
+      flex-direction: column;
+      &:not(:last-of-type):not(.PlanDuration) {
+        margin-right: 35px;
+      }
+      &:not(:first-of-type) {
+        > h3 {
+          padding-left: 17px;
+          border-left: solid 1px #dededf;
+        }
+        .ui.checkbox {
+          margin: -10px 0 20px 0;
+          label {
+            font-weight: 400;
+            font-size: 16px;
+            color: #626b6e;
+          }
+        }
+      }
+      > h3 {
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: 500;
+        color: #5c5d5d;
+      }
+    }
+  }
+  @media screen and (max-width: 638px) {
+    padding: 10px 15px;
+    &__fields {
+      flex-direction: column;
+      > div {
+        margin-bottom: 15px;
+        padding-left: 0;
+        &.PlanBehaviors {
+          max-width: 220px;
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    > div {
+      flex-direction: column;
+    }
+  }
+}

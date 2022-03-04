@@ -1,0 +1,10 @@
+.RegularTable {
+  width: 100%;
+  background-color: white;
+  border-top: none;
+  margin-top: 15px;
+  .ui.stackable.grid > .column:not(.row) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

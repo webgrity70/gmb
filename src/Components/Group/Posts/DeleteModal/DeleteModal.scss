@@ -1,0 +1,16 @@
+.DeletePostModal.ui.modal {
+  > div.header {
+    color: #5c5d5d;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1;
+  }
+  > div.content {
+    font-weight: 500;
+  }
+  .ui.button {
+    padding: 12px 20px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}

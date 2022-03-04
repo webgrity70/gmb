@@ -1,0 +1,21 @@
+@import '../../../styles/partials/colors';
+
+.LocationInput {
+  span,
+  a {
+    color: #5c5d5d;
+    font-family: $rubik;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  a {
+    text-decoration: underline;
+    color: $primary-color;
+    cursor: pointer;
+  }
+  &__list {
+    font-weight: 500 !important;
+    margin-right: 5px;
+  }
+}

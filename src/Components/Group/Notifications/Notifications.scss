@@ -1,0 +1,65 @@
+@import '../../../styles/partials/colors';
+
+.PlanNotifications {
+  &.ui.popup {
+    min-width: 320px;
+    text-align: center;
+    padding: 15px 25px 20px 25px;
+    z-index: 2000;
+  }
+  > div > span {
+    color: #5c5d5d;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  &__notification-title {
+    color: #5c5d5d;
+    font-size: 14px;
+    margin-top: 10px;
+    > div:first-of-type {
+      height: 1px;
+      margin: auto;
+      width: 100%;
+      margin-top: 3px;
+      background-color: #d1d1d1;
+      margin-bottom: 10px;
+    }
+  }
+  &__option {
+    display: flex;
+    span {
+      &:not(:first-of-type) {
+        cursor: pointer;
+      }
+      &:not(.active) {
+        color: #b5b5b6;
+      }
+      &.active {
+        color: $primary-color;
+        font-weight: 500;
+      }
+      &.label {
+        width: 40px;
+        color: #5c5d5d;
+        text-align: left;
+        font-weight: 500;
+      }
+    }
+  }
+  @media screen and (max-width: 638px) {
+    &.ui.popup {
+      min-width: 300px;
+      margin-left: 30px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.notification-content {
+  .ui.checkbox input:checked ~ label:before {
+    background-color: #ff8e00 !important;
+  }
+}

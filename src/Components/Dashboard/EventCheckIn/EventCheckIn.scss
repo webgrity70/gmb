@@ -1,0 +1,544 @@
+@import '../../../styles/partials/colors';
+$colors: $health-fitness-color, $learn-color, $life-color, $work-color;
+
+.checkin {
+  padding-top: 0;
+  flex: 1;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px 10px 5px 5px;
+  max-width: 350px;
+  .accordion.ui {
+    padding: 10px 20px;
+    min-height: 120px;
+    textarea {
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+      min-height: 65px;
+      font-weight: 500;
+
+      &::-webkit-input-placeholder {
+        /* Chrome */
+        color: rgb(140, 154, 171);
+      }
+      &:-ms-input-placeholder {
+        /* IE 10+ */
+        color: rgb(140, 154, 171);
+      }
+      &::-moz-placeholder {
+        /* Firefox 19+ */
+        color: rgb(140, 154, 171);
+        opacity: 1;
+      }
+      &:-moz-placeholder {
+        /* Firefox 4 - 18 */
+        color: rgb(140, 154, 171);
+        opacity: 1;
+      }
+    }
+    > div:not(:last-of-type) {
+      border-bottom: solid 1px #dfe3e9;
+    }
+    .title {
+      text-align: left;
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .content {
+      padding-top: 0 !important;
+      padding-bottom: 5px !important;
+    }
+    input {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  &.nothing {
+    .heading {
+      background-color: nth($colors, random(length($colors)));
+    }
+    .ui.button {
+      margin-top: 70px;
+      font-size: 24px;
+    }
+  }
+  .countdown {
+    &.flash {
+      -webkit-animation: flash linear 1s infinite;
+      animation: flash linear 1s infinite;
+    }
+    span {
+      font-size: 40px;
+    }
+  }
+  .slider {
+    &.d-prev {
+      -webkit-animation-name: slideRight;
+      animation-name: slideRight;
+      animation-duration: 500ms;
+    }
+    &.d-next {
+      -webkit-animation-name: slideLeft;
+      animation-name: slideLeft;
+      animation-duration: 500ms;
+    }
+  }
+
+  @keyframes slideRight {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    to {
+      -webkit-transform: translate3d(-100%, 0, 0) rotate(-20deg);
+      transform: translate3d(-100%, 0, 0) rotate(-20deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes slideLeft {
+    from {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+
+    to {
+      -webkit-transform: translate3d(100%, 0, 0) rotate(20deg);
+      transform: translate3d(100%, 0, 0) rotate(20deg);
+      opacity: 0;
+    }
+  }
+  .heading,
+  > div .heading {
+    text-align: center;
+    font-size: 28px;
+    font-family: $montserrat;
+    font-weight: 700;
+    color: white;
+    padding: 30px 0;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    &.health-fitness {
+      background-color: $health-fitness-color;
+    }
+    &.learn {
+      background-color: $learn-color;
+    }
+    &.work {
+      background-color: $work-color;
+    }
+    &.life {
+      background-color: $life-color;
+    }
+  }
+
+  textarea {
+    margin-top: 8px;
+    width: 90%;
+    padding: 7px;
+    color: #5c5d5d;
+    border: 1px solid #dfe3e9;
+    border-radius: 5px;
+    max-height: 100px;
+    margin-bottom: 20px;
+    border-color: #ced0da;
+    font-family: $rubik;
+    font-weight: 400;
+    &::-webkit-input-placeholder {
+      color: #adbbce;
+    }
+    &:-moz-placeholder {
+      color: #adbbce;
+    }
+    &:-moz-placeholder {
+      color: #adbbce;
+    }
+    &:-ms-input-placeholder {
+      color: #adbbce;
+    }
+    &::placeholder {
+      color: #adbbce;
+    }
+  }
+  .slider-container {
+    width: 100%;
+    padding: 0 25px;
+    margin-top: 25px;
+  }
+
+  .rc-slider-track {
+    background-color: #ff8f00;
+  }
+
+  .rc-slider-handle {
+    border-color: #ff8f00;
+    background-color: #ff8f00;
+    margin-top: -10px;
+    width: 25px;
+    height: 25px;
+    margin-left: -10px;
+  }
+
+  .slider-container {
+    .slider-component {
+      width: calc(100% - 60px);
+      display: inline-block;
+    }
+
+    .slider-percentage {
+      width: 60px;
+      display: inline-block;
+      color: #7f8fa4;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .accountability-score {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+  }
+
+  input {
+    margin-top: 8px;
+    width: 90%;
+    padding: 7px;
+    color: #5c5d5d;
+    border: 1px solid #dfe3e9;
+    border-radius: 5px;
+  }
+
+  .checkin-heading {
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    font-weight: 400;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    .title,
+    .points {
+      font-weight: 600;
+      font-family: $montserrat;
+    }
+    .points {
+      font-size: 40px;
+      margin: 30px 0;
+      -webkit-animation: bounce 0.55s linear;
+      animation: bounce 0.55s linear;
+      &.health-fitness {
+        color: $health-fitness-color;
+      }
+      &.learn {
+        color: $learn-color;
+      }
+      &.work {
+        color: $work-color;
+      }
+      &.life {
+        color: $life-color;
+      }
+    }
+    .sub-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+
+    .description {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      padding: 0 20px;
+    }
+  }
+
+  .time-left {
+    text-align: center;
+    font-weight: 500;
+    color: #5c5d5d;
+    margin-top: 25px;
+    font-size: 16px;
+  }
+  .time-left-container {
+    min-height: 249px;
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-between;
+    .ui.button.orange {
+      margin-left: 15px;
+    }
+  }
+  @mixin milestoneBaseText {
+    color: #5c5d5d;
+    font-weight: 600;
+    text-align: center;
+  }
+  .milestone {
+    &-title {
+      @include milestoneBaseText();
+      font-size: 12px;
+      margin: 5px auto;
+    }
+    &-text {
+      @include milestoneBaseText();
+      font-size: 18px;
+      margin: 5px auto;
+    }
+    &-description {
+      @include milestoneBaseText();
+      font-size: 12px;
+      font-weight: 500;
+      margin: 10px auto 15px auto;
+    }
+  }
+  .checkin-status {
+    color: #5c5d5d;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    max-width: 250px;
+    text-align: center;
+    margin: 15px auto;
+    &.title {
+      font-size: 26px;
+    }
+  }
+
+  .button.ui {
+    padding: 8px 15px;
+    font-weight: 600;
+    &.basic.orange {
+      &:hover {
+        background-color: #fff9f3 !important;
+      }
+      &:focus {
+        background-color: #f7eee5 !important;
+      }
+    }
+    &.basic:not(.orange):hover {
+      color: $primary-color !important;
+      box-shadow: 0 0 0 1px $primary-color inset, 0 0 0 0 $primary-color inset;
+    }
+  }
+
+  .checkin-button-holder {
+    margin: 20px 0 30px 0;
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    &.milestone-buttons {
+      padding: 0 50px;
+    }
+    &.consecutive {
+      .ui.button:last-of-type {
+        margin-left: 17px;
+      }
+    }
+    button.ui {
+      height: fit-content;
+      padding: 8px 21px;
+      color: white;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+    & ~ .change-plan {
+      margin-left: 0;
+    }
+    i.angle {
+      color: #f1b274;
+      cursor: pointer;
+      &.hide {
+        cursor: default;
+        user-select: none;
+        opacity: 0;
+      }
+      &.left {
+        margin-left: 10px;
+      }
+      &.right {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .checkin-notes {
+    min-height: 60px;
+    margin-bottom: 12px;
+    width: 90%;
+    margin-top: 30px;
+    border: 1px solid #ced0da;
+    border-radius: 5px;
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 12px;
+    padding-top: 6px;
+    max-height: 100px;
+  }
+
+  .checkin-done {
+    margin-bottom: 20px;
+    &.ui.orange {
+      font-size: 10px;
+      padding: 10px 30px;
+    }
+    i.icon.check {
+      margin: 0 !important;
+      opacity: 1;
+    }
+  }
+
+  .checkin-done-holder {
+    display: flex;
+    justify-content: space-between;
+    i.angle {
+      color: #f1b274;
+      cursor: pointer;
+      &.hide {
+        cursor: default;
+        user-select: none;
+        opacity: 0;
+      }
+      &.left {
+        margin-left: 10px;
+      }
+      &.right {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .change-plan {
+    bottom: 20px;
+    right: 20px;
+    color: #ff8f00;
+    margin-top: 10px;
+    margin-left: auto;
+    display: block;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .action-label {
+    color: #5c5d5d;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+  @media screen and (max-width: 990px) {
+    .slider-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 0 10px;
+      .slider-percentage {
+        width: 55px;
+      }
+    }
+    .slider-component {
+      width: calc(100% - 55px);
+    }
+    .rc-slider-handle {
+      width: 20px;
+      height: 20px;
+      margin-top: -8px;
+      margin-left: -10px;
+    }
+  }
+  @media screen and (max-width: 761px) {
+    min-height: 250px;
+    border-left: none;
+    padding-left: 0;
+    max-width: 100%;
+    textarea.checkin-notes {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .slider-container {
+      padding: 0 30px;
+      margin-top: 20px;
+      .slider-percentage {
+        width: 70px;
+      }
+    }
+    .slider-component {
+      width: calc(100% - 70px);
+    }
+    .rc-slider-handle {
+      margin-top: -15px;
+      width: 35px;
+      height: 35px;
+      margin-left: -18px;
+    }
+    .heading {
+      padding: 13px 0;
+      font-size: 21px;
+    }
+    .checkin-done.ui.orange {
+      margin-top: 0;
+    }
+    .checkin-notes {
+      min-height: 70px;
+    }
+  }
+  @-webkit-keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes flash {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes bounce {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translate3d(0, 0, 0);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(0.89);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translate3d(0, 0, 0);
+    }
+  }
+}

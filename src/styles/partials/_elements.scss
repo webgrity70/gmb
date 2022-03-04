@@ -1,0 +1,168 @@
+@import 'colors';
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-280 {
+  margin-top: 280px;
+}
+
+.actions {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    li {
+      display: inline-block;
+      padding: 0 5px;
+
+      a,
+      button {
+        display: inline-block;
+        margin-right: 0;
+        color: $primary-color;
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+#drift-widget-container {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+#root {
+  //overflow: hidden;
+  > .container-fluid {
+    @media (max-width: 768px) {
+      // padding-bottom: 50px;
+    }
+  }
+}
+
+#feedback-button {
+  display: block;
+  z-index: 999999;
+  bottom: 10px;
+  left: 10px;
+  background-color: $primary-color;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: fixed;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &:hover {
+    background-color: lighten($primary-color, 5%);
+    color: black;
+    box-shadow: 1px 1px 1px 1px #cccccc;
+  }
+}
+
+[data-tooltip] {
+  &:after {
+    z-index: 3;
+  }
+
+  &:before {
+    z-index: 4;
+  }
+}
+
+@media (max-width: 576px) {
+  .hidden-el-xs-down {
+    display: none;
+  }
+}
+
+.ui.checkbox input:checked ~ .box:before,
+.ui.checkbox input:checked ~ label:before {
+  background-color: #ff8e00 !important;
+  border-color: #e4e4e4;
+}
+
+.ui.checkbox input:checked ~ .box:after,
+.ui.checkbox input:checked ~ label:after {
+  color: #ffffff !important;
+  font-size: 10px;
+}
+
+.desktop-banner {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hidden-el-md-down {
+    display: none;
+  }
+  .zEWidget-launcher {
+    display: none;
+  }
+
+  .desktop-banner {
+    display: inline-block;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(14, 14, 14, 0.5);
+    width: 100%;
+    margin-left: -15px;
+    margin-top: -8px;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+  }
+}
+
+.ui {
+  &.button {
+    &.primary {
+      background-color: $primary-color;
+      color: #ffffff;
+      border: 1px solid $primary-color;
+
+      &:hover,
+      &:focus {
+        background-color: $primary-color-hover;
+      }
+    }
+    &.secondary {
+      color: $primary-color;
+      background-color: #ffffff;
+      border: 1px solid $primary-color;
+    }
+    &.third {
+      color: $primary-color;
+      background-color: #ffffff;
+      border: unset;
+    }
+
+    &.secondary,
+    &.third {
+      &:focus,
+      &:hover {
+        background-color: unset !important;
+        color: $primary-color-hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../../styles/partials/colors';
+
+@mixin baseText {
+  color: #5c5d5d;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 3px;
+}
+
+.ProfileGroupCard {
+  display: flex;
+  min-height: 200px;
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    a {
+      margin-top: 3px;
+    }
+  }
+  &__privacy-text {
+    @include baseText();
+    margin-top: 2px;
+  }
+  &__location {
+    @include baseText();
+    text-align: left;
+    max-width: 130px;
+    min-width: 85px;
+  }
+  &__privacy {
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    i {
+      color: $primary_color;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    h4 {
+      margin: 15px 0 7px 0;
+      font-weight: 600;
+    }
+    span {
+      margin-bottom: 10px;
+    }
+    a {
+      border-radius: 5px;
+      background-color: #ffffff;
+      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.1), 0 4px 7px 0 rgba(0, 0, 0, 0.06),
+        0 1px 5px 0 rgba(0, 0, 0, 0.2);
+      padding: 2px 20px;
+      color: #ff8f00;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  &__avatar {
+    padding: 16px 16px 0 0;
+    border-right: 1px solid #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .TableGroup {
+      &__icon {
+        height: 55px;
+        width: 55px;
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+      &__official {
+        bottom: 0;
+        top: auto;
+        right: 0;
+        left: auto;
+      }
+    }
+  }
+
+  .TableScorer {
+    margin: 0 auto 10px auto;
+    width: 100%;
+  }
+}

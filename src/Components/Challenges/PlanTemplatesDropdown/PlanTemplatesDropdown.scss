@@ -1,0 +1,50 @@
+@import '../../../styles/partials/colors';
+
+.PlanTemplatesDropdown {
+  .ui.selection.dropdown {
+    &:hover {
+      border-color: none;
+    }
+    input.search,
+    .default.text {
+      font-size: 14px;
+      line-height: 14px;
+      font-family: $rubik;
+    }
+    .text:not(.default) {
+      font-weight: 600;
+      color: #5c5d5d;
+    }
+    .default.text {
+      color: #7f8fa4;
+      font-weight: 400;
+    }
+    .menu > .item {
+      color: #5c5d5d;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .selected.item.addition span {
+      color: $primary-color;
+    }
+    &.active {
+      border-color: #efefef;
+      .menu {
+        border-color: #efefef;
+        .selected {
+          &.item {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 500px) {
+      height: auto;
+      input.search,
+      .default.text {
+        line-height: 18px;
+      }
+    }
+  }
+}

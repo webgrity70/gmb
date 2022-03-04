@@ -1,0 +1,10 @@
+@import '../../../../styles/partials/colors';
+
+.GroupsModuleInfo {
+  &__default-trigger {
+    margin: 0 0 0 7px;
+    color: $primary_color;
+    font-weight: 500;
+    cursor: pointer;
+  }
+}

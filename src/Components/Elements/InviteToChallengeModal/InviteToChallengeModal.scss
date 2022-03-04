@@ -1,0 +1,107 @@
+.InviteToChallengeModal {
+  &__title {
+    color: #5c5d5d;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-top: 10px !important;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  &__name {
+    color: #5c5d5d;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.34px;
+    line-height: 19px;
+  }
+  &__list {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+  &__flash {
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 15px;
+    margin-right: 10px;
+    align-self: center;
+    padding: 2px 5px;
+    background-color: #4e72f1;
+    i {
+      margin-right: 0;
+    }
+  }
+  &__date {
+    color: #7f8fa4;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 21px;
+  }
+  &__description {
+    color: #7e8fa5;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &.ui.modal .actions {
+    background-color: white;
+    justify-content: flex-end;
+    padding: 15px !important;
+    a {
+      margin-right: 15px;
+      &:first-of-type {
+        margin-right: 40px;
+      }
+      &:focus,
+      &:hover {
+        color: #f97a00;
+      }
+    }
+    @media screen and (max-width: 648px) {
+      padding: 10px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    &.ui.modal {
+      width: 600px;
+      > .content {
+        padding: 20px 30px;
+      }
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    &__description {
+      padding: 0;
+    }
+    &__title {
+      margin-top: 0 !important;
+    }
+    &__list {
+      max-height: 80%;
+    }
+    &.ui.modal {
+      border-radius: 0;
+      top: 0;
+      width: 100% !important;
+      height: 100vh;
+      margin: 0 !important;
+      overflow-y: hidden !important;
+      > .content {
+        padding: 15px !important;
+        bottom: 30px;
+        border-radius: 0;
+        position: absolute;
+        top: 40px;
+        overflow-y: auto;
+      }
+      > .actions {
+        bottom: 40px;
+        position: absolute;
+      }
+    }
+  }
+}

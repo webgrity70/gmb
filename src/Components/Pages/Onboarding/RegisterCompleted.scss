@@ -1,0 +1,63 @@
+@import '../../../styles/partials/colors';
+
+.RegisterCompleted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $rubik;
+  min-height: calc(100vh - 64px);
+  color: #3f3f3f;
+  font-weight: 400;
+
+  &__container {
+    max-width: 484px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+  }
+
+  &__sent-img {
+    margin-left: -32px;
+    margin-bottom: 20px;
+    width: 111px;
+  }
+
+  &__title,
+  &__description,
+  &__subtitle {
+    text-align: center;
+    font-family: $rubik;
+    font-weight: 400;
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: 15px;
+    line-height: 1.67;
+    margin-bottom: 77px;
+  }
+
+  &__subtitle {
+    color: #4f4f4f;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__help-divider {
+    width: 268px;
+    height: 2px;
+    background-color: #3fc4ff;
+  }
+
+  &__help-list {
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 8px;
+  }
+}

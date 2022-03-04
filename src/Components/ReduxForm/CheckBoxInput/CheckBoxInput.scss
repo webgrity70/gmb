@@ -1,0 +1,29 @@
+@import '../../../styles/partials/colors';
+
+.CheckBoxInput {
+  margin-top: 5px;
+  &.ui.checkbox {
+    &.disabled label:before {
+      background-color: transparent !important;
+    }
+    &.checked label,
+    label:hover {
+      color: black;
+    }
+    label {
+      line-height: 1.3;
+      color: #5c5d5d;
+      font-family: $rubik;
+      font-size: 14px;
+      font-weight: 400;
+      &:after {
+        top: 2px;
+      }
+    }
+    &:not(.checked) {
+      input:focus ~ label {
+        color: #5c5d5d !important;
+      }
+    }
+  }
+}

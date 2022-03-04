@@ -1,0 +1,31 @@
+@import '../../../../styles/partials/colors';
+
+.ui.modal.AppsListModal {
+  @media only screen and (min-width: 1200px) {
+    width: 750px;
+    margin: 0;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      font-weight: 500;
+    }
+  }
+  .AppsListModal__content {
+    padding: 0 120px;
+    max-height: 270px;
+    overflow-y: auto;
+    .ListItems {
+      &__item-hoverable,
+      &__item {
+        padding: 10px;
+      }
+    }
+  }
+}
+.AppsListModal__default-trigger {
+  color: $primary_color;
+  font-weight: 500;
+  cursor: pointer;
+}

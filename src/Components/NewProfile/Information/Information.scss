@@ -1,0 +1,33 @@
+@import '../../../styles/partials/colors';
+
+.ProfilePageInformation {
+  background-color: #fcfcfc;
+  padding: 34px 0;
+  &__blink {
+    @-webkit-keyframes blinker {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @-moz-keyframes blinker {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    -webkit-animation: blinker 1s infinite;
+    -moz-animation: blinker 1s infinite;
+    animation: blinker 1s infinite;
+  }
+}

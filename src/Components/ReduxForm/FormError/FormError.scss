@@ -1,0 +1,9 @@
+@import '../../../styles/partials/colors';
+
+.FormError {
+  color: $work-color;
+  font-family: $rubik;
+  font-size: 12px;
+  margin-top: 2px;
+  font-weight: 400;
+}
