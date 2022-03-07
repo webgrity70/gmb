@@ -21,6 +21,7 @@ import App from './App';
 import ScrollToTop from './Components/Elements/ScrollToTop';
 import configureStore from './store/configureStore';
 import history from './history';
+import register from './registerServiceWorker'
 
 const store = configureStore();
 
@@ -52,3 +53,4 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root')
 );
+register();

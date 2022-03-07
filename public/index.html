@@ -11,6 +11,7 @@
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/GMB_icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/fav/apple-touch-icon.png">
 
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700" rel="stylesheet">
 
@@ -104,5 +105,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <% } %>
 <div id="root"></div>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('service-worker.js').then(function (registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      }).catch(function (err) {
+        console.log(err)
+      });
+    });
+  } else {
+    console.log('service worker is not supported');
+  }
+</script>
 </body>
 </html>
